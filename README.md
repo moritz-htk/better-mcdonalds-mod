@@ -81,4 +81,4 @@ To get the File ID, go to the [download page of my mod](https://www.curseforge.c
 Website: [https://sites.google.com/view/moritz-htk](https://sites.google.com/view/moritz-htk)
 
 ---
-**NOTE**: This is an unofficial modification and is not affiliated with McDonald's Corporation.
+> **NOTE**: This is an unofficial modification and is not affiliated with McDonald's Corporation.

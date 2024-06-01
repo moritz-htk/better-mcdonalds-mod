@@ -30,11 +30,10 @@ jobs:
             common/build/libs/*.jar
             fabric/build/libs/*.jar
             neoforge/build/libs/*.jar
-          exclude: |
-            common/build/libs/*-sources.jar
-            common/build/libs/*-transformProductionFabric.jar
-            common/build/libs/*-transformProductionNeoForge.jar
-            fabric/build/libs/*-dev-shadow.jar
-            fabric/build/libs/*-sources.jar
-            neoforge/build/libs/*-dev-shadow.jar
-            neoforge/build/libs/*-sources.jar
+            !common/build/libs/*-sources.jar
+            !common/build/libs/*-transformProductionFabric.jar
+            !common/build/libs/*-transformProductionNeoForge.jar
+            !fabric/build/libs/*-dev-shadow.jar
+            !fabric/build/libs/*-sources.jar
+            !neoforge/build/libs/*-dev-shadow.jar
+            !neoforge/build/libs/*-sources.jar
