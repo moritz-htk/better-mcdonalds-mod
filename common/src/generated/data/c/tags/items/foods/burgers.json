@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "#c:foods/burgers/hamburger",
+      "required": false
+    },
+    {
+      "id": "#c:foods/burgers/cheeseburger",
+      "required": false
+    },
+    {
+      "id": "#c:foods/burgers/chickenburger",
+      "required": false
+    },
+    {
+      "id": "#c:foods/burgers/fishburger",
+      "required": false
+    }
+  ]
+}

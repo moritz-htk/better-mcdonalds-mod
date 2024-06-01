@@ -1,0 +1,38 @@
+modLoader="javafml"
+loaderVersion="[3,)"
+license="moritz_htk Software License Agreement (mSLA)"
+issueTrackerURL="https://github.com/moritz-htk/better-mcdonalds-mod/issues"
+
+[[mods]]
+    modId="better_mcdonalds_mod"
+    version="${version}"
+    displayName="Better McDonald's Mod"
+    displayURL="https://sites.google.com/view/moritz-htk/mods/better-mcdonalds-mod"
+    logoFile="icon.png"
+    credits="Volwert123, rporotos, kohari_nk, sovseabird"
+    authors="moritz_htk"
+    description='''This Minecraft mod adds many new items and food from McDonald's.'''
+
+[[dependencies.better_mcdonalds_mod]]
+    modId="neoforge"
+    type="required"
+    versionRange="[20.6.98-beta,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.better_mcdonalds_mod]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.20.6,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.better_mcdonalds_mod]]
+    modId="architectury"
+    type="required"
+    versionRange="[12.1.3,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[modproperties.better_mcdonalds_mod]
+    catalogueItemIcon="better_mcdonalds_mod:happy_meal"

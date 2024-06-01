@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#c:seeds/tomato",
+      "required": false
+    },
+    {
+      "id": "#c:seeds/lettuce",
+      "required": false
+    }
+  ]
+}

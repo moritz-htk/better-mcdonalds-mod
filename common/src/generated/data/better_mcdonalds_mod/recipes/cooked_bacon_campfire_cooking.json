@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "better_mcdonalds_mod:raw_bacon"
+  },
+  "result": {
+    "count": 1,
+    "id": "better_mcdonalds_mod:cooked_bacon"
+  }
+}

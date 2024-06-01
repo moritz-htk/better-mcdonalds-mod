@@ -1,0 +1,16 @@
+{
+  "values": [
+    "better_mcdonalds_mod:cheese",
+    "better_mcdonalds_mod:tortilla",
+    "better_mcdonalds_mod:mcwrap",
+    "better_mcdonalds_mod:mcflurry",
+    {
+      "id": "#c:foods/sauces",
+      "required": false
+    },
+    {
+      "id": "#c:foods/burgers",
+      "required": false
+    }
+  ]
+}

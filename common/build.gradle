@@ -1,0 +1,28 @@
+architectury {
+    common(enabled_platforms.split(","))
+}
+
+base {
+    archivesName = archives_base_name + "-common"
+}
+
+sourceSets {
+    main {
+        resources.srcDir project(":common").file("src/generated")
+    }
+}
+
+dependencies {
+    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+
+    modApi "dev.architectury:architectury:${architectury_api_version}"
+}
+
+publishing {
+    publications {
+        mavenCommon(MavenPublication) {
+            artifactId = archives_base_name
+            from components.java
+        }
+    }
+}

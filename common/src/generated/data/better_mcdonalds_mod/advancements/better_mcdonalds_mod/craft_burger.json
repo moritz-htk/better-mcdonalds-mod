@@ -1,0 +1,35 @@
+{
+  "parent": "better_mcdonalds_mod:better_mcdonalds_mod/craft_knife",
+  "criteria": {
+    "hamburger": {
+      "conditions": {
+        "items": [
+          {
+            "items": "better_mcdonalds_mod:hamburger"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/block/red_concrete_powder.png",
+    "description": {
+      "translate": "advancement.better_mcdonalds_mod.craft_burger.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "better_mcdonalds_mod:hamburger"
+    },
+    "title": {
+      "translate": "advancement.better_mcdonalds_mod.craft_burger.title"
+    }
+  },
+  "requirements": [
+    [
+      "hamburger"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

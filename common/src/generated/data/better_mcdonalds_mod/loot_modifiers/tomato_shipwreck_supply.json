@@ -1,0 +1,25 @@
+{
+  "type": "better_mcdonalds_mod:add_item",
+  "conditions": [
+    {
+      "chance": 0.42,
+      "condition": "minecraft:random_chance"
+    },
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/shipwreck_supply"
+    }
+  ],
+  "functions": [
+    {
+      "add": false,
+      "count": {
+        "type": "minecraft:uniform",
+        "max": 4.0,
+        "min": 1.0
+      },
+      "function": "minecraft:set_count"
+    }
+  ],
+  "item": "better_mcdonalds_mod:tomato"
+}

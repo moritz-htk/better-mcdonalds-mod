@@ -1,0 +1,25 @@
+{
+  "type": "better_mcdonalds_mod:add_item",
+  "conditions": [
+    {
+      "chance": 0.72,
+      "condition": "minecraft:random_chance"
+    },
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/village/village_savanna_house"
+    }
+  ],
+  "functions": [
+    {
+      "add": false,
+      "count": {
+        "type": "minecraft:uniform",
+        "max": 7.0,
+        "min": 1.0
+      },
+      "function": "minecraft:set_count"
+    }
+  ],
+  "item": "better_mcdonalds_mod:lettuce"
+}

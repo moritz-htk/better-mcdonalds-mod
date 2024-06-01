@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:foods/vegetables/tomato"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "better_mcdonalds_mod:tomato_seeds"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "better_mcdonalds_mod",
+  "version": "${version}",
+  "name": "Better McDonald's Mod",
+  "description": "This Minecraft mod adds many new items and food from McDonald's.",
+  "authors": [
+    "moritz_htk"
+  ],
+  "contributors": [
+    "Volwert123",
+    "rporotos",
+    "kohari_nk",
+    "sovseabird"
+  ],
+  "contact": {
+    "homepage": "https://sites.google.com/view/moritz-htk/mods/better-mcdonalds-mod",
+    "issues": "https://github.com/moritz-htk/better-mcdonalds-mod/issues",
+    "sources": "https://github.com/moritz-htk/better-mcdonalds-mod"
+  },
+  "license": "moritz_htk Software License Agreement (mSLA)",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.moritz_htk.better_mcdonalds_mod.fabric.BetterMcDonaldsModFabric"
+    ],
+    "client": [
+      "net.moritz_htk.better_mcdonalds_mod.fabric.client.BetterMcDonaldsModFabricClient"
+    ]
+  },
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.20.6",
+    "architectury": ">=12.1.3"
+  },
+  "custom": {
+    "catalogue": {
+      "icon": {
+        "item": "better_mcdonalds_mod:happy_meal"
+      }
+    },
+    "modmenu": {
+      "update_checker": true,
+      "links": {
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod",
+        "modmenu.github_releases": "https://github.com/moritz-htk/better-mcdonalds-mod/releases",
+        "modmenu.modrinth": "https://modrinth.com/mod/better-mcdonalds-mod",
+        "modmenu.wiki": "https://github.com/moritz-htk/better-mcdonalds-mod/wiki"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bread": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:bread"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cheese": {
+      "conditions": {
+        "items": [
+          {
+            "items": "better_mcdonalds_mod:cheese"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_cooked_salmon": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cooked_salmon"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "better_mcdonalds_mod:filet_o_fish"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bread",
+      "has_cheese",
+      "has_cooked_salmon"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "better_mcdonalds_mod:filet_o_fish"
+    ]
+  }
+}
