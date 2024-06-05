@@ -3,6 +3,20 @@ plugins {
     id "dev.architectury.loom" version "1.6-SNAPSHOT" apply false
 }
 
+def localPropertiesFile = file("local.properties")
+if (localPropertiesFile.exists()) {
+    Properties localProperties = new Properties()
+    localPropertiesFile.withInputStream {
+        stream -> localProperties.load(stream)
+    }
+    localProperties.each {
+        key, value -> project.ext.set(key, value)
+    }
+} else {
+    project.ext.set('curseforgeApiKey', System.getenv('CURSEFORGE_API_KEY') ?: '')
+    project.ext.set('modrinthApiKey', System.getenv('MODRINTH_API_KEY') ?: '')
+}
+
 architectury {
     minecraft = minecraft_version
 }

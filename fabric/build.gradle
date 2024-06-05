@@ -1,5 +1,6 @@
 plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
+    id "me.shedaniel.unified-publishing" version "0.1.12"
 }
 
 base {
@@ -68,6 +69,40 @@ publishing {
         mavenFabric(MavenPublication) {
             artifactId = archives_base_name + "-" + project.name
             from components.java
+        }
+    }
+}
+
+unifiedPublishing {
+    project {
+        displayName = "[Fabric ${project.minecraft_version}] Better McDonald's Mod ${project.version}"
+        version = "${project.version}"
+        releaseType = "release"
+        gameVersions = ["${project.minecraft_version}"]
+        gameLoaders = ["fabric"]
+        changelog = project(":").file("changelog.md").text
+
+        mainPublication tasks.remapJar
+
+        relations {
+            depends {
+                curseforge = "architectury-api"
+                modrinth = "architectury-api"
+            }
+        }
+
+        if (curseforgeApiKey != null) {
+            curseforge {
+                token = curseforgeApiKey
+                id = "546816"
+            }
+        }
+
+        if (modrinthApiKey != null) {
+            modrinth {
+                token = modrinthApiKey
+                id = "kdnePgr1"
+            }
         }
     }
 }

@@ -39,7 +39,7 @@ The [Better McDonald's Mod Wiki](https://github.com/moritz-htk/better-mcdonalds-
 - [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
 
 ## Dependencies
-- [Architectury API](https://www.curseforge.com/minecraft/mc-mods/architectury-api) (v12.1.3 and above)
+- [Architectury API](https://github.com/architectury/architectury-api) (v12.1.3 and above)
 
 ## Maven
 Better McDonald's Mod is available via [Curse Maven](https://www.cursemaven.com/) for developers wishing to make use of my mod.

@@ -21,6 +21,9 @@ jobs:
         run: chmod +x ./gradlew
       - name: Build with Gradle
         run: ./gradlew build
+        env:
+          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+          MODRINTH_API_KEY: ${{ secrets.MODRINTH_API_KEY }}
       - name: Capture Build Artifacts
         if: ${{ matrix.java == '21' }}
         uses: actions/upload-artifact@v4
