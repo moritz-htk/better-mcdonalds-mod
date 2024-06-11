@@ -78,15 +78,6 @@ components.java {
     }
 }
 
-publishing {
-    publications {
-        mavenNeoForge(MavenPublication) {
-            artifactId = archives_base_name + "-" + project.name
-            from components.java
-        }
-    }
-}
-
 unifiedPublishing {
     project {
         displayName = "[NeoForge ${project.minecraft_version}] Better McDonald's Mod ${project.version}"

@@ -64,15 +64,6 @@ components.java {
     }
 }
 
-publishing {
-    publications {
-        mavenFabric(MavenPublication) {
-            artifactId = archives_base_name + "-" + project.name
-            from components.java
-        }
-    }
-}
-
 unifiedPublishing {
     project {
         displayName = "[Fabric ${project.minecraft_version}] Better McDonald's Mod ${project.version}"
