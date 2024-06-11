@@ -65,6 +65,7 @@ public class BMMTagsProvider {
             tag(Tags.Items.SEEDS).addOptionalTag(SEEDS_TOMATO).addOptionalTag(SEEDS_LETTUCE);
             tag(SEEDS_TOMATO).add(BMMItems.TOMATO_SEEDS.getKey());
             tag(SEEDS_LETTUCE).add(BMMItems.LETTUCE_SEEDS.getKey());
+            tag(ItemTags.VILLAGER_PLANTABLE_SEEDS).add(BMMItems.TOMATO_SEEDS.getKey()).add(BMMItems.LETTUCE_SEEDS.getKey());
             tag(Tags.Items.FOODS).add(BMMItems.CHEESE.getKey()).add(BMMItems.TORTILLA.getKey()).add(BMMItems.MCWRAP.getKey()).add(BMMItems.MCFLURRY.getKey()).addOptionalTag(FOODS_SAUCES).addOptionalTag(FOODS_BURGERS);
             tag(Tags.Items.FOODS_RAW_MEATS).add(BMMItems.BEEF_PATTY.getKey()).add(BMMItems.RAW_BACON.getKey());
             tag(Tags.Items.FOODS_COOKED_MEATS).add(BMMItems.COOKED_BEEF_PATTY.getKey()).add(BMMItems.COOKED_BACON.getKey());
@@ -103,6 +104,7 @@ public class BMMTagsProvider {
         protected void addTags(HolderLookup.@NotNull Provider provider) {
             tag(BlockTags.MINEABLE_WITH_SHOVEL).add(TagEntry.element(BMMBlocks.SALT_BLOCK.getId()));
             tag(BlockTags.CROPS).add(TagEntry.element(BMMBlocks.TOMATO_CROP.getId())).add(TagEntry.element(BMMBlocks.LETTUCE_CROP.getId()));
+            tag(BlockTags.MAINTAINS_FARMLAND).add(TagEntry.element(BMMBlocks.TOMATO_CROP.getId())).add(TagEntry.element(BMMBlocks.LETTUCE_CROP.getId()));
         }
     }
 }
