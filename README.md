@@ -18,7 +18,7 @@ The Better McDonald's Mod was created by [moritz_htk](https://github.com/moritz-
 ## Latest versions
 | Mod Version  | Fabric | Quilt | Forge | NeoForge |
 |--------------|--------|-------|-------|----------|
-| 4.0.0+1.20.6 | ✔      | ✖     | ✖     | ✔        |
+| 4.0.1+1.20.6 | ✔      | ✖     | ✖     | ✔        |
 
 Click [here](https://github.com/moritz-htk/better-mcdonalds-mod/releases) to get to the release list!
 
@@ -72,7 +72,7 @@ Add the following to your `gradle.properties` file:
 
 ### `gradle.properties`
 ```
-better_mcdonalds_mod_file=4996946
+better_mcdonalds_mod_file=5389972
 ```
 
 To get the File ID, go to the [download page of my mod](https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod/files), click on the file you want to use and the file ID will be in the URL.
