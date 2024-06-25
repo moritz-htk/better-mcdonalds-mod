@@ -20,7 +20,7 @@ public class BMMItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        for (RegistrySupplier<Item> item : BMMItems.MAIN_ITEMS) {
+        for (RegistrySupplier<Item> item : BMMItems.ITEMS) {
             basicItem(item.get());
         }
         handheldItem(BMMItems.KNIFE.get());

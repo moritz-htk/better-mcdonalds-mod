@@ -25,6 +25,7 @@ public class BMMDataGenerators {
         generator.addProvider(event.includeClient(), new BMMItemModelProvider(packOutput, existingFileHelper));
 
         generator.addProvider(event.includeServer(), new BMMAdvancementProvider(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new BMMDataMapProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new BMMGlobalLootModifierProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new BMMTagsProvider.Items(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new BMMTagsProvider.Blocks(packOutput, lookupProvider, existingFileHelper));

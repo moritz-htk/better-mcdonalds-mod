@@ -13,9 +13,6 @@ issueTrackerURL="https://github.com/moritz-htk/better-mcdonalds-mod/issues"
     authors="moritz_htk"
     description='''This Minecraft mod adds many new items and food from McDonald's.'''
 
-[[mixins]]
-    config="better_mcdonalds_mod.mixins.json"
-
 [[dependencies.better_mcdonalds_mod]]
     modId="neoforge"
     type="required"

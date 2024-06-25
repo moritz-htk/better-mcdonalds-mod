@@ -16,9 +16,9 @@ The Better McDonald's Mod was created by [moritz_htk](https://github.com/moritz-
 ...and more! A new cooking tool and many new ingredients have been added to prepare the food.
 
 ## Latest versions
-| Mod Version  | Fabric | Quilt | Forge | NeoForge |
-|--------------|--------|-------|-------|----------|
-| 4.0.1+1.20.6 | ✔      | ✖     | ✖     | ✔        |
+| Version | Latest Version | Mod Loader       | Support |
+|---------|----------------|------------------|---------|
+| 1.20.x  | 4.0.2+1.20.6   | Fabric, NeoForge | Active  |
 
 Click [here](https://github.com/moritz-htk/better-mcdonalds-mod/releases) to get to the release list!
 
