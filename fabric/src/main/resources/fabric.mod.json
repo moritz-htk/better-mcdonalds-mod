@@ -29,13 +29,10 @@
       "net.moritz_htk.better_mcdonalds_mod.fabric.client.BetterMcDonaldsModFabricClient"
     ]
   },
-  "mixins": [
-    "better_mcdonalds_mod.mixins.json"
-  ],
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.20.6",
-    "architectury": ">=12.1.3"
+    "minecraft": ">=1.21",
+    "architectury": ">=13.0.2"
   },
   "custom": {
     "catalogue": {

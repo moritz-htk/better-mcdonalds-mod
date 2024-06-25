@@ -34,7 +34,7 @@ public class BMMBlockStateProvider extends BlockStateProvider {
 
     private ConfiguredModel[] cropStates(BlockState state, IntegerProperty ageProperty, String cropName) {
         ConfiguredModel[] models = new ConfiguredModel[1];
-        models[0] = new ConfiguredModel(models().crop(cropName + "_stage" + state.getValue(ageProperty), new ResourceLocation(BetterMcDonaldsMod.MOD_ID, "block/" + cropName + "_stage" + state.getValue(ageProperty))).renderType("cutout"));
+        models[0] = new ConfiguredModel(models().crop(cropName + "_stage" + state.getValue(ageProperty), ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, "block/" + cropName + "_stage" + state.getValue(ageProperty))).renderType("cutout"));
         return models;
     }
 }

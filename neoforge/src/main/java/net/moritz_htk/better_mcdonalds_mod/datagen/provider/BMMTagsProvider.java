@@ -40,7 +40,7 @@ public class BMMTagsProvider {
         public static final TagKey<Item> FOODS_BURGERS_CHEESEBURGER = registerKey("foods/burgers/cheeseburger");
         public static final TagKey<Item> FOODS_BURGERS_CHICKENBURGER = registerKey("foods/burgers/chickenburger");
         public static final TagKey<Item> FOODS_BURGERS_FISHBURGER = registerKey("foods/burgers/fishburger");
-        public static final TagKey<Item> FOODS_SIDE_DISHES = TagKey.create(Registries.ITEM, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, "foods/side_dishes"));
+        public static final TagKey<Item> FOODS_SIDE_DISHES = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, "foods/side_dishes"));
         public static final TagKey<Item> FOODS_DRINKS = registerKey("foods/drinks");
         public static final TagKey<Item> FOODS_DRINKS_COLA = registerKey("foods/drinks/cola");
         public static final TagKey<Item> FOODS_DRINKS_ORANGE_JUICE = registerKey("foods/drinks/orange_juice");
@@ -91,7 +91,7 @@ public class BMMTagsProvider {
         }
 
         private static TagKey<Item> registerKey(String path) {
-            return TagKey.create(Registries.ITEM, new ResourceLocation("c", path));
+            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", path));
         }
     }
 

@@ -20,7 +20,7 @@ public class BMMItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        for (RegistrySupplier<Item> item : BMMItems.MAIN_ITEMS) {
+        for (RegistrySupplier<Item> item : BMMItems.ITEMS) {
             basicItem(item.get());
         }
         handheldItem(BMMItems.KNIFE.get());
@@ -28,6 +28,6 @@ public class BMMItemModelProvider extends ItemModelProvider {
 
     public void handheldItem(Item item) {
         ResourceLocation location = Objects.requireNonNull(BuiltInRegistries.ITEM.getKey(item));
-        getBuilder(location.toString()).parent(new ModelFile.UncheckedModelFile("item/handheld")).texture("layer0", new ResourceLocation(location.getNamespace(), "item/" + location.getPath()));
+        getBuilder(location.toString()).parent(new ModelFile.UncheckedModelFile("item/handheld")).texture("layer0", ResourceLocation.fromNamespaceAndPath(location.getNamespace(), "item/" + location.getPath()));
     }
 }

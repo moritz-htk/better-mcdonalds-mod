@@ -31,8 +31,8 @@ public class BMMLootTableProvider {
     }
 
     public static class BMMBlockLootTables extends BlockLootSubProvider {
-        public BMMBlockLootTables() {
-            super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+        protected BMMBlockLootTables(HolderLookup.Provider lookupProvider) {
+            super(Set.of(), FeatureFlags.REGISTRY.allFlags(), lookupProvider);
         }
 
         @Override
