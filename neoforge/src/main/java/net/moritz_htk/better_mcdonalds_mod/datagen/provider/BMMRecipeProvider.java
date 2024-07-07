@@ -56,10 +56,7 @@ public class BMMRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(BMMItems.SALT.get()), has(BMMTagsProvider.Items.DUSTS_SALT))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.TORTILLA.get())));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.BEEF_PATTY.get(), 2)
-                .requires(BMMTagsProvider.Items.TOOLS_KNIFE)
-                .requires(Items.BEEF)
-                .unlockedBy(getHasName(BMMItems.KNIFE.get()), has(BMMTagsProvider.Items.TOOLS_KNIFE))
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.BEEF), RecipeCategory.FOOD, BMMItems.BEEF_PATTY.get(), 2)
                 .unlockedBy(getHasName(Items.BEEF), has(Items.BEEF))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.BEEF_PATTY.get())));
 
@@ -75,10 +72,7 @@ public class BMMRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(BMMItems.BEEF_PATTY.get()), has(BMMItems.BEEF_PATTY.get()))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BEEF_PATTY.get()) + "_campfire_cooking"));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.RAW_BACON.get(), 2)
-                .requires(BMMTagsProvider.Items.TOOLS_KNIFE)
-                .requires(Items.PORKCHOP)
-                .unlockedBy(getHasName(BMMItems.KNIFE.get()), has(BMMTagsProvider.Items.TOOLS_KNIFE))
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.PORKCHOP), RecipeCategory.FOOD, BMMItems.RAW_BACON.get(), 2)
                 .unlockedBy(getHasName(Items.PORKCHOP), has(Items.PORKCHOP))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.RAW_BACON.get())));
 
@@ -223,20 +217,12 @@ public class BMMRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.CARROT), has(Items.CARROT))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.SNACK_SALAD.get())));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.CHICKEN_MCNUGGETS.get())
-                .requires(BMMTagsProvider.Items.TOOLS_KNIFE)
-                .requires(Items.COOKED_CHICKEN)
-                .unlockedBy(getHasName(BMMItems.KNIFE.get()), has(BMMTagsProvider.Items.TOOLS_KNIFE))
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.COOKED_CHICKEN), RecipeCategory.FOOD, BMMItems.CHICKEN_MCNUGGETS.get(), 2)
                 .unlockedBy(getHasName(Items.COOKED_CHICKEN), has(Items.COOKED_CHICKEN))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.CHICKEN_MCNUGGETS.get())));
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.FRIES.get(), 2)
-                .requires(BMMTagsProvider.Items.TOOLS_KNIFE)
-                .requires(Items.BAKED_POTATO)
-                .requires(BMMTagsProvider.Items.DUSTS_SALT)
-                .unlockedBy(getHasName(BMMItems.KNIFE.get()), has(BMMTagsProvider.Items.TOOLS_KNIFE))
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.BAKED_POTATO), RecipeCategory.FOOD, BMMItems.FRIES.get(), 2)
                 .unlockedBy(getHasName(Items.BAKED_POTATO), has(Items.BAKED_POTATO))
-                .unlockedBy(getHasName(BMMItems.SALT.get()), has(BMMTagsProvider.Items.DUSTS_SALT))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.FRIES.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.HAPPY_MEAL.get())
@@ -302,14 +288,5 @@ public class BMMRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.SNOWBALL), has(Items.SNOWBALL))
                 .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.MCFLURRY.get())));
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, BMMItems.KNIFE.get())
-                .define('I', Items.IRON_INGOT)
-                .define('S', Items.STICK)
-                .pattern(" I ")
-                .pattern(" S ")
-                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
-                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
-                .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.KNIFE.get())));
     }
 }

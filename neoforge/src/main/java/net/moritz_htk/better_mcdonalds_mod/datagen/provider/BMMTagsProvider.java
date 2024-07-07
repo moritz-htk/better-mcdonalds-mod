@@ -46,7 +46,6 @@ public class BMMTagsProvider {
         public static final TagKey<Item> FOODS_DRINKS_ORANGE_JUICE = registerKey("foods/drinks/orange_juice");
         public static final TagKey<Item> FOODS_DRINKS_LEMON_JUICE = registerKey("foods/drinks/lemon_juice");
         public static final TagKey<Item> FOODS_DRINKS_ICE_TEA = registerKey("foods/drinks/ice_tea");
-        public static final TagKey<Item> TOOLS_KNIFE = registerKey("tools/knife");
 
         public Items(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, @Nullable ExistingFileHelper existingFileHelper) {
             super(output, Registries.ITEM, registries, BetterMcDonaldsMod.MOD_ID, existingFileHelper);
@@ -86,8 +85,6 @@ public class BMMTagsProvider {
             tag(FOODS_DRINKS_ORANGE_JUICE).add(TagEntry.element(BMMItems.FANTA.getId()));
             tag(FOODS_DRINKS_LEMON_JUICE).add(TagEntry.element(BMMItems.SPRITE.getId()));
             tag(FOODS_DRINKS_ICE_TEA).add(TagEntry.element(BMMItems.LIPTON_ICE_TEA_PEACH.getId()));
-            tag(Tags.Items.TOOLS).addOptionalTag(TOOLS_KNIFE);
-            tag(TOOLS_KNIFE).add(TagEntry.element(BMMItems.KNIFE.getId()));
         }
 
         private static TagKey<Item> registerKey(String path) {

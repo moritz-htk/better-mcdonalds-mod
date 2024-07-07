@@ -15,7 +15,5 @@ public class BMMVillagerTrades {
         TradeRegistry.registerVillagerTrade(VillagerProfession.BUTCHER, 2,
                 (entity, randomSource) -> new MerchantOffer(new ItemCost(Items.EMERALD, 1), new ItemStack(BMMItems.COOKED_BEEF_PATTY.get(), 6), 16, 5, 0.05f),
                 (entity, randomSource) -> new MerchantOffer(new ItemCost(Items.EMERALD, 1), new ItemStack(BMMItems.COOKED_BACON.get(), 6), 16, 5, 0.05f));
-        TradeRegistry.registerVillagerTrade(VillagerProfession.WEAPONSMITH, 1,
-                (entity, randomSource) -> new MerchantOffer(new ItemCost(Items.EMERALD, 2), new ItemStack(BMMItems.KNIFE.get()), 10, 1, 0.2f));
     }
 }

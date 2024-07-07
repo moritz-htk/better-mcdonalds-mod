@@ -10,12 +10,10 @@ import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Rarity;
 import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
 import net.moritz_htk.better_mcdonalds_mod.item.BMMDrinkItem;
-import net.moritz_htk.better_mcdonalds_mod.item.BMMKnifeItem;
 
 public class BMMItems {
     public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(BetterMcDonaldsMod.MOD_ID, Registries.ITEM);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(BetterMcDonaldsMod.MOD_ID, Registries.ITEM);
-    public static final DeferredRegister<Item> TOOL_ITEMS = DeferredRegister.create(BetterMcDonaldsMod.MOD_ID, Registries.ITEM);
 
     public static final RegistrySupplier<BlockItem> SALT_BLOCK = BLOCK_ITEMS.register("salt_block", () -> new BlockItem(BMMBlocks.SALT_BLOCK.get(), registerItemProperties()));
     public static final RegistrySupplier<Item> SALT = ITEMS.register("salt", () -> new Item(registerItemProperties()));
@@ -50,7 +48,6 @@ public class BMMItems {
     public static final RegistrySupplier<BMMDrinkItem> SPRITE = ITEMS.register("sprite", () -> new BMMDrinkItem(registerItemProperties().food(registerFoodValues(3, 0.4f))));
     public static final RegistrySupplier<BMMDrinkItem> LIPTON_ICE_TEA_PEACH = ITEMS.register("lipton_ice_tea_peach", () -> new BMMDrinkItem(registerItemProperties().food(registerFoodValues(3, 0.4f))));
     public static final RegistrySupplier<Item> MCFLURRY = ITEMS.register("mcflurry", () -> new Item(registerItemProperties().food(registerFoodValues(6, 0.4f))));
-    public static final RegistrySupplier<BMMKnifeItem> KNIFE = TOOL_ITEMS.register("knife", () -> new BMMKnifeItem(registerItemProperties()));
 
     public static Item.Properties registerItemProperties() {
         return new Item.Properties().arch$tab(BMMCreativeTabs.BETTER_MCDONALDS_MOD_MAIN);
@@ -63,6 +60,5 @@ public class BMMItems {
     public static void register() {
         BLOCK_ITEMS.register();
         ITEMS.register();
-        TOOL_ITEMS.register();
     }
 }

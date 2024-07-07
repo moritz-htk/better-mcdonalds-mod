@@ -1,16 +1,10 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "tag": "c:tools/knife"
-    },
-    {
-      "item": "minecraft:cooked_chicken"
-    }
-  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:cooked_chicken"
+  },
   "result": {
-    "count": 1,
+    "count": 2,
     "id": "better_mcdonalds_mod:chicken_mcnuggets"
   }
 }
