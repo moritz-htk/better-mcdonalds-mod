@@ -1,17 +1,8 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "tag": "c:tools/knife"
-    },
-    {
-      "item": "minecraft:baked_potato"
-    },
-    {
-      "tag": "c:dusts/salt"
-    }
-  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:baked_potato"
+  },
   "result": {
     "count": 2,
     "id": "better_mcdonalds_mod:fries"

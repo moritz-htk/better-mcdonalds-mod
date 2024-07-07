@@ -1,11 +1,11 @@
 {
   "parent": "better_mcdonalds_mod:better_mcdonalds_mod/root",
   "criteria": {
-    "knife": {
+    "beef_patty": {
       "conditions": {
         "items": [
           {
-            "items": "better_mcdonalds_mod:knife"
+            "items": "better_mcdonalds_mod:beef_patty"
           }
         ]
       },
@@ -15,19 +15,19 @@
   "display": {
     "background": "minecraft:textures/block/red_concrete_powder.png",
     "description": {
-      "translate": "advancement.better_mcdonalds_mod.craft_knife.description"
+      "translate": "advancement.better_mcdonalds_mod.craft_beef_patty.description"
     },
     "icon": {
       "count": 1,
-      "id": "better_mcdonalds_mod:knife"
+      "id": "better_mcdonalds_mod:beef_patty"
     },
     "title": {
-      "translate": "advancement.better_mcdonalds_mod.craft_knife.title"
+      "translate": "advancement.better_mcdonalds_mod.craft_beef_patty.title"
     }
   },
   "requirements": [
     [
-      "knife"
+      "beef_patty"
     ]
   ],
   "sends_telemetry_event": true

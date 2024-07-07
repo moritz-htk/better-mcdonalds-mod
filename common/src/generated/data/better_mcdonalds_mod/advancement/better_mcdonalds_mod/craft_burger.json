@@ -1,5 +1,5 @@
 {
-  "parent": "better_mcdonalds_mod:better_mcdonalds_mod/craft_knife",
+  "parent": "better_mcdonalds_mod:better_mcdonalds_mod/craft_beef_patty",
   "criteria": {
     "hamburger": {
       "conditions": {
