@@ -1,20 +1,8 @@
 {
   "values": [
-    {
-      "id": "#c:foods/sauces/mayonnaise",
-      "required": false
-    },
-    {
-      "id": "#c:foods/sauces/sweet_sour_sauce",
-      "required": false
-    },
-    {
-      "id": "#c:foods/sauces/ketchup",
-      "required": false
-    },
-    {
-      "id": "#c:foods/sauces/mustard",
-      "required": false
-    }
+    "#c:foods/sauces/mayonnaise",
+    "#c:foods/sauces/sweet_sour_sauce",
+    "#c:foods/sauces/ketchup",
+    "#c:foods/sauces/mustard"
   ]
 }

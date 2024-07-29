@@ -16,6 +16,6 @@ public class BMMDataMapProvider extends DataMapProvider {
 
     @Override
     protected void gather() {
-        builder(NeoForgeDataMaps.COMPOSTABLES).add(BMMItems.TOMATO.getKey(), new Compostable(0.65f), false).add(BMMItems.TOMATO_SEEDS.getKey(), new Compostable(0.2f), false).add(BMMItems.LETTUCE.getKey(), new Compostable(0.65f), false).add(BMMItems.LETTUCE_SEEDS.getKey(), new Compostable(0.2f), false).build();
+        builder(NeoForgeDataMaps.COMPOSTABLES).add(BMMItems.TOMATO.getId(), new Compostable(0.65f), false).add(BMMItems.TOMATO_SEEDS.getId(), new Compostable(0.2f), false).add(BMMItems.LETTUCE.getId(), new Compostable(0.65f), false).add(BMMItems.LETTUCE_SEEDS.getId(), new Compostable(0.2f), false).build();
     }
 }

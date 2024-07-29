@@ -1,12 +1,6 @@
 {
   "values": [
-    {
-      "id": "#c:foods/vegetables/tomato",
-      "required": false
-    },
-    {
-      "id": "#c:foods/vegetables/lettuce",
-      "required": false
-    }
+    "#c:foods/vegetables/tomato",
+    "#c:foods/vegetables/lettuce"
   ]
 }

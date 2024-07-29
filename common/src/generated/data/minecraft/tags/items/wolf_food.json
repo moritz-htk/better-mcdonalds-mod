@@ -1,8 +1,8 @@
 {
   "values": [
-    "better_mcdonalds_mod:beef_patty",
-    "better_mcdonalds_mod:cooked_beef_patty",
-    "better_mcdonalds_mod:raw_bacon",
-    "better_mcdonalds_mod:cooked_bacon"
+    "#c:foods/raw_meat/raw_beef",
+    "#c:foods/raw_meat/raw_bacon",
+    "#c:foods/cooked_meat/cooked_beef",
+    "#c:foods/cooked_meat/cooked_bacon"
   ]
 }

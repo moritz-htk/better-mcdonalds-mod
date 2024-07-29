@@ -1,20 +1,8 @@
 {
   "values": [
-    {
-      "id": "#c:foods/drinks/cola",
-      "required": false
-    },
-    {
-      "id": "#c:foods/drinks/orange_juice",
-      "required": false
-    },
-    {
-      "id": "#c:foods/drinks/lemon_juice",
-      "required": false
-    },
-    {
-      "id": "#c:foods/drinks/ice_tea",
-      "required": false
-    }
+    "#c:foods/drinks/coke",
+    "#c:foods/drinks/orange_juice",
+    "#c:foods/drinks/lemon_juice",
+    "#c:foods/drinks/ice_tea"
   ]
 }
