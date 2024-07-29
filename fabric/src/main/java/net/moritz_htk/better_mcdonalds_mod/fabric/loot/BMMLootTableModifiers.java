@@ -1,6 +1,5 @@
 package net.moritz_htk.better_mcdonalds_mod.fabric.loot;
 
-import net.fabricmc.fabric.api.loot.v2.FabricLootTableBuilder;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -21,6 +20,7 @@ public class BMMLootTableModifiers {
     private static final ResourceKey<LootTable> GRASS_BLOCK_KEY = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.withDefaultNamespace("blocks/short_grass"));
     private static final ResourceKey<LootTable> FERN_BLOCK_KEY = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.withDefaultNamespace("blocks/fern"));
 
+    @SuppressWarnings("deprecation")
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((key, tableBuilder, source) -> {
             addLoot(key, BuiltInLootTables.PILLAGER_OUTPOST, tableBuilder, 0.58f, BMMItems.TOMATO.get(), UniformGenerator.between(1, 3));
@@ -36,7 +36,7 @@ public class BMMLootTableModifiers {
         });
     }
 
-    private static void addLoot(ResourceKey<LootTable> lootTable, ResourceKey<LootTable> id, FabricLootTableBuilder tableBuilder, float chance, Item item, NumberProvider count) {
+    private static void addLoot(ResourceKey<LootTable> lootTable, ResourceKey<LootTable> id, LootTable.Builder tableBuilder, float chance, Item item, NumberProvider count) {
         if (!lootTable.equals(id)) return;
         tableBuilder.pool(LootPool.lootPool().when(LootItemRandomChanceCondition.randomChance(chance)).add(LootItem.lootTableItem(item)).apply(SetItemCountFunction.setCount(count)).build());
     }

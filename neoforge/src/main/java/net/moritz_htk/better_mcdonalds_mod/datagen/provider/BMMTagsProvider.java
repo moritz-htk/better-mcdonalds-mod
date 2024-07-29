@@ -26,6 +26,7 @@ public class BMMTagsProvider {
             super(output, Registries.ITEM, registries, BetterMcDonaldsMod.MOD_ID, existingFileHelper);
         }
 
+        @SuppressWarnings("unchecked")
         @Override
         protected void addTags(HolderLookup.@NotNull Provider provider) {
             // Dust Tags
