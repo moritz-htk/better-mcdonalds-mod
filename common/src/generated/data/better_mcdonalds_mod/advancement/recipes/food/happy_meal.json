@@ -15,7 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#c:foods/burgers"
+            "items": "#c:foods/burger"
           }
         ]
       },
@@ -25,7 +25,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#c:foods/drinks"
+            "items": "#c:foods/drink"
           }
         ]
       },
@@ -35,7 +35,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#better_mcdonalds_mod:foods/side_dishes"
+            "items": "#better_mcdonalds_mod:foods/side_dish"
           }
         ]
       },

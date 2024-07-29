@@ -1,7 +1,5 @@
 {
   "values": [
-    "#c:foods/raw_meat/raw_beef",
-    "#c:foods/raw_meat/raw_bacon",
     "#c:foods/cooked_meat/cooked_beef",
     "#c:foods/cooked_meat/cooked_bacon"
   ]

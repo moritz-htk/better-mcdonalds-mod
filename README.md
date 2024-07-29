@@ -18,8 +18,8 @@ The Better McDonald's Mod was created by [moritz_htk](https://github.com/moritz-
 ## Latest versions
 | Version | Latest Version | Mod Loader       | Support |
 |---------|----------------|------------------|---------|
-| 1.20.x  | 4.1.0+1.20.6   | Fabric, NeoForge | Active  |
-| 1.21.x  | 4.1.0+1.21     | Fabric, NeoForge | Active  |
+| 1.20.x  | 4.2.0+1.20.6   | Fabric, NeoForge | Active  |
+| 1.21.x  | 4.2.0+1.21     | Fabric, NeoForge | Active  |
 
 Click [here](https://github.com/moritz-htk/better-mcdonalds-mod/releases) to get to the release list!
 
@@ -40,7 +40,7 @@ The [Better McDonald's Mod Wiki](https://github.com/moritz-htk/better-mcdonalds-
 - [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
 
 ## Dependencies
-- [Architectury API](https://github.com/architectury/architectury-api) (v13.0.3 and above)
+- [Architectury API](https://github.com/architectury/architectury-api) (v13.0.6 and above)
 
 ## Maven
 Better McDonald's Mod is available via [Curse Maven](https://www.cursemaven.com/) for developers wishing to make use of my mod.

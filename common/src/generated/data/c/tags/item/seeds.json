@@ -1,12 +1,6 @@
 {
   "values": [
-    {
-      "id": "#c:seeds/tomato",
-      "required": false
-    },
-    {
-      "id": "#c:seeds/lettuce",
-      "required": false
-    }
+    "#c:seeds/tomato",
+    "#c:seeds/lettuce"
   ]
 }

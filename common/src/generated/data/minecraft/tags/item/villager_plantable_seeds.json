@@ -1,6 +1,6 @@
 {
   "values": [
-    "better_mcdonalds_mod:tomato_seeds",
-    "better_mcdonalds_mod:lettuce_seeds"
+    "#c:seeds/tomato",
+    "#c:seeds/lettuce"
   ]
 }

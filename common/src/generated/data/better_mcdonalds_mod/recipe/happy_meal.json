@@ -3,13 +3,13 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "c:foods/burgers"
+      "tag": "c:foods/burger"
     },
     {
-      "tag": "c:foods/drinks"
+      "tag": "c:foods/drink"
     },
     {
-      "tag": "better_mcdonalds_mod:foods/side_dishes"
+      "tag": "better_mcdonalds_mod:foods/side_dish"
     },
     {
       "item": "minecraft:apple"
