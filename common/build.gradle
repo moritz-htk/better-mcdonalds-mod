@@ -2,10 +2,6 @@ architectury {
     common(enabled_platforms.split(","))
 }
 
-base {
-    archivesName = archives_base_name + "-common"
-}
-
 sourceSets {
     main {
         resources.srcDir project(":common").file("src/generated")

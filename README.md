@@ -19,7 +19,7 @@ The Better McDonald's Mod was created by [moritz_htk](https://github.com/moritz-
 | Version | Latest Version | Mod Loader       | Support |
 |---------|----------------|------------------|---------|
 | 1.20.x  | 4.2.0+1.20.6   | Fabric, NeoForge | Active  |
-| 1.21.x  | 4.2.0+1.21     | Fabric, NeoForge | Active  |
+| 1.21.x  | 4.2.1+1.21.1   | Fabric, NeoForge | Active  |
 
 Click [here](https://github.com/moritz-htk/better-mcdonalds-mod/releases) to get to the release list!
 

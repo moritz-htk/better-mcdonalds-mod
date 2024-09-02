@@ -31,7 +31,7 @@
   },
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.21",
+    "minecraft": ">=1.21.1",
     "architectury": ">=13.0.6"
   },
   "custom": {
@@ -46,7 +46,7 @@
         "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod",
         "modmenu.github_releases": "https://github.com/moritz-htk/better-mcdonalds-mod/releases",
         "modmenu.modrinth": "https://modrinth.com/mod/better-mcdonalds-mod",
-        "modmenu.wiki": "https://github.com/moritz-htk/better-mcdonalds-mod/wiki"
+        "modmenu.wiki": "https://moritz-htk.gitbook.io/better-mcdonalds-mod"
       }
     }
   }
