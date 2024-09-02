@@ -15,7 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#c:foods/vegetables/lettuce"
+            "items": "#c:crops/lettuce"
           }
         ]
       },
@@ -31,7 +31,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#c:foods/vegetables/tomato"
+            "items": "#c:crops/tomato"
           }
         ]
       },

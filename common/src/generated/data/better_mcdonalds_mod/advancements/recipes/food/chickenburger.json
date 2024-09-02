@@ -35,7 +35,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#c:foods/vegetables/lettuce"
+            "items": "#c:crops/lettuce"
           }
         ]
       },

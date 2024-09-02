@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "c:foods/vegetables/tomato"
+      "tag": "c:crops/tomato"
     },
     {
-      "tag": "c:foods/vegetables/lettuce"
+      "tag": "c:crops/lettuce"
     },
     {
       "item": "minecraft:carrot"

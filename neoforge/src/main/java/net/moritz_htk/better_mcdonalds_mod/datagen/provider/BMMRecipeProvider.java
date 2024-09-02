@@ -30,13 +30,13 @@ public class BMMRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMBlocks.SALT_BLOCK.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.TOMATO_SEEDS.get(), 2)
-                .requires(BMMTags.Items.FOODS_VEGETABLES_TOMATO)
-                .unlockedBy(getHasName(BMMItems.TOMATO.get()), has(BMMTags.Items.FOODS_VEGETABLES_TOMATO))
+                .requires(BMMTags.Items.CROPS_TOMATO)
+                .unlockedBy(getHasName(BMMItems.TOMATO.get()), has(BMMTags.Items.CROPS_TOMATO))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.TOMATO_SEEDS.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.LETTUCE_SEEDS.get(), 2)
-                .requires(BMMTags.Items.FOODS_VEGETABLES_LETTUCE)
-                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.FOODS_VEGETABLES_LETTUCE))
+                .requires(BMMTags.Items.CROPS_LETTUCE)
+                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.CROPS_LETTUCE))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.LETTUCE_SEEDS.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.CHEESE.get(), 2)
@@ -111,11 +111,11 @@ public class BMMRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.WATER_BUCKET)
                 .requires(Items.SUGAR)
                 .requires(BMMTags.Items.DUSTS_SALT)
-                .requires(BMMTags.Items.FOODS_VEGETABLES_TOMATO)
+                .requires(BMMTags.Items.CROPS_TOMATO)
                 .unlockedBy(getHasName(Items.WATER_BUCKET), has(Items.WATER_BUCKET))
                 .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR))
                 .unlockedBy(getHasName(BMMItems.SALT.get()), has(BMMTags.Items.DUSTS_SALT))
-                .unlockedBy(getHasName(BMMItems.TOMATO.get()), has(BMMTags.Items.FOODS_VEGETABLES_TOMATO))
+                .unlockedBy(getHasName(BMMItems.TOMATO.get()), has(BMMTags.Items.CROPS_TOMATO))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.KETCHUP.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.MUSTARD.get(), 2)
@@ -160,33 +160,33 @@ public class BMMRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.BREAD)
                 .requires(BMMItems.COOKED_BEEF_PATTY.get(), 2)
                 .requires(BMMItems.CHEESE.get())
-                .requires(BMMTags.Items.FOODS_VEGETABLES_LETTUCE)
+                .requires(BMMTags.Items.CROPS_LETTUCE)
                 .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
                 .unlockedBy(getHasName(BMMItems.COOKED_BEEF_PATTY.get()), has(BMMItems.COOKED_BEEF_PATTY.get()))
                 .unlockedBy(getHasName(BMMItems.CHEESE.get()), has(BMMItems.CHEESE.get()))
-                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.FOODS_VEGETABLES_LETTUCE))
+                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.CROPS_LETTUCE))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.BIG_MAC.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.CHICKENBURGER.get())
                 .requires(Items.BREAD)
                 .requires(Items.COOKED_CHICKEN)
                 .requires(BMMTags.Items.FOODS_SAUCES_KETCHUP)
-                .requires(BMMTags.Items.FOODS_VEGETABLES_LETTUCE)
+                .requires(BMMTags.Items.CROPS_LETTUCE)
                 .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
                 .unlockedBy(getHasName(Items.COOKED_CHICKEN), has(Items.COOKED_CHICKEN))
                 .unlockedBy(getHasName(BMMItems.KETCHUP.get()), has(BMMTags.Items.FOODS_SAUCES_KETCHUP))
-                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.FOODS_VEGETABLES_LETTUCE))
+                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.CROPS_LETTUCE))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.CHICKENBURGER.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.MCCHICKEN.get())
                 .requires(Items.BREAD)
                 .requires(Items.COOKED_CHICKEN)
                 .requires(BMMTags.Items.FOODS_SAUCES_MAYONNAISE)
-                .requires(BMMTags.Items.FOODS_VEGETABLES_LETTUCE)
+                .requires(BMMTags.Items.CROPS_LETTUCE)
                 .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
                 .unlockedBy(getHasName(Items.COOKED_CHICKEN), has(Items.COOKED_CHICKEN))
                 .unlockedBy(getHasName(BMMItems.MAYONNAISE.get()), has(BMMTags.Items.FOODS_SAUCES_MAYONNAISE))
-                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.FOODS_VEGETABLES_LETTUCE))
+                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.CROPS_LETTUCE))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.MCCHICKEN.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.FILET_O_FISH.get())
@@ -202,19 +202,19 @@ public class BMMRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(BMMItems.TORTILLA.get())
                 .requires(Items.COOKED_CHICKEN)
                 .requires(BMMTags.Items.FOODS_SAUCES_MAYONNAISE)
-                .requires(BMMTags.Items.FOODS_VEGETABLES_LETTUCE)
+                .requires(BMMTags.Items.CROPS_LETTUCE)
                 .unlockedBy(getHasName(BMMItems.TORTILLA.get()), has(BMMItems.TORTILLA.get()))
                 .unlockedBy(getHasName(Items.COOKED_CHICKEN), has(Items.COOKED_CHICKEN))
                 .unlockedBy(getHasName(BMMItems.MAYONNAISE.get()), has(BMMTags.Items.FOODS_SAUCES_MAYONNAISE))
-                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.FOODS_VEGETABLES_LETTUCE))
+                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.CROPS_LETTUCE))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.MCWRAP.get())));
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.SNACK_SALAD.get())
-                .requires(BMMTags.Items.FOODS_VEGETABLES_TOMATO)
-                .requires(BMMTags.Items.FOODS_VEGETABLES_LETTUCE)
+                .requires(BMMTags.Items.CROPS_TOMATO)
+                .requires(BMMTags.Items.CROPS_LETTUCE)
                 .requires(Items.CARROT)
-                .unlockedBy(getHasName(BMMItems.TOMATO.get()), has(BMMTags.Items.FOODS_VEGETABLES_TOMATO))
-                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.FOODS_VEGETABLES_LETTUCE))
+                .unlockedBy(getHasName(BMMItems.TOMATO.get()), has(BMMTags.Items.CROPS_TOMATO))
+                .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.CROPS_LETTUCE))
                 .unlockedBy(getHasName(Items.CARROT), has(Items.CARROT))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.SNACK_SALAD.get())));
 

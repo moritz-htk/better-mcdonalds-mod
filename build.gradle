@@ -1,9 +1,11 @@
 plugins {
-    id "architectury-plugin" version "3.4-SNAPSHOT"
-    id "dev.architectury.loom" version "1.7-SNAPSHOT" apply false
+    id 'dev.architectury.loom' version '1.7-SNAPSHOT' apply false
+    id 'architectury-plugin' version '3.4-SNAPSHOT'
+    id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+    id 'me.shedaniel.unified-publishing' version '0.1.13' apply false
 }
 
-def localPropertiesFile = file("local.properties")
+def localPropertiesFile = file('local.properties')
 if (localPropertiesFile.exists()) {
     Properties localProperties = new Properties()
     localPropertiesFile.withInputStream {
@@ -21,8 +23,18 @@ architectury {
     minecraft = minecraft_version
 }
 
+allprojects {
+    group = maven_group
+    version = mod_version
+}
+
 subprojects {
-    apply plugin: "dev.architectury.loom"
+    apply plugin: 'dev.architectury.loom'
+    apply plugin: 'architectury-plugin'
+
+    base {
+        archivesName = "${archives_name}-${project.name}"
+    }
 
     loom {
         silentMojangMappingsLicense()
@@ -32,22 +44,9 @@ subprojects {
         minecraft "com.mojang:minecraft:${minecraft_version}"
         mappings loom.officialMojangMappings()
     }
-}
-
-allprojects {
-    apply plugin: "java"
-    apply plugin: "architectury-plugin"
-    apply plugin: "maven-publish"
-
-    version = mod_version
-    group = maven_group
 
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
         options.release = 21
-    }
-
-    java {
-        withSourcesJar()
     }
 }
