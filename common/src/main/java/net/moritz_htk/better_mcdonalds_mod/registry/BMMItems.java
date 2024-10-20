@@ -48,6 +48,7 @@ public class BMMItems {
     public static final RegistrySupplier<BMMDrinkItem> SPRITE = ITEMS.register("sprite", () -> new BMMDrinkItem(registerItemProperties().food(registerFoodValues(3, 0.4f))));
     public static final RegistrySupplier<BMMDrinkItem> LIPTON_ICE_TEA_PEACH = ITEMS.register("lipton_ice_tea_peach", () -> new BMMDrinkItem(registerItemProperties().food(registerFoodValues(3, 0.4f))));
     public static final RegistrySupplier<Item> MCFLURRY = ITEMS.register("mcflurry", () -> new Item(registerItemProperties().food(registerFoodValues(6, 0.4f))));
+    public static final RegistrySupplier<Item> MCFLURRY_CHOCOLATE = ITEMS.register("mcflurry_chocolate", () -> new Item(registerItemProperties().food(registerFoodValues(6, 0.4f))));
 
     public static Item.Properties registerItemProperties() {
         return new Item.Properties().arch$tab(BMMCreativeTabs.BETTER_MCDONALDS_MOD_MAIN);

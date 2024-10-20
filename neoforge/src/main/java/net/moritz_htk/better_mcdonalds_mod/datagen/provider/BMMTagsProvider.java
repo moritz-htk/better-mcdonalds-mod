@@ -45,7 +45,7 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.SEEDS_LETTUCE).add(TagEntry.element(BMMItems.LETTUCE_SEEDS.getId()));
 
             // Food Tags
-            tag(Tags.Items.FOODS).addTags(BMMTags.Items.FOODS_CHEESE, BMMTags.Items.FOODS_SAUCE, BMMTags.Items.FOODS_BURGER, BMMTags.Items.FOODS_DRINK).add(TagEntry.element(BMMItems.TORTILLA.getId())).add(TagEntry.element(BMMItems.MCWRAP.getId())).add(TagEntry.element(BMMItems.MCFLURRY.getId()));
+            tag(Tags.Items.FOODS).addTags(BMMTags.Items.FOODS_CHEESE, BMMTags.Items.FOODS_SAUCE, BMMTags.Items.FOODS_BURGER, BMMTags.Items.FOODS_DRINK).add(TagEntry.element(BMMItems.TORTILLA.getId())).add(TagEntry.element(BMMItems.MCWRAP.getId())).add(TagEntry.element(BMMItems.MCFLURRY.getId())).add(TagEntry.element(BMMItems.MCFLURRY_CHOCOLATE.getId()));
             tag(BMMTags.Items.FOODS_CHEESE).add(TagEntry.element(BMMItems.CHEESE.getId()));
             tag(BMMTags.Items.FOODS_SAUCE).addTags(BMMTags.Items.FOODS_SAUCES_MAYONNAISE, BMMTags.Items.FOODS_SAUCES_SWEET_SOUR_SAUCE, BMMTags.Items.FOODS_SAUCES_KETCHUP, BMMTags.Items.FOODS_SAUCES_MUSTARD);
             tag(BMMTags.Items.FOODS_BURGER).addTags(BMMTags.Items.FOODS_BURGERS_HAMBURGER, BMMTags.Items.FOODS_BURGERS_CHEESEBURGER, BMMTags.Items.FOODS_BURGERS_CHICKENBURGER, BMMTags.Items.FOODS_BURGERS_FISHBURGER);

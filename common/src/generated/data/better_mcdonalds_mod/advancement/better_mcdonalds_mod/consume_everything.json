@@ -169,6 +169,14 @@
       },
       "trigger": "minecraft:consume_item"
     },
+    "mcflurry_chocolate": {
+      "conditions": {
+        "item": {
+          "items": "better_mcdonalds_mod:mcflurry_chocolate"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
     "mcwrap": {
       "conditions": {
         "item": {
@@ -335,6 +343,9 @@
     ],
     [
       "mcflurry"
+    ],
+    [
+      "mcflurry_chocolate"
     ]
   ],
   "sends_telemetry_event": true
