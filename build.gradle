@@ -3,6 +3,7 @@ plugins {
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
     id 'me.shedaniel.unified-publishing' version '0.1.13' apply false
+    id 'org.sinytra.wiki.toolkit' version '0.1.10'
 }
 
 def localPropertiesFile = file('local.properties')
@@ -48,5 +49,13 @@ subprojects {
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
         options.release = 21
+    }
+}
+
+wiki {
+    docs {
+        better_mcdonalds_mod {
+            root = file('docs/better_mcdonalds_mod')
+        }
     }
 }
