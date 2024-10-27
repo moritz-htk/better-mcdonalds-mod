@@ -43,29 +43,29 @@ The [Better McDonald's Mod Wiki](https://github.com/moritz-htk/better-mcdonalds-
 - [Architectury API](https://github.com/architectury/architectury-api) (v13.0.8 and above)
 
 ## Maven
-Better McDonald's Mod is available via [Curse Maven](https://www.cursemaven.com/) for developers wishing to make use of my mod.
+Better McDonald's Mod is available via [Modrinth Maven](https://support.modrinth.com/en/articles/8801191-modrinth-maven) for developers wishing to make use of my mod.
 
 Update your `build.gradle` file to include the following:
 
 ### Fabric `build.gradle`
 ```
 repositories {
-    maven { url "https://cursemaven.com" }
+    maven { url "https://api.modrinth.com/maven" }
 }
 
 dependencies {
-    modImplementation "curse.maven:better-mcdonalds-mod-546816:${better_mcdonalds_mod_file}"
+    modImplementation "maven.modrinth:better-mcdonalds-mod:${better_mcdonalds_mod_version}-fabric"
 }
 ```
 
 ### NeoForge `build.gradle`
 ```
 repositories {
-    maven { url "https://cursemaven.com" }
+    maven { url "https://api.modrinth.com/maven" }
 }
 
 dependencies {
-    implementation fg.deobf("curse.maven:better-mcdonalds-mod-546816:${better_mcdonalds_mod_file}")
+    implementation fg.deobf("maven.modrinth:better-mcdonalds-mod:${better_mcdonalds_mod_version}-neoforge")
 }
 ```
 
@@ -73,10 +73,10 @@ Add the following to your `gradle.properties` file:
 
 ### `gradle.properties`
 ```
-better_mcdonalds_mod_file=5389972
+better_mcdonalds_mod_version=4.2.1+1.20.6
 ```
 
-To get the File ID, go to the [download page of my mod](https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod/files), click on the file you want to use and the file ID will be in the URL.
+To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
 
 ## Social Media
 Website: [https://sites.google.com/view/moritz-htk](https://sites.google.com/view/moritz-htk)
