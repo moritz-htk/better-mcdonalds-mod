@@ -90,7 +90,7 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                     Pair.of("fries", BMMItems.FRIES.get()), Pair.of("happy_meal", BMMItems.HAPPY_MEAL.get()),
                     Pair.of("coca_cola", BMMItems.COCA_COLA.get()), Pair.of("fanta", BMMItems.FANTA.get()),
                     Pair.of("sprite", BMMItems.SPRITE.get()), Pair.of("lipton_ice_tea_peach", BMMItems.LIPTON_ICE_TEA_PEACH.get()),
-                    Pair.of("mcflurry", BMMItems.MCFLURRY.get())
+                    Pair.of("mcflurry", BMMItems.MCFLURRY.get()), Pair.of("mcflurry_chocolate", BMMItems.MCFLURRY_CHOCOLATE.get())
             );
 
             items.forEach(pair -> builder.addCriterion(pair.first, ConsumeItemTrigger.TriggerInstance.usedItem(pair.second)));

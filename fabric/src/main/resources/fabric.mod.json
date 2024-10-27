@@ -30,8 +30,10 @@
     ]
   },
   "depends": {
-    "fabric": "*",
+    "fabricloader": ">=0.16.7",
     "minecraft": ">=1.20.6",
+    "java": ">=21",
+    "fabric-api": "*",
     "architectury": ">=12.1.4"
   },
   "custom": {
@@ -46,6 +48,7 @@
         "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod",
         "modmenu.github_releases": "https://github.com/moritz-htk/better-mcdonalds-mod/releases",
         "modmenu.modrinth": "https://modrinth.com/mod/better-mcdonalds-mod",
+        "modmenu.paypal": "https://www.paypal.com/donate/?hosted_button_id=CADH35AVDHEMW",
         "modmenu.wiki": "https://moritz-htk.gitbook.io/better-mcdonalds-mod"
       }
     }

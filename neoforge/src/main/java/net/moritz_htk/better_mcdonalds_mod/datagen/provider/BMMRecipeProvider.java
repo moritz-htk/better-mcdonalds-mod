@@ -289,5 +289,16 @@ public class BMMRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.SNOWBALL), has(Items.SNOWBALL))
                 .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR))
                 .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.MCFLURRY.get())));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, BMMItems.MCFLURRY_CHOCOLATE.get())
+                .requires(Items.MILK_BUCKET)
+                .requires(Items.SNOWBALL)
+                .requires(Items.SUGAR)
+                .requires(Items.COCOA_BEANS)
+                .unlockedBy(getHasName(Items.MILK_BUCKET), has(Items.MILK_BUCKET))
+                .unlockedBy(getHasName(Items.SNOWBALL), has(Items.SNOWBALL))
+                .unlockedBy(getHasName(Items.SUGAR), has(Items.SUGAR))
+                .unlockedBy(getHasName(Items.COCOA_BEANS), has(Items.COCOA_BEANS))
+                .save(output, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.MCFLURRY_CHOCOLATE.get())));
     }
 }

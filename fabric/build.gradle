@@ -69,6 +69,10 @@ unifiedPublishing {
                 curseforge = "architectury-api"
                 modrinth = "architectury-api"
             }
+            depends {
+                curseforge = "fabric-api"
+                modrinth = "fabric-api"
+            }
         }
 
         if (curseforgeApiKey != null) {
