@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:milk_bucket"
-    },
-    {
-      "item": "minecraft:snowball"
-    },
-    {
-      "item": "minecraft:sugar"
-    }
+    "minecraft:milk_bucket",
+    "minecraft:snowball",
+    "minecraft:sugar"
   ],
   "result": {
     "count": 1,

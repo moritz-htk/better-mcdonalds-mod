@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:milk_bucket"
-    },
-    {
-      "tag": "c:dusts/salt"
-    }
+    "minecraft:milk_bucket",
+    "#c:dusts/salt"
   ],
   "result": {
     "count": 2,

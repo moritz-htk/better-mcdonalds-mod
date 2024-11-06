@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:water_bucket"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "tag": "c:dusts/salt"
-    },
-    {
-      "tag": "c:crops/tomato"
-    }
+    "minecraft:water_bucket",
+    "minecraft:sugar",
+    "#c:dusts/salt",
+    "#c:crops/tomato"
   ],
   "result": {
     "count": 2,

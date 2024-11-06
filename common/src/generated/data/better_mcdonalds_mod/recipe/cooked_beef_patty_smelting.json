@@ -3,9 +3,7 @@
   "category": "food",
   "cookingtime": 200,
   "experience": 1.0,
-  "ingredient": {
-    "item": "better_mcdonalds_mod:beef_patty"
-  },
+  "ingredient": "better_mcdonalds_mod:beef_patty",
   "result": {
     "count": 1,
     "id": "better_mcdonalds_mod:cooked_beef_patty"

@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:foods/burger"
-    },
-    {
-      "tag": "c:foods/drink"
-    },
-    {
-      "tag": "better_mcdonalds_mod:foods/side_dish"
-    },
-    {
-      "item": "minecraft:apple"
-    }
+    "#c:foods/burger",
+    "#c:foods/drink",
+    "#better_mcdonalds_mod:foods/side_dish",
+    "minecraft:apple"
   ],
   "result": {
     "count": 1,

@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:water_bucket"
-    },
-    {
-      "item": "minecraft:wheat"
-    },
-    {
-      "item": "minecraft:wheat"
-    },
-    {
-      "item": "minecraft:egg"
-    },
-    {
-      "tag": "c:dusts/salt"
-    }
+    "minecraft:water_bucket",
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "minecraft:egg",
+    "#c:dusts/salt"
   ],
   "result": {
     "count": 2,

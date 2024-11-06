@@ -88,6 +88,9 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.FOODS_DRINKS_LEMON_JUICE).add(TagEntry.element(BMMItems.SPRITE.getId()));
             tag(BMMTags.Items.FOODS_DRINKS_ICE_TEA).add(TagEntry.element(BMMItems.LIPTON_ICE_TEA_PEACH.getId()));
 
+            // Villager Tags
+            tag(ItemTags.VILLAGER_PICKS_UP).add(TagEntry.element(BMMItems.TOMATO.getId())).add(TagEntry.element(BMMItems.TOMATO_SEEDS.getId())).add(TagEntry.element(BMMItems.LETTUCE.getId())).add(TagEntry.element(BMMItems.LETTUCE_SEEDS.getId()));
+
             // Serene Season Crop Tags
             tag(BMMTags.Items.SERENE_SEASON_SUMMER_CROPS).add(TagEntry.element(BMMItems.TOMATO_SEEDS.getId()));
             tag(BMMTags.Items.SERENE_SEASON_AUTUMN_CROPS).add(TagEntry.element(BMMItems.LETTUCE_SEEDS.getId()));

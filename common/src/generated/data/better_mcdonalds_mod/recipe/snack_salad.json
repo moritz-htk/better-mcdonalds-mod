@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "c:crops/tomato"
-    },
-    {
-      "tag": "c:crops/lettuce"
-    },
-    {
-      "item": "minecraft:carrot"
-    }
+    "#c:crops/tomato",
+    "#c:crops/lettuce",
+    "minecraft:carrot"
   ],
   "result": {
     "count": 1,

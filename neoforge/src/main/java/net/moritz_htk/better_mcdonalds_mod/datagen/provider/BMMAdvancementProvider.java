@@ -5,7 +5,9 @@ import net.minecraft.advancements.*;
 import net.minecraft.advancements.critereon.ConsumeItemTrigger;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.PlayerTrigger;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -23,10 +25,16 @@ import java.util.function.Consumer;
 
 public class BMMAdvancementProvider extends AdvancementProvider {
     public BMMAdvancementProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, ExistingFileHelper existingFileHelper) {
-        super(output, registries, existingFileHelper, List.of(new BMMAdvancements()));
+        super(output, registries, existingFileHelper, List.of(new BMMAdvancements(registries)));
     }
 
     private static class BMMAdvancements implements AdvancementProvider.AdvancementGenerator {
+        private HolderGetter<Item> items;
+
+        public BMMAdvancements(CompletableFuture<HolderLookup.Provider> registries) {
+            registries.thenAccept(provider -> this.items = provider.lookupOrThrow(Registries.ITEM));
+        }
+
         @Override
         public void generate(HolderLookup.@NotNull Provider provider, @NotNull Consumer<AdvancementHolder> consumer, @NotNull ExistingFileHelper existingFileHelper) {
             AdvancementHolder ROOT = createRootAdvancement(BMMItems.HAPPY_MEAL.get(), PlayerTrigger.TriggerInstance.tick(), consumer);
@@ -93,7 +101,7 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                     Pair.of("mcflurry", BMMItems.MCFLURRY.get()), Pair.of("mcflurry_chocolate", BMMItems.MCFLURRY_CHOCOLATE.get())
             );
 
-            items.forEach(pair -> builder.addCriterion(pair.first, ConsumeItemTrigger.TriggerInstance.usedItem(pair.second)));
+            items.forEach(pair -> builder.addCriterion(pair.first, ConsumeItemTrigger.TriggerInstance.usedItem(this.items, pair.second)));
 
             return builder.save(consumer, String.valueOf(ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + "consume_everything")));
         }

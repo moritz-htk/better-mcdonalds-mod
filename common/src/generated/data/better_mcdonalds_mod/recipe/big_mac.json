@@ -2,21 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bread"
-    },
-    {
-      "item": "better_mcdonalds_mod:cooked_beef_patty"
-    },
-    {
-      "item": "better_mcdonalds_mod:cooked_beef_patty"
-    },
-    {
-      "item": "better_mcdonalds_mod:cheese"
-    },
-    {
-      "tag": "c:crops/lettuce"
-    }
+    "minecraft:bread",
+    "better_mcdonalds_mod:cooked_beef_patty",
+    "better_mcdonalds_mod:cooked_beef_patty",
+    "better_mcdonalds_mod:cheese",
+    "#c:crops/lettuce"
   ],
   "result": {
     "count": 1,

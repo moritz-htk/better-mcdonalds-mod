@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bread"
-    },
-    {
-      "item": "minecraft:cooked_chicken"
-    },
-    {
-      "tag": "c:foods/sauces/ketchup"
-    },
-    {
-      "tag": "c:crops/lettuce"
-    }
+    "minecraft:bread",
+    "minecraft:cooked_chicken",
+    "#c:foods/sauces/ketchup",
+    "#c:crops/lettuce"
   ],
   "result": {
     "count": 1,

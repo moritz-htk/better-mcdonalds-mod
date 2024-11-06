@@ -30,7 +30,7 @@ public class BMMDataGenerators {
         generator.addProvider(event.includeServer(), new BMMTagsProvider.Items(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new BMMTagsProvider.Blocks(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), BMMLootTableProvider.create(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), new BMMRecipeProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new BMMRecipeProvider.Runner(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new BMMWorldGenProvider(packOutput, lookupProvider));
     }
 }

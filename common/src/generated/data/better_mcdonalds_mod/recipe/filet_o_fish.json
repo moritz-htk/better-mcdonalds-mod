@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bread"
-    },
-    {
-      "item": "better_mcdonalds_mod:cheese"
-    },
-    {
-      "item": "minecraft:cooked_salmon"
-    }
+    "minecraft:bread",
+    "better_mcdonalds_mod:cheese",
+    "minecraft:cooked_salmon"
   ],
   "result": {
     "count": 1,

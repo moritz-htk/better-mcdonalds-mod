@@ -2,7 +2,7 @@ package net.moritz_htk.better_mcdonalds_mod.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ItemUseAnimation;
 import org.jetbrains.annotations.NotNull;
 
 public class BMMDrinkItem extends Item {
@@ -11,7 +11,7 @@ public class BMMDrinkItem extends Item {
     }
 
     @Override
-    public @NotNull UseAnim getUseAnimation(ItemStack itemStack) {
-        return UseAnim.DRINK;
+    public @NotNull ItemUseAnimation getUseAnimation(ItemStack itemStack) {
+        return ItemUseAnimation.DRINK;
     }
 }
