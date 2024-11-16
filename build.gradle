@@ -71,7 +71,7 @@ subprojects {
 wiki {
     docs {
         better_mcdonalds_mod {
-            root = file('docs/better_mcdonalds_mod')
+            root = file('docs/better-mcdonalds-mod')
         }
     }
 }

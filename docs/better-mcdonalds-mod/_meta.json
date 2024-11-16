@@ -1,0 +1,10 @@
+{
+  "blocks": {
+    "name": "Blocks",
+    "icon": "Box"
+  },
+  "items": {
+    "name": "Items",
+    "icon": "Utensils"
+  }
+}
