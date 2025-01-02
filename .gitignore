@@ -1,21 +1,33 @@
+# Build output directories
 build/
-*.ipr
-run/
-*.iws
 out/
-*.iml
-.gradle/
 output/
 bin/
-libs/
+classes/
+.gradle/
 
+# IntelliJ IDEA files
+*.ipr
+*.iws
+*.iml
+.idea/
+
+# Eclipse files
 .classpath
 .project
-.idea/
-classes/
 .metadata
+
+# Visual Studio Code files
 .vscode
-.settings
-*.launch
-common/src/main/generated/.cache/
+
+# Local and project-specific configuration
 local.properties
+.settings
+
+# Datagen cache
+common/src/main/generated/.cache/
+
+# Miscellaneous
+run/
+libs/
+*.launch
