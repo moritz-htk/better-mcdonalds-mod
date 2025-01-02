@@ -2,12 +2,12 @@ package net.moritz_htk.better_mcdonalds_mod.fabric;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.world.level.block.ComposterBlock;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMItems;
 import net.moritz_htk.better_mcdonalds_mod.fabric.loot.BMMLootTableModifiers;
 import net.moritz_htk.better_mcdonalds_mod.fabric.world.BMMWorldGeneration;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMItems;
 
-public class BetterMcDonaldsModFabric implements ModInitializer {
+public class BMMFabric implements ModInitializer {
     @Override
     public void onInitialize() {
         BetterMcDonaldsMod.init();

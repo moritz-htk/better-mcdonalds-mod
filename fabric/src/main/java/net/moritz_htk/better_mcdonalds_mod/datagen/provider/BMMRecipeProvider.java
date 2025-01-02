@@ -12,10 +12,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMBlocks;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMItems;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMTags;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMBlocks;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMItems;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMTags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;

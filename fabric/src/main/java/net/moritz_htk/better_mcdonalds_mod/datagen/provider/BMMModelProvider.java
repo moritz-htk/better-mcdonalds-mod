@@ -7,8 +7,8 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.world.item.Item;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMBlocks;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMItems;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMBlocks;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMItems;
 
 import java.util.Set;
 

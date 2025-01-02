@@ -13,8 +13,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMItems;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMItems;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package net.moritz_htk.better_mcdonalds_mod.registry;
+package net.moritz_htk.better_mcdonalds_mod.common.registry;
 
 import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -7,7 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 
 public class BMMCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(BetterMcDonaldsMod.MOD_ID, Registries.CREATIVE_MODE_TAB);

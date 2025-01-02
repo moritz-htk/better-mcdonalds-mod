@@ -14,7 +14,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCon
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMItems;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMItems;
 
 public class BMMLootTableModifiers {
     private static final ResourceKey<LootTable> GRASS_BLOCK_KEY = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.withDefaultNamespace("blocks/short_grass"));

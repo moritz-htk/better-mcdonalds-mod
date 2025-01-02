@@ -6,9 +6,9 @@ import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMBlocks;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMItems;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMTags;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMBlocks;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMItems;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMTags;
 
 import java.util.concurrent.CompletableFuture;
 

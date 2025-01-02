@@ -1,4 +1,4 @@
-package net.moritz_htk.better_mcdonalds_mod.registry;
+package net.moritz_htk.better_mcdonalds_mod.common.registry;
 
 import dev.architectury.registry.level.entity.trade.TradeRegistry;
 import net.minecraft.world.entity.npc.VillagerProfession;

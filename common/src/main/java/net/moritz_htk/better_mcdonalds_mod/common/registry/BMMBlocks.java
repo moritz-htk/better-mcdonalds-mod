@@ -1,4 +1,4 @@
-package net.moritz_htk.better_mcdonalds_mod.registry;
+package net.moritz_htk.better_mcdonalds_mod.common.registry;
 
 import com.mojang.serialization.MapCodec;
 import dev.architectury.registry.registries.DeferredRegister;
@@ -11,9 +11,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
-import net.moritz_htk.better_mcdonalds_mod.block.BMMLettuceCropBlock;
-import net.moritz_htk.better_mcdonalds_mod.block.BMMTomatoCropBlock;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.block.BMMLettuceCropBlock;
+import net.moritz_htk.better_mcdonalds_mod.common.block.BMMTomatoCropBlock;
 
 public class BMMBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BetterMcDonaldsMod.MOD_ID, Registries.BLOCK);

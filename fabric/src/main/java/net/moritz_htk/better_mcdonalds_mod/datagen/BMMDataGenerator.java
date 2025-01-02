@@ -4,9 +4,9 @@ import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
+import net.moritz_htk.better_mcdonalds_mod.common.world.configured_feature.BMMConfiguredFeatures;
+import net.moritz_htk.better_mcdonalds_mod.common.world.placed_feature.BMMPlacedFeatures;
 import net.moritz_htk.better_mcdonalds_mod.datagen.provider.*;
-import net.moritz_htk.better_mcdonalds_mod.world.configured_feature.BMMConfiguredFeatures;
-import net.moritz_htk.better_mcdonalds_mod.world.placed_feature.BMMPlacedFeatures;
 
 public class BMMDataGenerator implements DataGeneratorEntrypoint {
     @Override

@@ -1,4 +1,4 @@
-package net.moritz_htk.better_mcdonalds_mod.world.placement;
+package net.moritz_htk.better_mcdonalds_mod.common.world.placement;
 
 import net.minecraft.world.level.levelgen.placement.*;
 

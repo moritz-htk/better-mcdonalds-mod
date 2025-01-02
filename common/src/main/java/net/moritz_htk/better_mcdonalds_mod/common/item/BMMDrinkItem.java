@@ -1,4 +1,4 @@
-package net.moritz_htk.better_mcdonalds_mod.item;
+package net.moritz_htk.better_mcdonalds_mod.common.item;
 
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Item;

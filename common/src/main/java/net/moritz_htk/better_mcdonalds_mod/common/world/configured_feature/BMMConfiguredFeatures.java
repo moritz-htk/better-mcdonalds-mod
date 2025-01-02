@@ -1,4 +1,4 @@
-package net.moritz_htk.better_mcdonalds_mod.world.configured_feature;
+package net.moritz_htk.better_mcdonalds_mod.common.world.configured_feature;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -11,8 +11,8 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockStateProvider;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMBlocks;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMBlocks;
 
 import java.util.List;
 
