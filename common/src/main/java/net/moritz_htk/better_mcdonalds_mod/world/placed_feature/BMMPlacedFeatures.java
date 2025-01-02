@@ -23,7 +23,7 @@ public class BMMPlacedFeatures {
         context.register(SALT_BLOCK, saltBlockFeature(configuredFeatures));
     }
 
-    public static PlacedFeature saltBlockFeature(HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures) {
+    private static PlacedFeature saltBlockFeature(HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures) {
         return new PlacedFeature(configuredFeatures.getOrThrow(BMMConfiguredFeatures.SALT_BLOCK), BMMDiskPlacement.modifiers(
                 CountPlacement.of(2),
                 InSquarePlacement.spread(),

@@ -23,7 +23,7 @@ public class BMMConfiguredFeatures {
         context.register(SALT_BLOCK, saltBlockFeature());
     }
 
-    public static ConfiguredFeature<?, ?> saltBlockFeature() {
+    private static ConfiguredFeature<?, ?> saltBlockFeature() {
         return new ConfiguredFeature<>(Feature.DISK, new DiskConfiguration(
                 RuleBasedBlockStateProvider.simple(BMMBlocks.SALT_BLOCK.get()),
                 BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.SAND)),

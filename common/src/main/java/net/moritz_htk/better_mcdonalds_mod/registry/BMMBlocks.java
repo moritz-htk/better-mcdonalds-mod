@@ -27,7 +27,7 @@ public class BMMBlocks {
     public static final RegistrySupplier<BMMTomatoCropBlock> TOMATO_CROP = BLOCKS.register("tomato_crop", () -> new BMMTomatoCropBlock(BlockBehaviour.Properties.of().setId(registerBlockId("tomato_crop"))));
     public static final RegistrySupplier<BMMLettuceCropBlock> LETTUCE_CROP  = BLOCKS.register("lettuce_crop", () -> new BMMLettuceCropBlock(BlockBehaviour.Properties.of().setId(registerBlockId("lettuce_crop"))));
 
-    public static ResourceKey<Block> registerBlockId(String id) {
+    private static ResourceKey<Block> registerBlockId(String id) {
         return ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, id));
     }
 }
