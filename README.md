@@ -6,7 +6,7 @@
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/kdnePgr1?style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/better-mcdonalds-mod)
 [![Mod Version](https://img.shields.io/modrinth/v/kdnePgr1?style=for-the-badge)](https://github.com/moritz-htk/better-mcdonalds-mod/releases)
 ![Version Availability](https://cf.way2muchnoise.eu/versions/546816.svg?badge_style=for_the_badge)
-[![License](https://img.shields.io/badge/LICENSE-moritz__htk_Software_License_Agreement_(mSLA)-red?style=for-the-badge)](https://sites.google.com/view/moritz-htk/license)
+[![License](https://img.shields.io/badge/mSLA_v2.0-red?style=for-the-badge)](https://sites.google.com/view/moritz-htk/license)
 
 The Better McDonald's Mod was created by [moritz_htk](https://github.com/moritz-htk). Many well-known products have been added such as:
 - Big Mac

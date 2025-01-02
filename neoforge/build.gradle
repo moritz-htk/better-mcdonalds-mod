@@ -47,6 +47,7 @@ processResources {
 
 jar {
     exclude '.cache/**'
+    from project(':').file('LICENSE.md')
 }
 
 remapJar {

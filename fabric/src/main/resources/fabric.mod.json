@@ -18,7 +18,7 @@
     "issues": "https://github.com/moritz-htk/better-mcdonalds-mod/issues",
     "sources": "https://github.com/moritz-htk/better-mcdonalds-mod"
   },
-  "license": "moritz_htk Software License Agreement (mSLA)",
+  "license": "mSLA v2.0",
   "icon": "assets/better_mcdonalds_mod/icon.png",
   "environment": "*",
   "entrypoints": {
