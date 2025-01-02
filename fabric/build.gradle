@@ -11,7 +11,7 @@ architectury {
 fabricApi {
     configureDataGeneration {
         client = true
-        getOutputDirectory().set(project(":common").file("src/generated"))
+        getOutputDirectory().set(project(":common").file("src/main/generated"))
     }
 }
 
