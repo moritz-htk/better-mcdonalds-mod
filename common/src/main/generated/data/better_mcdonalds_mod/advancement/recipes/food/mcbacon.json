@@ -15,7 +15,7 @@
       "conditions": {
         "items": [
           {
-            "items": "better_mcdonalds_mod:cheese"
+            "items": "#c:foods/cheese"
           }
         ]
       },
@@ -25,7 +25,7 @@
       "conditions": {
         "items": [
           {
-            "items": "better_mcdonalds_mod:cooked_bacon"
+            "items": "#c:foods/cooked_bacon"
           }
         ]
       },

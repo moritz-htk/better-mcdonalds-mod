@@ -10,6 +10,7 @@ import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMBlocks;
 import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMItems;
 import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMTags;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class BMMTagsProvider {
@@ -30,17 +31,17 @@ public class BMMTagsProvider {
             getOrCreateTagBuilder(BMMTags.Items.CROPS_LETTUCE).add(BMMItems.LETTUCE.getId());
 
             // Seed Tags
-            getOrCreateTagBuilder(ItemTags.VILLAGER_PLANTABLE_SEEDS).addTag(BMMTags.Items.SEEDS_TOMATO).addTag(BMMTags.Items.SEEDS_LETTUCE);
+            getOrCreateTagBuilder(ItemTags.VILLAGER_PLANTABLE_SEEDS).addAll(List.of(BMMItems.TOMATO_SEEDS.getKey(), BMMItems.LETTUCE_SEEDS.getKey()));
             getOrCreateTagBuilder(ConventionalItemTags.SEEDS).addTag(BMMTags.Items.SEEDS_TOMATO).addTag(BMMTags.Items.SEEDS_LETTUCE);
             getOrCreateTagBuilder(BMMTags.Items.SEEDS_TOMATO).add(BMMItems.TOMATO_SEEDS.getId());
             getOrCreateTagBuilder(BMMTags.Items.SEEDS_LETTUCE).add(BMMItems.LETTUCE_SEEDS.getId());
 
             // Food Tags
-            getOrCreateTagBuilder(ConventionalItemTags.FOODS).addTag(BMMTags.Items.FOODS_CHEESE).addTag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_DRINK).add(BMMItems.TORTILLA.getId()).add(BMMItems.MCWRAP.getId()).add(BMMItems.MCFLURRY.getId()).add(BMMItems.MCFLURRY_CHOCOLATE.getId());
+            getOrCreateTagBuilder(ConventionalItemTags.FOODS).addTag(BMMTags.Items.FOODS_CHEESE).addTag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_DRINK).addAll(List.of(BMMItems.TORTILLA.getKey(), BMMItems.MCWRAP.getKey(), BMMItems.MCFLURRY.getKey(), BMMItems.MCFLURRY_CHOCOLATE.getKey()));
             getOrCreateTagBuilder(BMMTags.Items.FOODS_CHEESE).add(BMMItems.CHEESE.getId());
             getOrCreateTagBuilder(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_SAUCES_MAYONNAISE).addTag(BMMTags.Items.FOODS_SAUCES_SWEET_SOUR_SAUCE).addTag(BMMTags.Items.FOODS_SAUCES_KETCHUP).addTag(BMMTags.Items.FOODS_SAUCES_MUSTARD);
             getOrCreateTagBuilder(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_BURGERS_HAMBURGER).addTag(BMMTags.Items.FOODS_BURGERS_CHEESEBURGER).addTag(BMMTags.Items.FOODS_BURGERS_CHICKENBURGER).addTag(BMMTags.Items.FOODS_BURGERS_FISHBURGER);
-            getOrCreateTagBuilder(BMMTags.Items.FOODS_SIDE_DISH).add(BMMItems.SNACK_SALAD.getId()).add(BMMItems.CHICKEN_MCNUGGETS.getId()).add(BMMItems.FRIES.getId());
+            getOrCreateTagBuilder(BMMTags.Items.FOODS_SIDE_DISH).addAll(List.of(BMMItems.SNACK_SALAD.getKey(), BMMItems.CHICKEN_MCNUGGETS.getKey(), BMMItems.FRIES.getKey()));
             getOrCreateTagBuilder(BMMTags.Items.FOODS_DRINK).addTag(BMMTags.Items.FOODS_DRINKS_COKE).addTag(BMMTags.Items.FOODS_DRINKS_ORANGE_JUICE).addTag(BMMTags.Items.FOODS_DRINKS_LEMON_JUICE).addTag(BMMTags.Items.FOODS_DRINKS_ICE_TEA);
 
             // Vegetable Food Tags
@@ -48,18 +49,18 @@ public class BMMTagsProvider {
             getOrCreateTagBuilder(BMMTags.Items.FOODS_VEGETABLES_TOMATO).add(BMMItems.TOMATO.getId());
             getOrCreateTagBuilder(BMMTags.Items.FOODS_VEGETABLES_LETTUCE).add(BMMItems.LETTUCE.getId());
 
-            // Wolf Food Tags
-            getOrCreateTagBuilder(ItemTags.WOLF_FOOD).addTag(BMMTags.Items.FOODS_RAW_MEAT_RAW_BEEF).addTag(BMMTags.Items.FOODS_RAW_MEAT_RAW_BACON).addTag(BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BEEF).addTag(BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BACON);
+            // Meat Tags
+            getOrCreateTagBuilder(ItemTags.MEAT).addAll(List.of(BMMItems.BEEF_PATTY.getKey(), BMMItems.COOKED_BEEF_PATTY.getKey(), BMMItems.RAW_BACON.getKey(), BMMItems.COOKED_BACON.getKey()));
 
             // Raw Meat Food Tags
-            getOrCreateTagBuilder(ConventionalItemTags.RAW_MEAT_FOODS).addTag(BMMTags.Items.FOODS_RAW_MEAT_RAW_BEEF).addTag(BMMTags.Items.FOODS_RAW_MEAT_RAW_BACON);
-            getOrCreateTagBuilder(BMMTags.Items.FOODS_RAW_MEAT_RAW_BEEF).add(BMMItems.BEEF_PATTY.getId());
-            getOrCreateTagBuilder(BMMTags.Items.FOODS_RAW_MEAT_RAW_BACON).add(BMMItems.RAW_BACON.getId());
+            getOrCreateTagBuilder(ConventionalItemTags.RAW_MEAT_FOODS).addTag(BMMTags.Items.FOODS_RAW_BEEF).addTag(BMMTags.Items.FOODS_RAW_BACON);
+            getOrCreateTagBuilder(BMMTags.Items.FOODS_RAW_BEEF).add(BMMItems.BEEF_PATTY.getId());
+            getOrCreateTagBuilder(BMMTags.Items.FOODS_RAW_BACON).add(BMMItems.RAW_BACON.getId());
 
             // Cooked Meat Food Tags
-            getOrCreateTagBuilder(ConventionalItemTags.COOKED_MEAT_FOODS).addTag(BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BEEF).addTag(BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BACON);
-            getOrCreateTagBuilder(BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BEEF).add(BMMItems.COOKED_BEEF_PATTY.getId());
-            getOrCreateTagBuilder(BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BACON).add(BMMItems.COOKED_BACON.getId());
+            getOrCreateTagBuilder(ConventionalItemTags.COOKED_MEAT_FOODS).addTag(BMMTags.Items.FOODS_COOKED_BEEF).addTag(BMMTags.Items.FOODS_COOKED_BACON);
+            getOrCreateTagBuilder(BMMTags.Items.FOODS_COOKED_BEEF).add(BMMItems.COOKED_BEEF_PATTY.getId());
+            getOrCreateTagBuilder(BMMTags.Items.FOODS_COOKED_BACON).add(BMMItems.COOKED_BACON.getId());
 
             // Sauce Food Tags
             getOrCreateTagBuilder(BMMTags.Items.FOODS_SAUCES_MAYONNAISE).add(BMMItems.MAYONNAISE.getId());
@@ -68,9 +69,9 @@ public class BMMTagsProvider {
             getOrCreateTagBuilder(BMMTags.Items.FOODS_SAUCES_MUSTARD).add(BMMItems.MUSTARD.getId());
 
             // Burger Food Tags
-            getOrCreateTagBuilder(BMMTags.Items.FOODS_BURGERS_HAMBURGER).add(BMMItems.HAMBURGER.getId()).add(BMMItems.MCBACON.getId()).add(BMMItems.BIG_MAC.getId());
+            getOrCreateTagBuilder(BMMTags.Items.FOODS_BURGERS_HAMBURGER).addAll(List.of(BMMItems.HAMBURGER.getKey(), BMMItems.MCBACON.getKey(), BMMItems.BIG_MAC.getKey()));
             getOrCreateTagBuilder(BMMTags.Items.FOODS_BURGERS_CHEESEBURGER).add(BMMItems.CHEESEBURGER.getId());
-            getOrCreateTagBuilder(BMMTags.Items.FOODS_BURGERS_CHICKENBURGER).add(BMMItems.CHICKENBURGER.getId()).add(BMMItems.MCCHICKEN.getId());
+            getOrCreateTagBuilder(BMMTags.Items.FOODS_BURGERS_CHICKENBURGER).addAll(List.of(BMMItems.CHICKENBURGER.getKey(), BMMItems.MCCHICKEN.getKey()));
             getOrCreateTagBuilder(BMMTags.Items.FOODS_BURGERS_FISHBURGER).add(BMMItems.FILET_O_FISH.getId());
 
             // Drink Food Tag
@@ -80,7 +81,7 @@ public class BMMTagsProvider {
             getOrCreateTagBuilder(BMMTags.Items.FOODS_DRINKS_ICE_TEA).add(BMMItems.LIPTON_ICE_TEA_PEACH.getId());
 
             // Villager Tags
-            getOrCreateTagBuilder(ItemTags.VILLAGER_PICKS_UP).add(BMMItems.TOMATO.getId()).add(BMMItems.TOMATO_SEEDS.getId()).add(BMMItems.LETTUCE.getId()).add(BMMItems.LETTUCE_SEEDS.getId());
+            getOrCreateTagBuilder(ItemTags.VILLAGER_PICKS_UP).addAll(List.of(BMMItems.TOMATO.getKey(), BMMItems.LETTUCE.getKey()));
 
             // Serene Season Crop Tags
             getOrCreateTagBuilder(BMMTags.Items.SERENE_SEASON_SUMMER_CROPS).add(BMMItems.TOMATO_SEEDS.getId());

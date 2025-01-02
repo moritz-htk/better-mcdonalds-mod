@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "minecraft:bread",
-    "better_mcdonalds_mod:cheese",
+    "#c:foods/cheese",
     "minecraft:cooked_salmon"
   ],
   "result": {

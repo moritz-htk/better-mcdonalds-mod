@@ -4,7 +4,7 @@
   "ingredients": [
     "minecraft:bread",
     "better_mcdonalds_mod:cooked_beef_patty",
-    "better_mcdonalds_mod:cheese"
+    "#c:foods/cheese"
   ],
   "result": {
     "count": 1,

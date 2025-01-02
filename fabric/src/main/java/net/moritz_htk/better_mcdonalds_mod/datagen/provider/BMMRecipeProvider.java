@@ -149,31 +149,31 @@ public class BMMRecipeProvider extends FabricRecipeProvider {
                 ShapelessRecipeBuilder.shapeless(items, RecipeCategory.FOOD, BMMItems.CHEESEBURGER.get())
                         .requires(Items.BREAD)
                         .requires(BMMItems.COOKED_BEEF_PATTY.get())
-                        .requires(BMMItems.CHEESE.get())
+                        .requires(BMMTags.Items.FOODS_CHEESE)
                         .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
                         .unlockedBy(getHasName(BMMItems.COOKED_BEEF_PATTY.get()), has(BMMItems.COOKED_BEEF_PATTY.get()))
-                        .unlockedBy(getHasName(BMMItems.CHEESE.get()), has(BMMItems.CHEESE.get()))
+                        .unlockedBy(getHasName(BMMItems.CHEESE.get()), has(BMMTags.Items.FOODS_CHEESE))
                         .save(output, registerRecipe(BMMItems.CHEESEBURGER.get()));
 
                 ShapelessRecipeBuilder.shapeless(items, RecipeCategory.FOOD, BMMItems.MCBACON.get())
                         .requires(Items.BREAD)
                         .requires(BMMItems.COOKED_BEEF_PATTY.get())
-                        .requires(BMMItems.CHEESE.get())
-                        .requires(BMMItems.COOKED_BACON.get())
+                        .requires(BMMTags.Items.FOODS_CHEESE)
+                        .requires(BMMTags.Items.FOODS_COOKED_BACON)
                         .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
                         .unlockedBy(getHasName(BMMItems.COOKED_BEEF_PATTY.get()), has(BMMItems.COOKED_BEEF_PATTY.get()))
-                        .unlockedBy(getHasName(BMMItems.CHEESE.get()), has(BMMItems.CHEESE.get()))
-                        .unlockedBy(getHasName(BMMItems.COOKED_BACON.get()), has(BMMItems.COOKED_BACON.get()))
+                        .unlockedBy(getHasName(BMMItems.CHEESE.get()), has(BMMTags.Items.FOODS_CHEESE))
+                        .unlockedBy(getHasName(BMMItems.COOKED_BACON.get()), has(BMMTags.Items.FOODS_COOKED_BACON))
                         .save(output, registerRecipe(BMMItems.MCBACON.get()));
 
                 ShapelessRecipeBuilder.shapeless(items, RecipeCategory.FOOD, BMMItems.BIG_MAC.get())
                         .requires(Items.BREAD)
                         .requires(BMMItems.COOKED_BEEF_PATTY.get(), 2)
-                        .requires(BMMItems.CHEESE.get())
+                        .requires(BMMTags.Items.FOODS_CHEESE)
                         .requires(BMMTags.Items.CROPS_LETTUCE)
                         .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
                         .unlockedBy(getHasName(BMMItems.COOKED_BEEF_PATTY.get()), has(BMMItems.COOKED_BEEF_PATTY.get()))
-                        .unlockedBy(getHasName(BMMItems.CHEESE.get()), has(BMMItems.CHEESE.get()))
+                        .unlockedBy(getHasName(BMMItems.CHEESE.get()), has(BMMTags.Items.FOODS_CHEESE))
                         .unlockedBy(getHasName(BMMItems.LETTUCE.get()), has(BMMTags.Items.CROPS_LETTUCE))
                         .save(output, registerRecipe(BMMItems.BIG_MAC.get()));
 
@@ -201,10 +201,10 @@ public class BMMRecipeProvider extends FabricRecipeProvider {
 
                 ShapelessRecipeBuilder.shapeless(items, RecipeCategory.FOOD, BMMItems.FILET_O_FISH.get())
                         .requires(Items.BREAD)
-                        .requires(BMMItems.CHEESE.get())
+                        .requires(BMMTags.Items.FOODS_CHEESE)
                         .requires(Items.COOKED_SALMON)
                         .unlockedBy(getHasName(Items.BREAD), has(Items.BREAD))
-                        .unlockedBy(getHasName(BMMItems.CHEESE.get()), has(BMMItems.CHEESE.get()))
+                        .unlockedBy(getHasName(BMMItems.CHEESE.get()), has(BMMTags.Items.FOODS_CHEESE))
                         .unlockedBy(getHasName(Items.COOKED_SALMON), has(Items.COOKED_SALMON))
                         .save(output, registerRecipe(BMMItems.FILET_O_FISH.get()));
 
