@@ -8,6 +8,13 @@ architectury {
     fabric()
 }
 
+fabricApi {
+    configureDataGeneration {
+        client = true
+        getOutputDirectory().set(project(":common").file("src/generated"))
+    }
+}
+
 configurations {
     common {
         canBeResolved = true
@@ -43,6 +50,7 @@ processResources {
 }
 
 shadowJar {
+    exclude '**/better_mcdonalds_mod/datagen/**'
     exclude '.cache/**'
 
     configurations = [project.configurations.shadowBundle]

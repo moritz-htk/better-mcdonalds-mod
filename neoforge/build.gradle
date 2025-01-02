@@ -8,17 +8,6 @@ architectury {
     neoForge()
 }
 
-loom {
-    runs {
-        data {
-            data()
-            programArgs "--all", "--mod", "better_mcdonalds_mod"
-            programArgs "--output", project(":common").file("src/generated").absolutePath
-            programArgs "--existing", project(":common").file("src/main/resources").absolutePath
-        }
-    }
-}
-
 configurations {
     common {
         canBeResolved = true
@@ -58,7 +47,6 @@ processResources {
 }
 
 shadowJar {
-    exclude '**/better_mcdonalds_mod/datagen/**'
     exclude '.cache/**'
 
     configurations = [project.configurations.shadowBundle]
