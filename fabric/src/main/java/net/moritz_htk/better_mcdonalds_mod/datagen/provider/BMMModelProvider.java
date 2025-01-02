@@ -25,7 +25,7 @@ public class BMMModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
         for (RegistrySupplier<Item> item : BMMItems.ITEMS) {
-            Set<Item> excludedItems = Set.of(BMMItems.SALT_BLOCK.get(), BMMItems.TOMATO_SEEDS.get(), BMMItems.LETTUCE_SEEDS.get());
+            Set<Item> excludedItems = Set.of(BMMItems.SALT_BLOCK.get());
             if (!excludedItems.contains(item.get())) {
                 itemModelGenerators.generateFlatItem(item.get(), ModelTemplates.FLAT_ITEM);
             }
