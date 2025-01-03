@@ -1,15 +1,15 @@
 architectury {
-    common(enabled_platforms.split(","))
+    common(enabled_platforms.split(','))
 }
 
 sourceSets {
     main {
-        resources.srcDir project(":common").file("src/main/generated")
+        resources.srcDir project(':common').file('src/main/generated')
     }
 }
 
 dependencies {
-    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
 
-    modApi "dev.architectury:architectury:${architectury_api_version}"
+    modApi "dev.architectury:architectury:${project.architectury_api_version}"
 }

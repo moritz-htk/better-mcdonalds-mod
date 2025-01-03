@@ -20,12 +20,12 @@ if (localPropertiesFile.exists()) {
 }
 
 architectury {
-    minecraft = minecraft_version
+    minecraft = project.minecraft_version
 }
 
 allprojects {
-    group = maven_group
-    version = mod_version
+    group = project.mod_group
+    version = project.mod_version
 }
 
 subprojects {
@@ -33,7 +33,7 @@ subprojects {
     apply plugin: 'architectury-plugin'
 
     base {
-        archivesName = "${archives_name}-${project.name}"
+        archivesName = "${project.mod_id}-${project.project.name}"
     }
 
     loom {
@@ -41,12 +41,14 @@ subprojects {
     }
 
     dependencies {
-        minecraft "com.mojang:minecraft:${minecraft_version}"
+        minecraft "com.mojang:minecraft:${project.minecraft_version}"
         mappings loom.officialMojangMappings()
     }
 
-    tasks.withType(JavaCompile) {
-        options.encoding = "UTF-8"
-        options.release = 21
+    tasks.withType(JavaCompile).tap {
+        configureEach {
+            options.encoding = 'UTF-8'
+            options.release = 21
+        }
     }
 }
