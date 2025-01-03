@@ -50,11 +50,11 @@ public class BMMItems {
     public static final RegistrySupplier<Item> MCFLURRY = ITEMS.register("mcflurry", () -> new Item(registerItemProperties().food(registerFoodValues(6, 0.4f))));
     public static final RegistrySupplier<Item> MCFLURRY_CHOCOLATE = ITEMS.register("mcflurry_chocolate", () -> new Item(registerItemProperties().food(registerFoodValues(6, 0.4f))));
 
-    public static Item.Properties registerItemProperties() {
+    private static Item.Properties registerItemProperties() {
         return new Item.Properties().arch$tab(BMMCreativeTabs.BETTER_MCDONALDS_MOD_MAIN);
     }
 
-    public static FoodProperties registerFoodValues(int nutrition, float saturation) {
+    private static FoodProperties registerFoodValues(int nutrition, float saturation) {
         return new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).build();
     }
 
