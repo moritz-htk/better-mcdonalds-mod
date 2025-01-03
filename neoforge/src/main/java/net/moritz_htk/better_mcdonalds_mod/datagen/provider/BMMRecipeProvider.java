@@ -6,10 +6,10 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMBlocks;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMItems;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMTags;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMBlocks;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMItems;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMTags;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import org.jetbrains.annotations.NotNull;
 

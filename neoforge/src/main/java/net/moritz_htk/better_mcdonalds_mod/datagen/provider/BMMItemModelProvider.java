@@ -3,8 +3,8 @@ package net.moritz_htk.better_mcdonalds_mod.datagen.provider;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Item;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMItems;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMItems;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 

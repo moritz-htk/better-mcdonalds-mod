@@ -3,7 +3,7 @@ package net.moritz_htk.better_mcdonalds_mod.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 import net.moritz_htk.better_mcdonalds_mod.datagen.provider.*;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

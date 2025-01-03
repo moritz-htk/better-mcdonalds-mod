@@ -19,14 +19,14 @@
     "sources": "https://github.com/moritz-htk/better-mcdonalds-mod"
   },
   "license": "moritz_htk Software License Agreement (mSLA)",
-  "icon": "icon.png",
+  "icon": "assets/better_mcdonalds_mod/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.moritz_htk.better_mcdonalds_mod.fabric.BetterMcDonaldsModFabric"
+      "net.moritz_htk.better_mcdonalds_mod.fabric.BMMFabric"
     ],
     "client": [
-      "net.moritz_htk.better_mcdonalds_mod.fabric.client.BetterMcDonaldsModFabricClient"
+      "net.moritz_htk.better_mcdonalds_mod.fabric.client.BMMFabricClient"
     ]
   },
   "depends": {

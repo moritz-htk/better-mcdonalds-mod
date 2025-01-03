@@ -13,11 +13,11 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
-import net.moritz_htk.better_mcdonalds_mod.block.BMMLettuceCropBlock;
-import net.moritz_htk.better_mcdonalds_mod.block.BMMTomatoCropBlock;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMBlocks;
-import net.moritz_htk.better_mcdonalds_mod.registry.BMMItems;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.block.BMMLettuceCropBlock;
+import net.moritz_htk.better_mcdonalds_mod.common.block.BMMTomatoCropBlock;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMBlocks;
+import net.moritz_htk.better_mcdonalds_mod.common.registry.BMMItems;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;

@@ -4,10 +4,10 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.world.configured_feature.BMMConfiguredFeatures;
+import net.moritz_htk.better_mcdonalds_mod.common.world.placed_feature.BMMPlacedFeatures;
 import net.moritz_htk.better_mcdonalds_mod.neoforge.world.biome_modifier.BMMBiomeModifiers;
-import net.moritz_htk.better_mcdonalds_mod.world.configured_feature.BMMConfiguredFeatures;
-import net.moritz_htk.better_mcdonalds_mod.world.placed_feature.BMMPlacedFeatures;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 

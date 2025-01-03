@@ -1,11 +1,11 @@
-package net.moritz_htk.better_mcdonalds_mod.registry;
+package net.moritz_htk.better_mcdonalds_mod.common.registry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 
 public class BMMTags {
     public static class Items {

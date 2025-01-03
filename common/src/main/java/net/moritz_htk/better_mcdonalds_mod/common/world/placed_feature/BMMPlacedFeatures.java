@@ -1,4 +1,4 @@
-package net.moritz_htk.better_mcdonalds_mod.world.placed_feature;
+package net.moritz_htk.better_mcdonalds_mod.common.world.placed_feature;
 
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
@@ -10,9 +10,9 @@ import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraft.world.level.material.Fluids;
-import net.moritz_htk.better_mcdonalds_mod.BetterMcDonaldsMod;
-import net.moritz_htk.better_mcdonalds_mod.world.configured_feature.BMMConfiguredFeatures;
-import net.moritz_htk.better_mcdonalds_mod.world.placement.BMMDiskPlacement;
+import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.common.world.configured_feature.BMMConfiguredFeatures;
+import net.moritz_htk.better_mcdonalds_mod.common.world.placement.BMMDiskPlacement;
 
 public class BMMPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SALT_BLOCK = registerKey("salt_block");
