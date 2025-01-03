@@ -1,4 +1,5 @@
 plugins {
+    id 'com.github.johnrengelman.shadow'
     id 'me.shedaniel.unified-publishing'
 }
 
@@ -48,14 +49,17 @@ processResources {
     }
 }
 
-jar {
+shadowJar {
     exclude '**/better_mcdonalds_mod/datagen/**'
     exclude '.cache/**'
     from project(':').file('LICENSE.md')
+
+    configurations = [project.configurations.shadowBundle]
+    archiveClassifier = 'dev-shadow'
 }
 
 remapJar {
-    input.set tasks.jar.archiveFile
+    input.set shadowJar.archiveFile
 }
 
 unifiedPublishing {

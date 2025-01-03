@@ -35,3 +35,5 @@ jobs:
             neoforge/build/libs/*.jar
             !common/build/libs/*-transformProductionFabric.jar
             !common/build/libs/*-transformProductionNeoForge.jar
+            !fabric/build/libs/*-dev-shadow.jar
+            !neoforge/build/libs/*-dev-shadow.jar
