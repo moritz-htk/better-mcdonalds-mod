@@ -31,7 +31,7 @@ issueTrackerURL="https://github.com/moritz-htk/better-mcdonalds-mod/issues"
 [[dependencies.better_mcdonalds_mod]]
     modId="architectury"
     type="required"
-    versionRange="[13.0.6,)"
+    versionRange="[13.0.8,)"
     ordering="AFTER"
     side="BOTH"
 
