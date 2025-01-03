@@ -18,6 +18,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class BMMTagsProvider {
@@ -39,17 +40,17 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.CROPS_LETTUCE).add(TagEntry.element(BMMItems.LETTUCE.getId()));
 
             // Seed Tags
-            tag(ItemTags.VILLAGER_PLANTABLE_SEEDS).addTags(BMMTags.Items.SEEDS_TOMATO, BMMTags.Items.SEEDS_LETTUCE);
+            tag(ItemTags.VILLAGER_PLANTABLE_SEEDS).addAll(List.of(BMMItems.TOMATO_SEEDS.getKey(), BMMItems.LETTUCE_SEEDS.getKey()));
             tag(Tags.Items.SEEDS).addTags(BMMTags.Items.SEEDS_TOMATO, BMMTags.Items.SEEDS_LETTUCE);
             tag(BMMTags.Items.SEEDS_TOMATO).add(TagEntry.element(BMMItems.TOMATO_SEEDS.getId()));
             tag(BMMTags.Items.SEEDS_LETTUCE).add(TagEntry.element(BMMItems.LETTUCE_SEEDS.getId()));
 
             // Food Tags
-            tag(Tags.Items.FOODS).addTags(BMMTags.Items.FOODS_CHEESE, BMMTags.Items.FOODS_SAUCE, BMMTags.Items.FOODS_BURGER, BMMTags.Items.FOODS_DRINK).add(TagEntry.element(BMMItems.TORTILLA.getId())).add(TagEntry.element(BMMItems.MCWRAP.getId())).add(TagEntry.element(BMMItems.MCFLURRY.getId())).add(TagEntry.element(BMMItems.MCFLURRY_CHOCOLATE.getId()));
+            tag(Tags.Items.FOODS).addTags(BMMTags.Items.FOODS_CHEESE, BMMTags.Items.FOODS_SAUCE, BMMTags.Items.FOODS_BURGER, BMMTags.Items.FOODS_DRINK).addAll(List.of(BMMItems.TORTILLA.getKey(), BMMItems.MCWRAP.getKey(), BMMItems.MCFLURRY.getKey(), BMMItems.MCFLURRY_CHOCOLATE.getKey()));
             tag(BMMTags.Items.FOODS_CHEESE).add(TagEntry.element(BMMItems.CHEESE.getId()));
             tag(BMMTags.Items.FOODS_SAUCE).addTags(BMMTags.Items.FOODS_SAUCES_MAYONNAISE, BMMTags.Items.FOODS_SAUCES_SWEET_SOUR_SAUCE, BMMTags.Items.FOODS_SAUCES_KETCHUP, BMMTags.Items.FOODS_SAUCES_MUSTARD);
             tag(BMMTags.Items.FOODS_BURGER).addTags(BMMTags.Items.FOODS_BURGERS_HAMBURGER, BMMTags.Items.FOODS_BURGERS_CHEESEBURGER, BMMTags.Items.FOODS_BURGERS_CHICKENBURGER, BMMTags.Items.FOODS_BURGERS_FISHBURGER);
-            tag(BMMTags.Items.FOODS_SIDE_DISH).add(TagEntry.element(BMMItems.SNACK_SALAD.getId())).add(TagEntry.element(BMMItems.CHICKEN_MCNUGGETS.getId())).add(TagEntry.element(BMMItems.FRIES.getId()));
+            tag(BMMTags.Items.FOODS_SIDE_DISH).addAll(List.of(BMMItems.SNACK_SALAD.getKey(), BMMItems.CHICKEN_MCNUGGETS.getKey(), BMMItems.FRIES.getKey()));
             tag(BMMTags.Items.FOODS_DRINK).addTags(BMMTags.Items.FOODS_DRINKS_COKE, BMMTags.Items.FOODS_DRINKS_ORANGE_JUICE, BMMTags.Items.FOODS_DRINKS_LEMON_JUICE, BMMTags.Items.FOODS_DRINKS_ICE_TEA);
 
             // Vegetable Food Tags
@@ -57,18 +58,18 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.FOODS_VEGETABLES_TOMATO).add(TagEntry.element(BMMItems.TOMATO.getId()));
             tag(BMMTags.Items.FOODS_VEGETABLES_LETTUCE).add(TagEntry.element(BMMItems.LETTUCE.getId()));
 
-            // Wolf Food Tags
-            tag(ItemTags.WOLF_FOOD).addTags(BMMTags.Items.FOODS_RAW_MEAT_RAW_BEEF, BMMTags.Items.FOODS_RAW_MEAT_RAW_BACON, BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BEEF, BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BACON);
+            // Meat Tags
+            tag(ItemTags.MEAT).addAll(List.of(BMMItems.BEEF_PATTY.getKey(), BMMItems.COOKED_BEEF_PATTY.getKey(), BMMItems.RAW_BACON.getKey(), BMMItems.COOKED_BACON.getKey()));
 
             // Raw Meat Food Tags
-            tag(Tags.Items.FOODS_RAW_MEAT).addTags(BMMTags.Items.FOODS_RAW_MEAT_RAW_BEEF, BMMTags.Items.FOODS_RAW_MEAT_RAW_BACON);
-            tag(BMMTags.Items.FOODS_RAW_MEAT_RAW_BEEF).add(TagEntry.element(BMMItems.BEEF_PATTY.getId()));
-            tag(BMMTags.Items.FOODS_RAW_MEAT_RAW_BACON).add(TagEntry.element(BMMItems.RAW_BACON.getId()));
+            tag(Tags.Items.FOODS_RAW_MEAT).addTags(BMMTags.Items.FOODS_RAW_BEEF, BMMTags.Items.FOODS_RAW_BACON);
+            tag(BMMTags.Items.FOODS_RAW_BEEF).add(TagEntry.element(BMMItems.BEEF_PATTY.getId()));
+            tag(BMMTags.Items.FOODS_RAW_BACON).add(TagEntry.element(BMMItems.RAW_BACON.getId()));
 
             // Cooked Meat Food Tags
-            tag(Tags.Items.FOODS_COOKED_MEAT).addTags(BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BEEF, BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BACON);
-            tag(BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BEEF).add(TagEntry.element(BMMItems.COOKED_BEEF_PATTY.getId()));
-            tag(BMMTags.Items.FOODS_COOKED_MEAT_COOKED_BACON).add(TagEntry.element(BMMItems.COOKED_BACON.getId()));
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTags(BMMTags.Items.FOODS_COOKED_BEEF, BMMTags.Items.FOODS_COOKED_BACON);
+            tag(BMMTags.Items.FOODS_COOKED_BEEF).add(TagEntry.element(BMMItems.COOKED_BEEF_PATTY.getId()));
+            tag(BMMTags.Items.FOODS_COOKED_BACON).add(TagEntry.element(BMMItems.COOKED_BACON.getId()));
 
             // Sauce Food Tags
             tag(BMMTags.Items.FOODS_SAUCES_MAYONNAISE).add(TagEntry.element(BMMItems.MAYONNAISE.getId()));
@@ -77,9 +78,9 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.FOODS_SAUCES_MUSTARD).add(TagEntry.element(BMMItems.MUSTARD.getId()));
 
             // Burger Food Tags
-            tag(BMMTags.Items.FOODS_BURGERS_HAMBURGER).add(TagEntry.element(BMMItems.HAMBURGER.getId())).add(TagEntry.element(BMMItems.MCBACON.getId())).add(TagEntry.element(BMMItems.BIG_MAC.getId()));
+            tag(BMMTags.Items.FOODS_BURGERS_HAMBURGER).addAll(List.of(BMMItems.HAMBURGER.getKey(), BMMItems.MCBACON.getKey(), BMMItems.BIG_MAC.getKey()));
             tag(BMMTags.Items.FOODS_BURGERS_CHEESEBURGER).add(TagEntry.element(BMMItems.CHEESEBURGER.getId()));
-            tag(BMMTags.Items.FOODS_BURGERS_CHICKENBURGER).add(TagEntry.element(BMMItems.CHICKENBURGER.getId())).add(TagEntry.element(BMMItems.MCCHICKEN.getId()));
+            tag(BMMTags.Items.FOODS_BURGERS_CHICKENBURGER).addAll(List.of(BMMItems.CHICKENBURGER.getKey(), BMMItems.MCCHICKEN.getKey()));
             tag(BMMTags.Items.FOODS_BURGERS_FISHBURGER).add(TagEntry.element(BMMItems.FILET_O_FISH.getId()));
 
             // Drink Food Tag

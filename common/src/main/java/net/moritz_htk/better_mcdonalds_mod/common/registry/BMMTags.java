@@ -32,12 +32,12 @@ public class BMMTags {
         public static final TagKey<Item> FOODS_VEGETABLES_LETTUCE = registerCommonKey("foods/vegetables/lettuce");
 
         // Raw Meat Food Tags
-        public static final TagKey<Item> FOODS_RAW_MEAT_RAW_BEEF = registerCommonKey("foods/raw_meat/raw_beef");
-        public static final TagKey<Item> FOODS_RAW_MEAT_RAW_BACON = registerCommonKey("foods/raw_meat/raw_bacon");
+        public static final TagKey<Item> FOODS_RAW_BEEF = registerCommonKey("foods/raw_beef");
+        public static final TagKey<Item> FOODS_RAW_BACON = registerCommonKey("foods/raw_bacon");
 
         // Cooked Meat Food Tags
-        public static final TagKey<Item> FOODS_COOKED_MEAT_COOKED_BEEF = registerCommonKey("foods/cooked_meat/cooked_beef");
-        public static final TagKey<Item> FOODS_COOKED_MEAT_COOKED_BACON = registerCommonKey("foods/cooked_meat/cooked_bacon");
+        public static final TagKey<Item> FOODS_COOKED_BEEF = registerCommonKey("foods/cooked_beef");
+        public static final TagKey<Item> FOODS_COOKED_BACON = registerCommonKey("foods/cooked_bacon");
 
         // Sauce Food Tags
         public static final TagKey<Item> FOODS_SAUCES_MAYONNAISE = registerCommonKey("foods/sauces/mayonnaise");
