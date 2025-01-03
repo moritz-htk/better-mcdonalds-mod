@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[4,)"
-license="moritz_htk Software License Agreement (mSLA)"
+license="mSLA v2.0"
 issueTrackerURL="https://github.com/moritz-htk/better-mcdonalds-mod/issues"
 
 [[mods]]

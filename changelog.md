@@ -1,2 +1,2 @@
 **Changes:**
-- Added Chocolate McFlurry
+- Updated license

@@ -44,6 +44,7 @@ processResources {
 
 shadowJar {
     exclude '.cache/**'
+    from project(':').file('LICENSE.md')
 
     configurations = [project.configurations.shadowBundle]
     archiveClassifier = 'dev-shadow'
