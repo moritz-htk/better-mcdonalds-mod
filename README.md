@@ -16,11 +16,21 @@ The Better McDonald's Mod was created by [moritz_htk](https://github.com/moritz-
 ...and more! A new cooking tool and many new ingredients have been added to prepare the food.
 
 ## Latest versions
-| Version | Latest Version | Mod Loader       | Support |
-|---------|----------------|------------------|---------|
-| 1.20.x  | 4.3.0+1.20.6   | Fabric, NeoForge | Stopped |
-| 1.21.1  | 4.4.0+1.21.1   | Fabric, NeoForge | Active  |
-| 1.21.x  | 4.4.0+1.21.4   | Fabric, NeoForge | Active  |
+
+Here is a list of all available versions:
+
+| Version | Latest Version | Mod Loader              | Support   |
+|---------|----------------|-------------------------|-----------|
+| 1.21.4  | 4.4.1+1.21.4   | Fabric, NeoForge        | ✅ Active  |
+| 1.21.3  | 4.3.1+1.21.3   | Fabric, NeoForge        | ❌ Stopped |
+| 1.21.1  | 4.4.0+1.21.1   | Fabric, NeoForge        | ✅ Active  |
+| 1.21    | 4.2.0+1.21     | Fabric, NeoForge        | ❌ Stopped |
+| 1.20.6  | 4.3.0+1.20.6   | Fabric, NeoForge        | ❌ Stopped |
+| 1.20.4  | 3.1.0          | Fabric, Forge, NeoForge | ❌ Stopped |
+| 1.20.1  | 3.1.0          | Fabric, Forge, NeoForge | ❌ Stopped |
+| 1.20    | 3.0.0          | Fabric, Forge           | ❌ Stopped |
+| 1.19.4  | 3.0.3          | Fabric, Forge           | ❌ Stopped |
+| 1.19.2  | 2.0.1          | Fabric, Forge           | ❌ Stopped |
 
 Click [here](https://github.com/moritz-htk/better-mcdonalds-mod/releases) to get to the release list!
 
@@ -74,7 +84,7 @@ Add the following to your `gradle.properties` file:
 
 ### `gradle.properties`
 ```
-better_mcdonalds_mod_version=4.4.0+1.21.4
+better_mcdonalds_mod_version=4.4.1+1.21.4
 ```
 
 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
