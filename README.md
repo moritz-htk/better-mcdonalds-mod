@@ -8,14 +8,14 @@
 ![Version Availability](https://cf.way2muchnoise.eu/versions/546816.svg?badge_style=for_the_badge)
 [![License](https://img.shields.io/badge/LICENSE-mSLA_v2.0-red?style=for-the-badge)](https://sites.google.com/view/moritz-htk/license)
 
-The Better McDonald's Mod was created by [moritz_htk](https://github.com/moritz-htk). Many well-known products have been added such as:
-- Big Mac
-- Happy Meal
-- Coca-Cola
+The **Better McDonald's Mod** was created by [moritz_htk](https://github.com/moritz-htk). Many well-known products have been added such as:
+- 🍔 Big Mac
+- 🎁 Happy Meal
+- 🥤 Coca-Cola
 
-...and more! A new cooking tool and many new ingredients have been added to prepare the food.
+...and more! A new 🍳 **cooking tool** and many new 🥩 **ingredients** have been added to prepare the food.
 
-## Latest versions
+## 📌 Latest Versions
 
 Here is a list of all available versions:
 
@@ -32,33 +32,33 @@ Here is a list of all available versions:
 | 1.19.4  | 3.0.3          | Fabric, Forge           | ❌ Stopped |
 | 1.19.2  | 2.0.1          | Fabric, Forge           | ❌ Stopped |
 
-Click [here](https://github.com/moritz-htk/better-mcdonalds-mod/releases) to get to the release list!
+🔗 Click [here](https://github.com/moritz-htk/better-mcdonalds-mod/releases) to get to the release list!
 
-## Supported languages
+## 🌍 Supported Languages
 - Danish, Dutch, English, French, German, Italian, Japanese, Portuguese, Russian, Spanish, Ukrainian
 
-## Wiki
-The [Better McDonald's Mod Wiki](https://github.com/moritz-htk/better-mcdonalds-mod/wiki) (currently work in progress) provides all the necessary information about items and functions.
+## 📖 Wiki
+The [Better McDonald's Mod Wiki](https://github.com/moritz-htk/better-mcdonalds-mod/wiki) (currently work in progress 🏗️) provides all the necessary information about items and functions.
 
-## Planned functions
-- machines for manufacturing
-- side mod (McCafé, Grimace Shake, Shamrock Shake)
+## 🔮 Planned Features
+- ⚙️ machines for manufacturing
+- 🍩 side mod (McCafé, Grimace Shake, Shamrock Shake)
 
-## Credits
-- [Volwert123](https://github.com/Volwert123/) (Contributor)
-- [rporotos](https://www.fiverr.com/rporotos) (Textures)
-- [kohari_nk](https://www.fiverr.com/kohari_nk) (Textures)
-- [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
+## 🙌 Credits
+- 🏗️ [Volwert123](https://github.com/Volwert123/) (Contributor)
+- 🎨 [rporotos](https://www.fiverr.com/rporotos) (Textures)
+- 🎨 [kohari_nk](https://www.fiverr.com/kohari_nk) (Textures)
+- 🎨 [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
 
-## Dependencies
+## 🔗 Dependencies
 - [Architectury API](https://github.com/architectury/architectury-api) (v15.0.1 and above)
 
-## Maven
+## 📦 Maven
 Better McDonald's Mod is available via [Modrinth Maven](https://support.modrinth.com/en/articles/8801191-modrinth-maven) for developers wishing to make use of my mod.
 
 Update your `build.gradle` file to include the following:
 
-### Fabric `build.gradle`
+### ⚙️ Fabric `build.gradle`
 ```
 repositories {
     maven { url "https://api.modrinth.com/maven" }
@@ -69,7 +69,7 @@ dependencies {
 }
 ```
 
-### NeoForge `build.gradle`
+### ⚙️ NeoForge `build.gradle`
 ```
 repositories {
     maven { url "https://api.modrinth.com/maven" }
@@ -82,15 +82,15 @@ dependencies {
 
 Add the following to your `gradle.properties` file:
 
-### `gradle.properties`
+### ⚙️ `gradle.properties`
 ```
 better_mcdonalds_mod_version=4.4.1+1.21.4
 ```
 
-To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
+📌 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
 
-## Social Media
-Website: [https://sites.google.com/view/moritz-htk](https://sites.google.com/view/moritz-htk)
+## 🌐 Social Media
+🌍 Website: [https://sites.google.com/view/moritz-htk](https://sites.google.com/view/moritz-htk)
 
 ---
-> **NOTE**: This is an unofficial modification and is not affiliated with McDonald's Corporation.
+> ⚠️ **NOTE**: This is an unofficial modification and is not affiliated with McDonald's Corporation.
