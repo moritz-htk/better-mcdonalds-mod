@@ -8,13 +8,6 @@ architectury {
     fabric()
 }
 
-fabricApi {
-    configureDataGeneration {
-        client = true
-        getOutputDirectory().set(project(':common').file('src/main/generated'))
-    }
-}
-
 configurations {
     common {
         canBeResolved = true

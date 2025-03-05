@@ -1,3 +1,2 @@
 **Changes:**
-- Updated to Minecraft 1.21.4
-- Updated license
+- Moved datagen from Fabric back to NeoForge

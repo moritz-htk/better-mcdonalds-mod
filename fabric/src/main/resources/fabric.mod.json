@@ -27,17 +27,14 @@
     ],
     "client": [
       "net.moritz_htk.better_mcdonalds_mod.fabric.client.BMMFabricClient"
-    ],
-    "fabric-datagen": [
-      "net.moritz_htk.better_mcdonalds_mod.datagen.BMMDataGenerator"
     ]
   },
   "depends": {
-    "fabricloader": ">=0.16.9",
+    "fabricloader": ">=0.16.10",
     "minecraft": ">=1.21.4",
     "java": ">=21",
     "fabric-api": "*",
-    "architectury": ">=15.0.1"
+    "architectury": ">=15.0.3"
   },
   "custom": {
     "catalogue": {

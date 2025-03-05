@@ -8,6 +8,17 @@ architectury {
     neoForge()
 }
 
+loom {
+    runs {
+        dataClient {
+            clientData()
+            programArgs "--all", "--mod", "better_mcdonalds_mod"
+            programArgs "--output", project(":common").file("src/main/generated").absolutePath
+            programArgs "--existing", project(":common").file("src/main/resources").absolutePath
+        }
+    }
+}
+
 configurations {
     common {
         canBeResolved = true
