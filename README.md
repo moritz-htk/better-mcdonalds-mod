@@ -35,7 +35,7 @@ Here is a list of all available versions:
 🔗 Click [here](https://github.com/moritz-htk/better-mcdonalds-mod/releases) to get to the release list!
 
 ## 🌍 Supported Languages
-- Danish, Dutch, English, French, German, Italian, Japanese, Portuguese, Russian, Spanish, Ukrainian
+- Danish, Dutch, English, French, German, Italian, Japanese, Portuguese, Russian, Spanish, Swedish, Ukrainian
 
 ## 📖 Wiki
 The [Better McDonald's Mod Wiki](https://github.com/moritz-htk/better-mcdonalds-mod/wiki) (currently work in progress 🏗️) provides all the necessary information about items and functions.
