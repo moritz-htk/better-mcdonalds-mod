@@ -21,7 +21,7 @@ Here is a list of all available versions:
 
 | Version | Latest Version | Mod Loader              | Support   |
 |---------|----------------|-------------------------|-----------|
-| 1.21.4  | 4.4.2+1.21.4   | Fabric, NeoForge        | ✅ Active  |
+| 1.21.4  | 4.4.1+1.21.4   | Fabric, NeoForge        | ✅ Active  |
 | 1.21.3  | 4.3.1+1.21.3   | Fabric, NeoForge        | ❌ Stopped |
 | 1.21.1  | 4.4.0+1.21.1   | Fabric, NeoForge        | ✅ Active  |
 | 1.21    | 4.2.0+1.21     | Fabric, NeoForge        | ❌ Stopped |
@@ -84,7 +84,7 @@ Add the following to your `gradle.properties` file:
 
 ### ⚙️ `gradle.properties`
 ```
-better_mcdonalds_mod_version=4.4.2+1.21.4
+better_mcdonalds_mod_version=4.4.1+1.21.4
 ```
 
 📌 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
