@@ -1,2 +1,2 @@
 **Changes:**
-- Updated license
+- Added Swedish translation
