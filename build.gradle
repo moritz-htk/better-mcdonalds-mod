@@ -40,9 +40,16 @@ subprojects {
         silentMojangMappingsLicense()
     }
 
+    repositories {
+        maven { url 'https://maven.parchmentmc.org/' }
+    }
+
     dependencies {
         minecraft "com.mojang:minecraft:${project.minecraft_version}"
-        mappings loom.officialMojangMappings()
+        mappings loom.layered() {
+            officialMojangMappings()
+            parchment("org.parchmentmc.data:parchment-${project.minecraft_version}:${project.parchment_version}@zip")
+        }
     }
 
     tasks.withType(JavaCompile).tap {
