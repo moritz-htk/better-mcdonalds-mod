@@ -1,7 +1,7 @@
 package net.moritz_htk.better_mcdonalds_mod.neoforge;
 
 import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
-import net.moritz_htk.better_mcdonalds_mod.neoforge.loot.BMMLootModifiers;
+import net.moritz_htk.better_mcdonalds_mod.neoforge.registry.BMMLootModifiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 

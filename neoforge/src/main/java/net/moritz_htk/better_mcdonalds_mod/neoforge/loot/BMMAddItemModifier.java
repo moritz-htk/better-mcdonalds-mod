@@ -28,9 +28,8 @@ public class BMMAddItemModifier extends LootModifier {
                             .and(BuiltInRegistries.ITEM.byNameCodec()
                                     .fieldOf("item")
                                     .forGetter(m -> m.item))
-                            .and(LootItemFunctions.CODEC
-                                    .listOf()
-                                    .fieldOf("functions")
+                            .and(LootItemFunctions.CODEC.listOf()
+                                    .optionalFieldOf("functions", List.of())
                                     .forGetter(m -> m.functions))
                             .apply(inst, BMMAddItemModifier::new)));
 

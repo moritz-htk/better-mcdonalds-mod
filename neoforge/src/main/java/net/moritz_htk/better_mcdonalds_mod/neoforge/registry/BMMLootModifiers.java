@@ -1,7 +1,8 @@
-package net.moritz_htk.better_mcdonalds_mod.neoforge.loot;
+package net.moritz_htk.better_mcdonalds_mod.neoforge.registry;
 
 import com.mojang.serialization.MapCodec;
 import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.moritz_htk.better_mcdonalds_mod.neoforge.loot.BMMAddItemModifier;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
