@@ -3,8 +3,8 @@
   "category": "misc",
   "ingredients": [
     "#c:foods/burger",
-    "#c:foods/drink",
     "#better_mcdonalds_mod:foods/side_dish",
+    "#better_mcdonalds_mod:drinks",
     "minecraft:apple"
   ],
   "result": {

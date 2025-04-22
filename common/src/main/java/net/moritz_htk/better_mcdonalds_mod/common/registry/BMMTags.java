@@ -25,7 +25,6 @@ public class BMMTags {
         public static final TagKey<Item> FOODS_SAUCE = registerCommonKey("foods/sauce");
         public static final TagKey<Item> FOODS_BURGER = registerCommonKey("foods/burger");
         public static final TagKey<Item> FOODS_SIDE_DISH = registerModKey("foods/side_dish");
-        public static final TagKey<Item> FOODS_DRINK = registerCommonKey("foods/drink");
 
         // Vegetable Food Tags
         public static final TagKey<Item> FOODS_VEGETABLES_TOMATO = registerCommonKey("foods/vegetables/tomato");
@@ -51,11 +50,10 @@ public class BMMTags {
         public static final TagKey<Item> FOODS_BURGERS_CHICKENBURGER = registerCommonKey("foods/burgers/chickenburger");
         public static final TagKey<Item> FOODS_BURGERS_FISHBURGER = registerCommonKey("foods/burgers/fishburger");
 
-        // Drink Food Tag
-        public static final TagKey<Item> FOODS_DRINKS_COKE = registerCommonKey("foods/drinks/coke");
-        public static final TagKey<Item> FOODS_DRINKS_ORANGE_JUICE = registerCommonKey("foods/drinks/orange_juice");
-        public static final TagKey<Item> FOODS_DRINKS_LEMON_JUICE = registerCommonKey("foods/drinks/lemon_juice");
-        public static final TagKey<Item> FOODS_DRINKS_ICE_TEA = registerCommonKey("foods/drinks/ice_tea");
+        // Drink Tags
+        public static final TagKey<Item> DRINKS = registerModKey("drinks");
+        public static final TagKey<Item> DRINKS_SODA = registerCommonKey("drinks/soda");
+        public static final TagKey<Item> DRINKS_TEA = registerCommonKey("drinks/tea");
 
         // Serene Season Crop Tags
         public static final TagKey<Item> SERENE_SEASON_SUMMER_CROPS = registerCompatibilityKey("sereneseasons", "summer_crops");

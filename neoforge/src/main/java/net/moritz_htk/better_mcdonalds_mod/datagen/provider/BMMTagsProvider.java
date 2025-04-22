@@ -6,7 +6,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagEntry;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.moritz_htk.better_mcdonalds_mod.common.BetterMcDonaldsMod;
@@ -43,12 +42,11 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.SEEDS_LETTUCE).add(BMMItems.LETTUCE_SEEDS.getKey());
 
             // Food Tags
-            tag(Tags.Items.FOODS).addTag(BMMTags.Items.FOODS_CHEESE).addTag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_DRINK).addAll(List.of(BMMItems.TORTILLA.getKey(), BMMItems.MCWRAP.getKey(), BMMItems.MCFLURRY.getKey(), BMMItems.MCFLURRY_CHOCOLATE.getKey()));
+            tag(Tags.Items.FOODS).addTag(BMMTags.Items.FOODS_CHEESE).addTag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_BURGER).addAll(List.of(BMMItems.TORTILLA.getKey(), BMMItems.MCWRAP.getKey(), BMMItems.MCFLURRY.getKey(), BMMItems.MCFLURRY_CHOCOLATE.getKey()));
             tag(BMMTags.Items.FOODS_CHEESE).add(BMMItems.CHEESE.getKey());
             tag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_SAUCES_MAYONNAISE).addTag(BMMTags.Items.FOODS_SAUCES_SWEET_SOUR_SAUCE).addTag(BMMTags.Items.FOODS_SAUCES_KETCHUP).addTag(BMMTags.Items.FOODS_SAUCES_MUSTARD);
             tag(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_BURGERS_HAMBURGER).addTag(BMMTags.Items.FOODS_BURGERS_CHEESEBURGER).addTag(BMMTags.Items.FOODS_BURGERS_CHICKENBURGER).addTag(BMMTags.Items.FOODS_BURGERS_FISHBURGER);
             tag(BMMTags.Items.FOODS_SIDE_DISH).addAll(List.of(BMMItems.SNACK_SALAD.getKey(), BMMItems.CHICKEN_MCNUGGETS.getKey(), BMMItems.FRIES.getKey()));
-            tag(BMMTags.Items.FOODS_DRINK).addTag(BMMTags.Items.FOODS_DRINKS_COKE).addTag(BMMTags.Items.FOODS_DRINKS_ORANGE_JUICE).addTag(BMMTags.Items.FOODS_DRINKS_LEMON_JUICE).addTag(BMMTags.Items.FOODS_DRINKS_ICE_TEA);
 
             // Vegetable Food Tags
             tag(Tags.Items.FOODS_VEGETABLE).addTag(BMMTags.Items.FOODS_VEGETABLES_TOMATO).addTag(BMMTags.Items.FOODS_VEGETABLES_LETTUCE);
@@ -80,11 +78,11 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.FOODS_BURGERS_CHICKENBURGER).addAll(List.of(BMMItems.CHICKENBURGER.getKey(), BMMItems.MCCHICKEN.getKey()));
             tag(BMMTags.Items.FOODS_BURGERS_FISHBURGER).add(BMMItems.FILET_O_FISH.getKey());
 
-            // Drink Food Tag
-            tag(BMMTags.Items.FOODS_DRINKS_COKE).add(TagEntry.element(BMMItems.COCA_COLA.getId()));
-            tag(BMMTags.Items.FOODS_DRINKS_ORANGE_JUICE).add(TagEntry.element(BMMItems.FANTA.getId()));
-            tag(BMMTags.Items.FOODS_DRINKS_LEMON_JUICE).add(TagEntry.element(BMMItems.SPRITE.getId()));
-            tag(BMMTags.Items.FOODS_DRINKS_ICE_TEA).add(TagEntry.element(BMMItems.LIPTON_ICE_TEA_PEACH.getId()));
+            // Drink Tags
+            tag(Tags.Items.DRINKS).addTag(BMMTags.Items.DRINKS_SODA).addTag(BMMTags.Items.DRINKS_TEA);
+            tag(BMMTags.Items.DRINKS).addAll(List.of(BMMItems.COCA_COLA.getKey(), BMMItems.FANTA.getKey(), BMMItems.SPRITE.getKey(), BMMItems.LIPTON_ICE_TEA_PEACH.getKey()));
+            tag(BMMTags.Items.DRINKS_SODA).addAll(List.of(BMMItems.COCA_COLA.getKey(), BMMItems.FANTA.getKey(), BMMItems.SPRITE.getKey()));
+            tag(BMMTags.Items.DRINKS_TEA).add(BMMItems.LIPTON_ICE_TEA_PEACH.getKey());
 
             // Villager Tags
             tag(ItemTags.VILLAGER_PICKS_UP).addAll(List.of(BMMItems.TOMATO.getKey(), BMMItems.LETTUCE.getKey()));
@@ -102,13 +100,13 @@ public class BMMTagsProvider {
 
         @Override
         protected void addTags(HolderLookup.@NotNull Provider provider) {
-            tag(BlockTags.MINEABLE_WITH_SHOVEL).add(TagEntry.element(BMMBlocks.SALT_BLOCK.getId()));
-            tag(BlockTags.CROPS).add(TagEntry.element(BMMBlocks.TOMATO_CROP.getId())).add(TagEntry.element(BMMBlocks.LETTUCE_CROP.getId()));
-            tag(BlockTags.MAINTAINS_FARMLAND).add(TagEntry.element(BMMBlocks.TOMATO_CROP.getId())).add(TagEntry.element(BMMBlocks.LETTUCE_CROP.getId()));
+            tag(BlockTags.MINEABLE_WITH_SHOVEL).add(BMMBlocks.SALT_BLOCK.getKey());
+            tag(BlockTags.CROPS).addAll(List.of(BMMBlocks.TOMATO_CROP.getKey(), BMMBlocks.LETTUCE_CROP.getKey()));
+            tag(BlockTags.MAINTAINS_FARMLAND).addAll(List.of(BMMBlocks.TOMATO_CROP.getKey(), BMMBlocks.LETTUCE_CROP.getKey()));
 
             // Serene Season Crop Tags
-            tag(BMMTags.Blocks.SERENE_SEASON_SUMMER_CROPS).add(TagEntry.element(BMMBlocks.TOMATO_CROP.getId()));
-            tag(BMMTags.Blocks.SERENE_SEASON_AUTUMN_CROPS).add(TagEntry.element(BMMBlocks.LETTUCE_CROP.getId()));
+            tag(BMMTags.Blocks.SERENE_SEASON_SUMMER_CROPS).add(BMMBlocks.TOMATO_CROP.getKey());
+            tag(BMMTags.Blocks.SERENE_SEASON_AUTUMN_CROPS).add(BMMBlocks.LETTUCE_CROP.getKey());
         }
     }
 }

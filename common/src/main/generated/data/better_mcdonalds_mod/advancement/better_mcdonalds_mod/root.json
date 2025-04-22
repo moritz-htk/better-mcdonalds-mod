@@ -6,7 +6,7 @@
   },
   "display": {
     "announce_to_chat": false,
-    "background": "minecraft:textures/block/red_concrete_powder.png",
+    "background": "minecraft:block/red_concrete_powder",
     "description": {
       "translate": "advancement.better_mcdonalds_mod.root.description"
     },

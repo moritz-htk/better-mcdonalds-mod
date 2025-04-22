@@ -44,10 +44,10 @@ public class BMMItems {
     public static final RegistrySupplier<Item> CHICKEN_MCNUGGETS = ITEMS.register("chicken_mcnuggets", () -> new Item(registerItemProperties("chicken_mcnuggets").food(registerFoodValues(4, 0.4f))));
     public static final RegistrySupplier<Item> FRIES = ITEMS.register("fries", () -> new Item(registerItemProperties("fries").food(registerFoodValues(5, 0.4f))));
     public static final RegistrySupplier<Item> HAPPY_MEAL = ITEMS.register("happy_meal", () -> new Item(registerItemProperties("happy_meal").rarity(Rarity.UNCOMMON).food(registerFoodValues(14, 0.5f))));
-    public static final RegistrySupplier<BMMDrinkItem> COCA_COLA = ITEMS.register("coca_cola", () -> new BMMDrinkItem(registerItemProperties("coca_cola").food(registerFoodValues(3, 0.4f))));
-    public static final RegistrySupplier<BMMDrinkItem> FANTA = ITEMS.register("fanta", () -> new BMMDrinkItem(registerItemProperties("fanta").food(registerFoodValues(3, 0.4f))));
-    public static final RegistrySupplier<BMMDrinkItem> SPRITE = ITEMS.register("sprite", () -> new BMMDrinkItem(registerItemProperties("sprite").food(registerFoodValues(3, 0.4f))));
-    public static final RegistrySupplier<BMMDrinkItem> LIPTON_ICE_TEA_PEACH = ITEMS.register("lipton_ice_tea_peach", () -> new BMMDrinkItem(registerItemProperties("lipton_ice_tea_peach").food(registerFoodValues(3, 0.4f))));
+    public static final RegistrySupplier<Item> COCA_COLA = ITEMS.register("coca_cola", () -> new BMMDrinkItem(registerItemProperties("coca_cola").food(registerFoodValues(3, 0.4f))));
+    public static final RegistrySupplier<Item> FANTA = ITEMS.register("fanta", () -> new BMMDrinkItem(registerItemProperties("fanta").food(registerFoodValues(3, 0.4f))));
+    public static final RegistrySupplier<Item> SPRITE = ITEMS.register("sprite", () -> new BMMDrinkItem(registerItemProperties("sprite").food(registerFoodValues(3, 0.4f))));
+    public static final RegistrySupplier<Item> LIPTON_ICE_TEA_PEACH = ITEMS.register("lipton_ice_tea_peach", () -> new BMMDrinkItem(registerItemProperties("lipton_ice_tea_peach").food(registerFoodValues(3, 0.4f))));
     public static final RegistrySupplier<Item> MCFLURRY = ITEMS.register("mcflurry", () -> new Item(registerItemProperties("mcflurry").food(registerFoodValues(6, 0.4f))));
     public static final RegistrySupplier<Item> MCFLURRY_CHOCOLATE = ITEMS.register("mcflurry_chocolate", () -> new Item(registerItemProperties("mcflurry_chocolate").food(registerFoodValues(6, 0.4f))));
 

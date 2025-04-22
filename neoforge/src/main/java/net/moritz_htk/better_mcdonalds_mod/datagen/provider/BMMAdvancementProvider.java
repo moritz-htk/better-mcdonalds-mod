@@ -5,6 +5,7 @@ import net.minecraft.advancements.*;
 import net.minecraft.advancements.critereon.ConsumeItemTrigger;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.PlayerTrigger;
+import net.minecraft.core.ClientAsset;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -54,7 +55,7 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                             item.getDefaultInstance(),
                             Component.literal("Better McDonald's Mod"),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".root.description"),
-                            Optional.of(ResourceLocation.withDefaultNamespace("textures/block/red_concrete_powder.png")),
+                            Optional.of(new ClientAsset(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
                             AdvancementType.TASK, false, false, false))
                     .addCriterion("tick", criterion)
                     .save(consumer, String.valueOf(ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + "root")));
@@ -66,7 +67,7 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                             item.getDefaultInstance(),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + id + ".title"),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + id + ".description"),
-                            Optional.of(ResourceLocation.withDefaultNamespace("textures/block/red_concrete_powder.png")),
+                            Optional.of(new ClientAsset(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
                             type, true, true, false))
                     .addCriterion(criterionName, criterion)
                     .parent(parent)
@@ -79,7 +80,7 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                             item.getDefaultInstance(),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".consume_everything.title"),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".consume_everything.description"),
-                            Optional.of(ResourceLocation.withDefaultNamespace("textures/block/red_concrete_powder.png")),
+                            Optional.of(new ClientAsset(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
                             AdvancementType.CHALLENGE, true, true, false))
                     .parent(parent);
 
