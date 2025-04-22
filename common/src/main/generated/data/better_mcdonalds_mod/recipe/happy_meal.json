@@ -6,10 +6,10 @@
       "tag": "c:foods/burger"
     },
     {
-      "tag": "c:foods/drink"
+      "tag": "better_mcdonalds_mod:foods/side_dish"
     },
     {
-      "tag": "better_mcdonalds_mod:foods/side_dish"
+      "tag": "better_mcdonalds_mod:drinks"
     },
     {
       "item": "minecraft:apple"

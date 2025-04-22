@@ -21,9 +21,10 @@ Here is a list of all available versions:
 
 | Version | Latest Version | Mod Loader              | Support   |
 |---------|----------------|-------------------------|-----------|
-| 1.21.4  | 4.4.1+1.21.4   | Fabric, NeoForge        | ✅ Active  |
+| 1.21.5  | 4.4.2+1.21.5   | Fabric, NeoForge        | ✅ Active  |
+| 1.21.4  | 4.4.1+1.21.4   | Fabric, NeoForge        | ❌ Stopped |
 | 1.21.3  | 4.3.1+1.21.3   | Fabric, NeoForge        | ❌ Stopped |
-| 1.21.1  | 4.4.1+1.21.1   | Fabric, NeoForge        | ✅ Active  |
+| 1.21.1  | 4.4.2+1.21.1   | Fabric, NeoForge        | ✅ Active  |
 | 1.21    | 4.2.0+1.21     | Fabric, NeoForge        | ❌ Stopped |
 | 1.20.6  | 4.3.0+1.20.6   | Fabric, NeoForge        | ❌ Stopped |
 | 1.20.4  | 3.1.0          | Fabric, Forge, NeoForge | ❌ Stopped |
@@ -51,7 +52,7 @@ The [Better McDonald's Mod Wiki](https://github.com/moritz-htk/better-mcdonalds-
 - 🎨 [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
 
 ## 🔗 Dependencies
-- [Architectury API](https://github.com/architectury/architectury-api) (v13.0.8 and above)
+- [Architectury API](https://github.com/architectury/architectury-api) (v16.1.4 and above)
 
 ## 📦 Maven
 Better McDonald's Mod is available via [Modrinth Maven](https://support.modrinth.com/en/articles/8801191-modrinth-maven) for developers wishing to make use of my mod.
@@ -84,7 +85,7 @@ Add the following to your `gradle.properties` file:
 
 ### ⚙️ `gradle.properties`
 ```
-better_mcdonalds_mod_version=4.2.1+1.20.6
+better_mcdonalds_mod_version=4.4.2+1.21.5
 ```
 
 📌 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.

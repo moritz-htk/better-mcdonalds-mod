@@ -23,8 +23,8 @@ public class BMMBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         simpleBlockWithItem(BMMBlocks.SALT_BLOCK.get(), cubeAll(BMMBlocks.SALT_BLOCK.get()));
-        makeCrop(BMMBlocks.TOMATO_CROP.get(), BMMTomatoCropBlock.AGE, "tomato_crop");
-        makeCrop(BMMBlocks.LETTUCE_CROP.get(), BMMLettuceCropBlock.AGE, "lettuce_crop");
+        makeCrop((CropBlock) BMMBlocks.TOMATO_CROP.get(), BMMTomatoCropBlock.AGE, "tomato_crop");
+        makeCrop((CropBlock) BMMBlocks.LETTUCE_CROP.get(), BMMLettuceCropBlock.AGE, "lettuce_crop");
     }
 
     private void makeCrop(CropBlock block, IntegerProperty ageProperty, String cropName) {

@@ -25,7 +25,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#c:foods/drink"
+            "items": "#better_mcdonalds_mod:drinks"
           }
         ]
       },
@@ -52,8 +52,8 @@
     [
       "has_the_recipe",
       "has_burger",
-      "has_drink",
       "has_side_dish",
+      "has_drink",
       "has_apple"
     ]
   ],
