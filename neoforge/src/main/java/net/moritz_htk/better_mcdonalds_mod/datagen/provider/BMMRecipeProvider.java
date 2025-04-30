@@ -234,12 +234,12 @@ public class BMMRecipeProvider extends RecipeProvider {
                 .save(output, registerRecipe(BMMItems.FRIES.get()));
 
         ShapelessRecipeBuilder.shapeless(items, RecipeCategory.FOOD, BMMItems.HAPPY_MEAL.get())
-                .requires(BMMTags.Items.FOODS_BURGER)
-                .requires(BMMTags.Items.FOODS_SIDE_DISH)
+                .requires(BMMTags.Items.BURGER)
+                .requires(BMMTags.Items.SIDE_DISHES)
                 .requires(BMMTags.Items.DRINKS)
                 .requires(Items.APPLE)
-                .unlockedBy("has_burger", has(BMMTags.Items.FOODS_BURGER))
-                .unlockedBy("has_side_dish", has(BMMTags.Items.FOODS_SIDE_DISH))
+                .unlockedBy("has_burger", has(BMMTags.Items.BURGER))
+                .unlockedBy("has_side_dish", has(BMMTags.Items.SIDE_DISHES))
                 .unlockedBy("has_drink", has(BMMTags.Items.DRINKS))
                 .unlockedBy(getHasName(Items.APPLE), has(Items.APPLE))
                 .save(output, registerRecipe(BMMItems.HAPPY_MEAL.get()));

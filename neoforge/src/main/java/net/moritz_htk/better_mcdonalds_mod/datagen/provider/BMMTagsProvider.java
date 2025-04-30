@@ -42,11 +42,15 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.SEEDS_LETTUCE).add(BMMItems.LETTUCE_SEEDS.getKey());
 
             // Food Tags
-            tag(Tags.Items.FOODS).addTag(BMMTags.Items.FOODS_CHEESE).addTag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_BURGER).addAll(List.of(BMMItems.TORTILLA.getKey(), BMMItems.MCWRAP.getKey(), BMMItems.MCFLURRY.getKey(), BMMItems.MCFLURRY_CHOCOLATE.getKey()));
+            tag(Tags.Items.FOODS).addTag(BMMTags.Items.FOODS_CHEESE).addTag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_ICE_CREAM);
             tag(BMMTags.Items.FOODS_CHEESE).add(BMMItems.CHEESE.getKey());
+            tag(Tags.Items.FOODS_BREAD).add(BMMItems.TORTILLA.getKey());
             tag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_SAUCES_MAYONNAISE).addTag(BMMTags.Items.FOODS_SAUCES_SWEET_SOUR_SAUCE).addTag(BMMTags.Items.FOODS_SAUCES_KETCHUP).addTag(BMMTags.Items.FOODS_SAUCES_MUSTARD);
-            tag(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_BURGERS_HAMBURGER).addTag(BMMTags.Items.FOODS_BURGERS_CHEESEBURGER).addTag(BMMTags.Items.FOODS_BURGERS_CHICKENBURGER).addTag(BMMTags.Items.FOODS_BURGERS_FISHBURGER);
-            tag(BMMTags.Items.FOODS_SIDE_DISH).addAll(List.of(BMMItems.SNACK_SALAD.getKey(), BMMItems.CHICKEN_MCNUGGETS.getKey(), BMMItems.FRIES.getKey()));
+            tag(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_BURGERS_HAMBURGER).addTag(BMMTags.Items.FOODS_BURGERS_CHEESEBURGER).addTag(BMMTags.Items.FOODS_BURGERS_CHICKENBURGER).addTag(BMMTags.Items.FOODS_BURGERS_FISHBURGER).add(BMMItems.MCWRAP.getKey());
+            tag(BMMTags.Items.FOODS_ICE_CREAM).addAll(List.of(BMMItems.MCFLURRY.getKey(), BMMItems.MCFLURRY_CHOCOLATE.getKey()));
+
+            tag(BMMTags.Items.BURGER).addAll(List.of(BMMItems.HAMBURGER.getKey(), BMMItems.MCBACON.getKey(), BMMItems.BIG_MAC.getKey(), BMMItems.CHEESEBURGER.getKey(), BMMItems.CHICKENBURGER.getKey(), BMMItems.MCCHICKEN.getKey(), BMMItems.FILET_O_FISH.getKey()));
+            tag(BMMTags.Items.SIDE_DISHES).addAll(List.of(BMMItems.SNACK_SALAD.getKey(), BMMItems.CHICKEN_MCNUGGETS.getKey(), BMMItems.FRIES.getKey()));
 
             // Vegetable Food Tags
             tag(Tags.Items.FOODS_VEGETABLE).addTag(BMMTags.Items.FOODS_VEGETABLES_TOMATO).addTag(BMMTags.Items.FOODS_VEGETABLES_LETTUCE);

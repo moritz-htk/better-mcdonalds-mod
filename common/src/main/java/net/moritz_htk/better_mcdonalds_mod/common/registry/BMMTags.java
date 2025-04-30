@@ -24,7 +24,10 @@ public class BMMTags {
         public static final TagKey<Item> FOODS_CHEESE = registerCommonKey("foods/cheese");
         public static final TagKey<Item> FOODS_SAUCE = registerCommonKey("foods/sauce");
         public static final TagKey<Item> FOODS_BURGER = registerCommonKey("foods/burger");
-        public static final TagKey<Item> FOODS_SIDE_DISH = registerModKey("foods/side_dish");
+        public static final TagKey<Item> FOODS_ICE_CREAM = registerCommonKey("foods/ice_cream");
+
+        public static final TagKey<Item> BURGER = registerModKey("burger");
+        public static final TagKey<Item> SIDE_DISHES = registerModKey("side_dishes");
 
         // Vegetable Food Tags
         public static final TagKey<Item> FOODS_VEGETABLES_TOMATO = registerCommonKey("foods/vegetables/tomato");

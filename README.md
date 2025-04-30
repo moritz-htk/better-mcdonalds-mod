@@ -21,10 +21,10 @@ Here is a list of all available versions:
 
 | Version | Latest Version | Mod Loader              | Support   |
 |---------|----------------|-------------------------|-----------|
-| 1.21.5  | 4.4.2+1.21.5   | Fabric, NeoForge        | ✅ Active  |
+| 1.21.5  | 4.4.3+1.21.5   | Fabric, NeoForge        | ✅ Active  |
 | 1.21.4  | 4.4.1+1.21.4   | Fabric, NeoForge        | ❌ Stopped |
 | 1.21.3  | 4.3.1+1.21.3   | Fabric, NeoForge        | ❌ Stopped |
-| 1.21.1  | 4.4.2+1.21.1   | Fabric, NeoForge        | ✅ Active  |
+| 1.21.1  | 4.4.3+1.21.1   | Fabric, NeoForge        | ✅ Active  |
 | 1.21    | 4.2.0+1.21     | Fabric, NeoForge        | ❌ Stopped |
 | 1.20.6  | 4.3.0+1.20.6   | Fabric, NeoForge        | ❌ Stopped |
 | 1.20.4  | 3.1.0          | Fabric, Forge, NeoForge | ❌ Stopped |
