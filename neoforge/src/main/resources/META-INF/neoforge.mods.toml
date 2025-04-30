@@ -8,10 +8,10 @@ issueTrackerURL="https://github.com/moritz-htk/better-mcdonalds-mod/issues"
     version="${version}"
     displayName="Better McDonald's Mod"
     updateJSONURL="https://api.modrinth.com/updates/better-mcdonalds-mod/forge_updates.json?neoforge=only"
-    displayURL="https://sites.google.com/view/moritz-htk/mods/better-mcdonalds-mod"
+    displayURL="https://kyronis.net/better-mcdonalds-mod"
     logoFile="assets/better_mcdonalds_mod/icon.png"
     credits="Volwert123, rporotos, kohari_nk, sovseabird"
-    authors="moritz_htk"
+    authors="Kyronis"
     description='''This Minecraft mod adds many new items and food from McDonald's.'''
 
 [[dependencies.better_mcdonalds_mod]]
