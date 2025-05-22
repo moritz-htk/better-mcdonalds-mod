@@ -3,18 +3,27 @@ package net.kyronis.better_mcdonalds_mod.datagen.provider;
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
 import net.kyronis.better_mcdonalds_mod.neoforge.loot.BMMAddItemModifier;
+import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.predicates.DataComponentPredicates;
+import net.minecraft.core.component.predicates.EnchantmentsPredicate;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.EnchantmentTags;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
+import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
+import net.minecraft.world.level.storage.loot.functions.SmeltItemFunction;
+import net.minecraft.world.level.storage.loot.predicates.*;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
@@ -41,6 +50,8 @@ public class BMMGlobalLootModifierProvider extends GlobalLootModifierProvider {
         addChestLoot("lettuce_villager_savanna_house", BMMItems.LETTUCE.get(), 0.72f, UniformGenerator.between(1, 7), BuiltInLootTables.VILLAGE_SAVANNA_HOUSE.location());
         addBlockLoot("lettuce_seeds_grass", BMMItems.LETTUCE_SEEDS.get(), Blocks.SHORT_GRASS);
         addBlockLoot("lettuce_seeds_fern", BMMItems.LETTUCE_SEEDS.get(), Blocks.FERN);
+        addMobLoot("beef_patty_cow", BMMItems.BEEF_PATTY.get(), UniformGenerator.between(1, 2), EntityType.COW.getDefaultLootTable().get());
+        addMobLoot("raw_bacon_pig", BMMItems.RAW_BACON.get(), UniformGenerator.between(1, 2), EntityType.PIG.getDefaultLootTable().get());
     }
 
     private void addBlockLoot(String id, Item item, Block block) {
@@ -55,5 +66,17 @@ public class BMMGlobalLootModifierProvider extends GlobalLootModifierProvider {
                 LootItemRandomChanceCondition.randomChance(probability).build(),
                 new LootTableIdCondition.Builder(lootTable).build()
         }, item, List.of(Holder.direct(SetItemCountFunction.setCount(count).build()))));
+    }
+
+    private void addMobLoot(String id, Item item, NumberProvider count, ResourceKey<LootTable> lootTable) {
+        add(id, new BMMAddItemModifier(new LootItemCondition[]{
+                LootItemRandomChanceCondition.randomChance(0.5f).build(),
+                new LootTableIdCondition.Builder(lootTable.location()).build()
+        }, item, List.of(Holder.direct(SetItemCountFunction.setCount(count).build()), Holder.direct(SmeltItemFunction.smelted().when(shouldSmeltLoot()).build()))));
+    }
+
+    private AnyOfCondition.Builder shouldSmeltLoot() {
+        HolderLookup.RegistryLookup<Enchantment> registryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return AnyOfCondition.anyOf(LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().flags(EntityFlagsPredicate.Builder.flags().setOnFire(true))), LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.DIRECT_ATTACKER, EntityPredicate.Builder.entity().equipment(EntityEquipmentPredicate.Builder.equipment().mainhand(ItemPredicate.Builder.item().withComponents(DataComponentMatchers.Builder.components().partial(DataComponentPredicates.ENCHANTMENTS, EnchantmentsPredicate.enchantments(List.of(new EnchantmentPredicate(registryLookup.getOrThrow(EnchantmentTags.SMELTS_LOOT), MinMaxBounds.Ints.ANY)))).build())))));
     }
 }

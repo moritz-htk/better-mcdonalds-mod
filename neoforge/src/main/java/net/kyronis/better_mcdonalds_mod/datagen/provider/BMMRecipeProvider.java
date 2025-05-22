@@ -13,7 +13,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.NotNull;
 
@@ -68,15 +69,15 @@ public class BMMRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.BEEF), has(Items.BEEF))
                 .save(output, registerRecipe(BMMItems.BEEF_PATTY.get()));
 
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(BMMItems.BEEF_PATTY.get()), RecipeCategory.FOOD, BMMItems.COOKED_BEEF_PATTY.get(), 1.0f, 200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new)
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(BMMItems.BEEF_PATTY.get()), RecipeCategory.FOOD, BMMItems.COOKED_BEEF_PATTY.get(), 1.0f, 200)
                 .unlockedBy(getHasName(BMMItems.BEEF_PATTY.get()), has(BMMItems.BEEF_PATTY.get()))
                 .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BEEF_PATTY.get()) + "_smelting")));
 
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(BMMItems.BEEF_PATTY.get()), RecipeCategory.FOOD, BMMItems.COOKED_BEEF_PATTY.get(), 1.0f, 100, RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new)
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(BMMItems.BEEF_PATTY.get()), RecipeCategory.FOOD, BMMItems.COOKED_BEEF_PATTY.get(), 1.0f, 100)
                 .unlockedBy(getHasName(BMMItems.BEEF_PATTY.get()), has(BMMItems.BEEF_PATTY.get()))
                 .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BEEF_PATTY.get()) + "_smoking")));
 
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(BMMItems.BEEF_PATTY.get()), RecipeCategory.FOOD, BMMItems.COOKED_BEEF_PATTY.get(), 1.0f, 600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, CampfireCookingRecipe::new)
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(BMMItems.BEEF_PATTY.get()), RecipeCategory.FOOD, BMMItems.COOKED_BEEF_PATTY.get(), 1.0f, 600)
                 .unlockedBy(getHasName(BMMItems.BEEF_PATTY.get()), has(BMMItems.BEEF_PATTY.get()))
                 .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BEEF_PATTY.get()) + "_campfire_cooking")));
 
@@ -84,15 +85,15 @@ public class BMMRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.PORKCHOP), has(Items.PORKCHOP))
                 .save(output, registerRecipe(BMMItems.RAW_BACON.get()));
 
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(BMMItems.RAW_BACON.get()), RecipeCategory.FOOD, BMMItems.COOKED_BACON.get(), 1.0f, 200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new)
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(BMMItems.RAW_BACON.get()), RecipeCategory.FOOD, BMMItems.COOKED_BACON.get(), 1.0f, 200)
                 .unlockedBy(getHasName(BMMItems.RAW_BACON.get()), has(BMMItems.RAW_BACON.get()))
                 .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BACON.get()) + "_smelting")));
 
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(BMMItems.RAW_BACON.get()), RecipeCategory.FOOD, BMMItems.COOKED_BACON.get(), 1.0f, 100, RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new)
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(BMMItems.RAW_BACON.get()), RecipeCategory.FOOD, BMMItems.COOKED_BACON.get(), 1.0f, 100)
                 .unlockedBy(getHasName(BMMItems.RAW_BACON.get()), has(BMMItems.RAW_BACON.get()))
                 .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BACON.get()) + "_smoking")));
 
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(BMMItems.RAW_BACON.get()), RecipeCategory.FOOD, BMMItems.COOKED_BACON.get(), 1.0f, 600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, CampfireCookingRecipe::new)
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(BMMItems.RAW_BACON.get()), RecipeCategory.FOOD, BMMItems.COOKED_BACON.get(), 1.0f, 600)
                 .unlockedBy(getHasName(BMMItems.RAW_BACON.get()), has(BMMItems.RAW_BACON.get()))
                 .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BACON.get()) + "_campfire_cooking")));
 

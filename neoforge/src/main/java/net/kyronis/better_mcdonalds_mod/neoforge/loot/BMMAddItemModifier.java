@@ -17,9 +17,7 @@ import net.neoforged.neoforge.common.loot.LootModifier;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-import java.util.function.BiFunction;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 public class BMMAddItemModifier extends LootModifier {
     public static final Supplier<MapCodec<BMMAddItemModifier>> CODEC = Suppliers.memoize(() ->
@@ -35,33 +33,17 @@ public class BMMAddItemModifier extends LootModifier {
 
     private final Item item;
     private final List<Holder<LootItemFunction>> functions;
-    private final BiFunction<ItemStack, LootContext, ItemStack> compositeFunction;
 
     public BMMAddItemModifier(LootItemCondition[] conditionsIn, Item item, final List<Holder<LootItemFunction>> functions) {
         super(conditionsIn);
         this.item = item;
         this.functions = functions;
-
-        List<BiFunction<ItemStack, LootContext, ItemStack>> functionList = functions.stream()
-                .map(holder -> {
-                    LootItemFunction lootItemFunction = holder.value();
-                    return (BiFunction<ItemStack, LootContext, ItemStack>) (lootItemFunction);
-                })
-                .collect(Collectors.toList());
-        compositeFunction = LootItemFunctions.compose(functionList);
     }
 
     @Override
     protected @NotNull ObjectArrayList<ItemStack> doApply(@NotNull ObjectArrayList<ItemStack> generatedLoot, @NotNull LootContext context) {
-        for (LootItemCondition condition : this.conditions) {
-            if (!condition.test(context)) {
-                return generatedLoot;
-            }
-        }
-
-        final ItemStack stack = new ItemStack(this.item);
-        compositeFunction.apply(stack, context);
-        generatedLoot.add(stack);
+        ItemStack stack = functions.stream().map(Holder::value).reduce(new ItemStack(item), (s, f) -> f.apply(s, context), (a, b) -> b);
+        if (!stack.isEmpty()) generatedLoot.add(stack);
         return generatedLoot;
     }
 
