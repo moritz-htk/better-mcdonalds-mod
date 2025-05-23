@@ -74,7 +74,7 @@ better_mcdonalds_mod_version=4.4.3+1.21.5
 📌 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
 
 ## 🌐 Links
-🌍 Website: [https://kyronis.net/mods/better-mcdonalds-mod](https://kyronis.net/better-mcdonalds-mod)
+🌍 Website: [https://kyronis.net/mods/better-mcdonalds-mod](https://kyronis.net/mods/better-mcdonalds-mod)
 
 ---
 > ⚠️ **NOTE**: This is an unofficial modification and is not affiliated with McDonald's Corporation.
