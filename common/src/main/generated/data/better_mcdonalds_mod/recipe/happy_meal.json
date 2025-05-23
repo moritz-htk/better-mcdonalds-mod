@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "c:foods/burger"
+      "tag": "better_mcdonalds_mod:burger"
     },
     {
-      "tag": "better_mcdonalds_mod:foods/side_dish"
+      "tag": "better_mcdonalds_mod:side_dishes"
     },
     {
       "tag": "better_mcdonalds_mod:drinks"

@@ -5,7 +5,7 @@
   "name": "Better McDonald's Mod",
   "description": "This Minecraft mod adds many new items and food from McDonald's.",
   "authors": [
-    "moritz_htk"
+    "Kyronis"
   ],
   "contributors": [
     "Volwert123",
@@ -14,7 +14,8 @@
     "sovseabird"
   ],
   "contact": {
-    "homepage": "https://sites.google.com/view/moritz-htk/mods/better-mcdonalds-mod",
+    "email": "info@kyronis.net",
+    "homepage": "https://kyronis.net/better-mcdonalds-mod",
     "issues": "https://github.com/moritz-htk/better-mcdonalds-mod/issues",
     "sources": "https://github.com/moritz-htk/better-mcdonalds-mod"
   },
@@ -23,14 +24,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.moritz_htk.better_mcdonalds_mod.fabric.BMMFabric"
+      "net.kyronis.better_mcdonalds_mod.fabric.BMMFabric"
     ],
     "client": [
-      "net.moritz_htk.better_mcdonalds_mod.fabric.client.BMMFabricClient"
+      "net.kyronis.better_mcdonalds_mod.fabric.client.BMMFabricClient"
     ]
   },
   "depends": {
-    "fabricloader": ">=0.16.13",
+    "fabricloader": ">=0.16.14",
     "minecraft": ">=1.21.1",
     "java": ">=21",
     "fabric-api": "*",
@@ -49,7 +50,7 @@
         "modmenu.github_releases": "https://github.com/moritz-htk/better-mcdonalds-mod/releases",
         "modmenu.modrinth": "https://modrinth.com/mod/better-mcdonalds-mod",
         "modmenu.paypal": "https://www.paypal.com/donate/?hosted_button_id=CADH35AVDHEMW",
-        "modmenu.wiki": "https://moritz-htk.gitbook.io/better-mcdonalds-mod"
+        "modmenu.wiki": "https://kyronis.gitbook.io/better-mcdonalds-mod"
       }
     }
   }

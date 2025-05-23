@@ -3,10 +3,6 @@
     "#c:foods/cheese",
     "#c:foods/sauce",
     "#c:foods/burger",
-    "#c:foods/drink",
-    "better_mcdonalds_mod:tortilla",
-    "better_mcdonalds_mod:mcwrap",
-    "better_mcdonalds_mod:mcflurry",
-    "better_mcdonalds_mod:mcflurry_chocolate"
+    "#c:foods/ice_cream"
   ]
 }

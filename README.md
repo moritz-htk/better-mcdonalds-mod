@@ -6,40 +6,23 @@
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/kdnePgr1?style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/better-mcdonalds-mod)
 [![Mod Version](https://img.shields.io/modrinth/v/kdnePgr1?style=for-the-badge)](https://github.com/moritz-htk/better-mcdonalds-mod/releases)
 ![Version Availability](https://cf.way2muchnoise.eu/versions/546816.svg?badge_style=for_the_badge)
-[![License](https://img.shields.io/badge/LICENSE-mSLA_v2.0-red?style=for-the-badge)](https://sites.google.com/view/moritz-htk/license)
+[![License](https://img.shields.io/badge/LICENSE-mSLA_v2.0-red?style=for-the-badge)](https://kyronis.net/license)
 
-The **Better McDonald's Mod** was created by [moritz_htk](https://github.com/moritz-htk). Many well-known products have been added such as:
+The **Better McDonald's Mod** was created by [Kyronis](https://github.com/moritz-htk). Many well-known products have been added such as:
 - 🍔 Big Mac
 - 🎁 Happy Meal
 - 🥤 Coca-Cola
 
-...and more! A new 🍳 **cooking tool** and many new 🥩 **ingredients** have been added to prepare the food.
+...and more! Many new 🥩 **ingredients** have been added to prepare the food.
 
 ## 📌 Latest Versions
-
-Here is a list of all available versions:
-
-| Version | Latest Version | Mod Loader              | Support   |
-|---------|----------------|-------------------------|-----------|
-| 1.21.5  | 4.4.2+1.21.5   | Fabric, NeoForge        | ✅ Active  |
-| 1.21.4  | 4.4.1+1.21.4   | Fabric, NeoForge        | ❌ Stopped |
-| 1.21.3  | 4.3.1+1.21.3   | Fabric, NeoForge        | ❌ Stopped |
-| 1.21.1  | 4.4.2+1.21.1   | Fabric, NeoForge        | ✅ Active  |
-| 1.21    | 4.2.0+1.21     | Fabric, NeoForge        | ❌ Stopped |
-| 1.20.6  | 4.3.0+1.20.6   | Fabric, NeoForge        | ❌ Stopped |
-| 1.20.4  | 3.1.0          | Fabric, Forge, NeoForge | ❌ Stopped |
-| 1.20.1  | 3.1.0          | Fabric, Forge, NeoForge | ❌ Stopped |
-| 1.20    | 3.0.0          | Fabric, Forge           | ❌ Stopped |
-| 1.19.4  | 3.0.3          | Fabric, Forge           | ❌ Stopped |
-| 1.19.2  | 2.0.1          | Fabric, Forge           | ❌ Stopped |
-
-🔗 Click [here](https://github.com/moritz-htk/better-mcdonalds-mod/releases) to get to the release list!
+A full and always up-to-date version list is now available [here](https://kyronis.net/mods/better-mcdonalds-mod) on the official website.
 
 ## 🌍 Supported Languages
 - Danish, Dutch, English, French, German, Italian, Japanese, Portuguese, Russian, Spanish, Swedish, Ukrainian
 
 ## 📖 Wiki
-The [Better McDonald's Mod Wiki](https://github.com/moritz-htk/better-mcdonalds-mod/wiki) (currently work in progress 🏗️) provides all the necessary information about items and functions.
+The [Better McDonald's Mod Wiki](https://kyronis.gitbook.io/better-mcdonalds-mod) (currently work in progress 🏗️) provides all the necessary information about items and functions.
 
 ## 🔮 Planned Features
 - ⚙️ machines for manufacturing
@@ -85,10 +68,13 @@ Add the following to your `gradle.properties` file:
 
 ### ⚙️ `gradle.properties`
 ```
-better_mcdonalds_mod_version=4.4.2+1.21.5
+better_mcdonalds_mod_version=4.4.3+1.21.5
 ```
 
 📌 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
+
+## 🌐 Links
+🌍 Website: [https://kyronis.net/mods/better-mcdonalds-mod](https://kyronis.net/mods/better-mcdonalds-mod)
 
 ---
 > ⚠️ **NOTE**: This is an unofficial modification and is not affiliated with McDonald's Corporation.

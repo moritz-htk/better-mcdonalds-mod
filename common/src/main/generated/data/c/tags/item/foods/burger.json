@@ -3,6 +3,7 @@
     "#c:foods/burgers/hamburger",
     "#c:foods/burgers/cheeseburger",
     "#c:foods/burgers/chickenburger",
-    "#c:foods/burgers/fishburger"
+    "#c:foods/burgers/fishburger",
+    "better_mcdonalds_mod:mcwrap"
   ]
 }

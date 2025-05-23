@@ -1,8 +1,8 @@
 ## mSLA v2.0 - Software License Agreement
 
-Copyright © 2023-2025 moritz_htk
+Copyright © 2023-2025 Kyronis
 
-This Software License Agreement (the "Agreement") is entered into by and between moritz_htk (the "Licensor") and the recipient of the software (the "Licensee").
+This Software License Agreement (the "Agreement") is entered into by and between Kyronis (the "Licensor") and the recipient of the software (the "Licensee").
 
 ### Grant of License
 The Licensor hereby grants the Licensee a non-exclusive, worldwide, royalty-free license to use, modify, and distribute the software (the "Software") for non-commercial purposes, subject to the terms and conditions of this Agreement.
@@ -31,4 +31,4 @@ This Agreement shall be governed by and construed in accordance with the laws of
 
 By downloading, installing, using, modifying, or distributing the Software, the Licensee accepts and agrees to the terms and conditions of this Agreement.
 
-moritz_htk<br>December 26, 2024
+Kyronis<br>April 04, 2025
