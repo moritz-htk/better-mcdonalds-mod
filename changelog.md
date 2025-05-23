@@ -1,5 +1,14 @@
 **Changes:**
-- Updated to Minecraft 1.21.5
-- Reworked drink tags to match the new drink convention tags
-- The Happy Meal recipe has been slightly changed
-  - Now accepts drinks from `better_mcdonalds_mod:drinks` instead of `c:foods/drink`
+- Added new textures for Tortilla, Bacon, and Chocolate McFlurry
+- Added new mob drops:
+  - Cows now have a 50% chance to drop Beef Patties
+  - Pigs now have a 50% chance to drop Raw Bacon
+  - New drops will automatically smelt if the mob dies while on fire
+- Added new tags:
+  - `#c:foods/ice_cream` for ice cream products
+  - `#better_mcdonalds_mod:burger` tag for internal recipes
+- Renamed `#better_mcdonalds_mod:foods/side_dish` to `#better_mcdonalds_mod:side_dishes`
+- Assigned items to additional tags:
+  - Tortilla → `#c:foods/bread`
+  - McWrap → `#c:foods/burger`
+- Updated Happy Meal recipe to use the new tag system
