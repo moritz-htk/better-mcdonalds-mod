@@ -1,29 +1,25 @@
 package net.kyronis.better_mcdonalds_mod.datagen.provider;
 
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.kyronis.better_mcdonalds_mod.common.loot.conditions.BMMSmeltingConditionBuilder;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
 import net.kyronis.better_mcdonalds_mod.neoforge.loot.BMMAddItemModifier;
-import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.component.predicates.DataComponentPredicates;
-import net.minecraft.core.component.predicates.EnchantmentsPredicate;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
-import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.functions.SmeltItemFunction;
-import net.minecraft.world.level.storage.loot.predicates.*;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
@@ -72,11 +68,6 @@ public class BMMGlobalLootModifierProvider extends GlobalLootModifierProvider {
         add(id, new BMMAddItemModifier(new LootItemCondition[]{
                 LootItemRandomChanceCondition.randomChance(0.5f).build(),
                 new LootTableIdCondition.Builder(lootTable.location()).build()
-        }, item, List.of(Holder.direct(SetItemCountFunction.setCount(count).build()), Holder.direct(SmeltItemFunction.smelted().when(shouldSmeltLoot()).build()))));
-    }
-
-    private AnyOfCondition.Builder shouldSmeltLoot() {
-        HolderLookup.RegistryLookup<Enchantment> registryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
-        return AnyOfCondition.anyOf(LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.THIS, EntityPredicate.Builder.entity().flags(EntityFlagsPredicate.Builder.flags().setOnFire(true))), LootItemEntityPropertyCondition.hasProperties(LootContext.EntityTarget.DIRECT_ATTACKER, EntityPredicate.Builder.entity().equipment(EntityEquipmentPredicate.Builder.equipment().mainhand(ItemPredicate.Builder.item().withComponents(DataComponentMatchers.Builder.components().partial(DataComponentPredicates.ENCHANTMENTS, EnchantmentsPredicate.enchantments(List.of(new EnchantmentPredicate(registryLookup.getOrThrow(EnchantmentTags.SMELTS_LOOT), MinMaxBounds.Ints.ANY)))).build())))));
+        }, item, List.of(Holder.direct(SetItemCountFunction.setCount(count).build()), Holder.direct(SmeltItemFunction.smelted().when(BMMSmeltingConditionBuilder.shouldSmeltLoot(registries)).build()))));
     }
 }
