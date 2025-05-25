@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "better_mcdonalds_mod:block/lettuce_crop_stage2"
+  }
+}

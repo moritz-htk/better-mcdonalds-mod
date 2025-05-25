@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:water_bucket",
+    "minecraft:sugar",
+    "#c:dusts/salt",
+    "minecraft:pink_dye"
+  ],
+  "result": {
+    "count": 1,
+    "id": "better_mcdonalds_mod:lipton_ice_tea_peach"
+  }
+}

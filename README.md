@@ -6,80 +6,75 @@
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/kdnePgr1?style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/better-mcdonalds-mod)
 [![Mod Version](https://img.shields.io/modrinth/v/kdnePgr1?style=for-the-badge)](https://github.com/moritz-htk/better-mcdonalds-mod/releases)
 ![Version Availability](https://cf.way2muchnoise.eu/versions/546816.svg?badge_style=for_the_badge)
-[![License](https://img.shields.io/badge/LICENSE-moritz__htk_Software_License_Agreement_(mSLA)-red?style=for-the-badge)](https://sites.google.com/view/moritz-htk/license)
+[![License](https://img.shields.io/badge/LICENSE-mSLA_v2.0-red?style=for-the-badge)](https://kyronis.net/license)
 
-The Better McDonald's Mod was created by [moritz_htk](https://github.com/moritz-htk). Many well-known products have been added such as:
-- Big Mac
-- Happy Meal
-- Coca-Cola
+The **Better McDonald's Mod** was created by [Kyronis](https://github.com/moritz-htk). Many well-known products have been added such as:
+- 🍔 Big Mac
+- 🎁 Happy Meal
+- 🥤 Coca-Cola
 
-...and more! A new cooking tool and many new ingredients have been added to prepare the food.
+...and more! Many new 🥩 **ingredients** have been added to prepare the food.
 
-## Latest versions
-| Version | Latest Version | Mod Loader       | Support |
-|---------|----------------|------------------|---------|
-| 1.20.x  | 4.2.0+1.20.6   | Fabric, NeoForge | Active  |
-| 1.21.x  | 4.2.1+1.21.1   | Fabric, NeoForge | Active  |
+## 📌 Latest Versions
+A full and always up-to-date version list is now available [here](https://kyronis.net/mods/better-mcdonalds-mod) on the official website.
 
-Click [here](https://github.com/moritz-htk/better-mcdonalds-mod/releases) to get to the release list!
+## 🌍 Supported Languages
+- Danish, Dutch, English, French, German, Italian, Japanese, Portuguese, Russian, Spanish, Swedish, Ukrainian
 
-## Supported languages
-- Danish, Dutch, English, French, German, Italian, Japanese, Portuguese, Russian, Spanish, Ukrainian
+## 📖 Wiki
+The [Better McDonald's Mod Wiki](https://kyronis.gitbook.io/better-mcdonalds-mod) (currently work in progress 🏗️) provides all the necessary information about items and functions.
 
-## Wiki
-The [Better McDonald's Mod Wiki](https://github.com/moritz-htk/better-mcdonalds-mod/wiki) (currently work in progress) provides all the necessary information about items and functions.
+## 🔮 Planned Features
+- ⚙️ machines for manufacturing
+- 🍩 side mod (McCafé, Grimace Shake, Shamrock Shake)
 
-## Planned functions
-- machines for manufacturing
-- side mod (McCafé, Grimace Shake, Shamrock Shake)
+## 🙌 Credits
+- 🏗️ [Volwert123](https://github.com/Volwert123/) (Contributor)
+- 🎨 [rporotos](https://www.fiverr.com/rporotos) (Textures)
+- 🎨 [kohari_nk](https://www.fiverr.com/kohari_nk) (Textures)
+- 🎨 [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
 
-## Credits
-- [Volwert123](https://github.com/Volwert123/) (Contributor)
-- [rporotos](https://www.fiverr.com/rporotos) (Textures)
-- [kohari_nk](https://www.fiverr.com/kohari_nk) (Textures)
-- [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
+## 🔗 Dependencies
+- [Architectury API](https://github.com/architectury/architectury-api) (v16.1.4 and above)
 
-## Dependencies
-- [Architectury API](https://github.com/architectury/architectury-api) (v13.0.6 and above)
-
-## Maven
-Better McDonald's Mod is available via [Curse Maven](https://www.cursemaven.com/) for developers wishing to make use of my mod.
+## 📦 Maven
+Better McDonald's Mod is available via [Modrinth Maven](https://support.modrinth.com/en/articles/8801191-modrinth-maven) for developers wishing to make use of my mod.
 
 Update your `build.gradle` file to include the following:
 
-### Fabric `build.gradle`
+### ⚙️ Fabric `build.gradle`
 ```
 repositories {
-    maven { url "https://cursemaven.com" }
+    maven { url "https://api.modrinth.com/maven" }
 }
 
 dependencies {
-    modImplementation "curse.maven:better-mcdonalds-mod-546816:${better_mcdonalds_mod_file}"
+    modImplementation "maven.modrinth:better-mcdonalds-mod:${better_mcdonalds_mod_version}-fabric"
 }
 ```
 
-### NeoForge `build.gradle`
+### ⚙️ NeoForge `build.gradle`
 ```
 repositories {
-    maven { url "https://cursemaven.com" }
+    maven { url "https://api.modrinth.com/maven" }
 }
 
 dependencies {
-    implementation fg.deobf("curse.maven:better-mcdonalds-mod-546816:${better_mcdonalds_mod_file}")
+    implementation fg.deobf("maven.modrinth:better-mcdonalds-mod:${better_mcdonalds_mod_version}-neoforge")
 }
 ```
 
 Add the following to your `gradle.properties` file:
 
-### `gradle.properties`
+### ⚙️ `gradle.properties`
 ```
-better_mcdonalds_mod_file=5389972
+better_mcdonalds_mod_version=4.4.3+1.21.5
 ```
 
-To get the File ID, go to the [download page of my mod](https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod/files), click on the file you want to use and the file ID will be in the URL.
+📌 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
 
-## Social Media
-Website: [https://sites.google.com/view/moritz-htk](https://sites.google.com/view/moritz-htk)
+## 🌐 Links
+🌍 Website: [https://kyronis.net/mods/better-mcdonalds-mod](https://kyronis.net/mods/better-mcdonalds-mod)
 
 ---
-> **NOTE**: This is an unofficial modification and is not affiliated with McDonald's Corporation.
+> ⚠️ **NOTE**: This is an unofficial modification and is not affiliated with McDonald's Corporation.
