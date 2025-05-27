@@ -1,13 +1,7 @@
 ---
 title: Salt
-hide_meta: true
----
-
-<p align="center">
-    <img src="https://i.imgur.com/o4v6RsE.png" alt="Salt texture" width="160px"/>
-    Salt Texture
-</p>
-
+icon: better_mcdonalds_mod:salt
+type: item
 ---
 
 <table>
@@ -37,7 +31,41 @@ hide_meta: true
 
 ### Mining
 
-Salt is obtained when a [salt block](../blocks/salt_block) is broken with a [shovel](https://minecraft.wiki/w/Shovel). There are 2-4 salt in each block. If the shovel is enchanted with [Fortune](https://minecraft.wiki/w/Fortune), it can drop an extra salt per level of Fortune. If the [salt block](../blocks/salt_block) is mined using a shovel enchanted with [Silk Touch](https://minecraft.wiki/w/Silk_Touch), it drops the [salt block](../blocks/salt_block) instead.
+Salt can be obtained from [salt blocks](../blocks/salt_block) using any item, but [shovels](https://minecraft.wiki/w/Shovel) are the quickest. When a salt block is broken with a regular tool, it drops 2–4 salt. The [Fortune](https://minecraft.wiki/w/Fortune) enchantment increases the average amount of salt dropped, though it does not increase the maximum. If broken with a tool enchanted with [Silk Touch](https://minecraft.wiki/w/Silk_Touch), the [salt block](../blocks/salt_block) drops itself instead.
+
+<table>
+    <thead>
+        <tr>
+            <th rowspan="3">Source</th>
+            <th colspan="4">Drops</th>
+        </tr>
+        <tr>
+            <th colspan="4"><Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> Salt</th>
+        </tr>
+        <tr>
+            <th>Default tool</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) I</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) II</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) III</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:salt_block"/> [Salt Block](../blocks/salt_block)</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~33.33%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~33.33%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~33.33%)</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~25%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~25%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~50%)</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~20%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~20%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~60%)</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~16.67%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~16.67%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~66.68%)</td>
+        </tr>
+        <tr>
+            <td>Average drops</td>
+            <td>~3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td>~3.25 (3 1⁄4) <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td>~3.4 (3 2⁄5) <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td>~3.5 (3 1⁄2) <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+        </tr>
+    </tbody>
+</table>
 
 ## Usage
 
@@ -56,53 +84,53 @@ Salt is used as an ingredient in some recipes.
     <tbody>
         <tr>
             <td>[Salt Block](../blocks/salt_block)</td>
-            <td>Salt</td>
-            <td><img src="https://i.imgur.com/iDmmUjN.png" alt="Salt Block crafting recipe" width="320px"/></td>
+            <td>Salt (4)</td>
+            <td><CraftingRecipe slots={['better_mcdonalds_mod:salt', 'better_mcdonalds_mod:salt', '', 'better_mcdonalds_mod:salt', 'better_mcdonalds_mod:salt', '', '', '', '']} result="better_mcdonalds_mod:salt_block"/></td>
         </tr>
         <tr>
-            <td>[Cheese](cheese)</td>
+            <td>[Cheese](../items/cheese)</td>
             <td>[Milk Bucket](https://minecraft.wiki/w/Milk_Bucket) + Salt</td>
-            <td><img src="https://i.imgur.com/dW41PpF.png" alt="Cheese crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['milk_bucket', 'better_mcdonalds_mod:salt', '', '', '', '', '', '', '']} result="better_mcdonalds_mod:cheese" count={2}/></td>
         </tr>
         <tr>
-            <td>[Tortilla](tortilla)</td>
-            <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Wheat](https://minecraft.wiki/w/Wheat) + [Egg](https://minecraft.wiki/w/Egg) + Salt</td>
-            <td><img src="https://i.imgur.com/uyeCPV0.png" alt="Tortilla crafting recipe" width="320px"/></td>
+            <td>[Tortilla](../items/tortilla)</td>
+            <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Wheat](https://minecraft.wiki/w/Wheat) (2) + [Egg](https://minecraft.wiki/w/Egg) + Salt</td>
+            <td><CraftingRecipe slots={['water_bucket', 'wheat', 'wheat', 'egg', 'better_mcdonalds_mod:salt', '', '', '', '']} result="better_mcdonalds_mod:tortilla" count={2}/></td>
         </tr>
         <tr>
-            <td>[Sweet-Sour-Sauce](sweet_sour_sauce)</td>
+            <td>[Sweet-Sour-Sauce](../items/sweet_sour_sauce)</td>
             <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Sugar](https://minecraft.wiki/w/Sugar) + Salt + [Honey Bottle](https://minecraft.wiki/w/Honey_Bottle)</td>
-            <td><img src="https://i.imgur.com/C1fT2Wf.png" alt="Sweet-Sour-Sauce crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['water_bucket', 'sugar', 'better_mcdonalds_mod:salt', 'honey_bottle', '', '', '', '', '']} result="better_mcdonalds_mod:sweet_sour_sauce" count={2}/></td>
         </tr>
         <tr>
-            <td>[Ketchup](ketchup)</td>
-            <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Sugar](https://minecraft.wiki/w/Sugar) + Salt + [Tomato](tomato)</td>
-            <td><img src="https://i.imgur.com/Fzjaqfm.png" alt="Ketchup crafting recipe" width="320px"/></td>
+            <td>[Ketchup](../items/ketchup)</td>
+            <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Sugar](https://minecraft.wiki/w/Sugar) + Salt + [Tomato](../items/tomato)</td>
+            <td><CraftingRecipe slots={['water_bucket', 'sugar', 'better_mcdonalds_mod:salt', 'better_mcdonalds_mod:tomato', '', '', '', '', '']} result="better_mcdonalds_mod:ketchup" count={2}/></td>
         </tr>
         <tr>
-            <td>[Mustard](mustard)</td>
+            <td>[Mustard](../items/mustard)</td>
             <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Sugar](https://minecraft.wiki/w/Sugar) + Salt + [Pumpkin Seeds](https://minecraft.wiki/w/Pumpkin_Seeds)</td>
-            <td><img src="https://i.imgur.com/JEtLI5N.png" alt="Mustard crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['water_bucket', 'sugar', 'better_mcdonalds_mod:salt', 'pumpkin_seeds', '', '', '', '', '']} result="better_mcdonalds_mod:mustard" count={2}/></td>
         </tr>
         <tr>
-            <td>[Coca Cola](coca_cola)</td>
+            <td>[Coca Cola](../items/coca_cola)</td>
             <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Sugar](https://minecraft.wiki/w/Sugar) + Salt + [Brown Dye](https://minecraft.wiki/w/Brown_Dye)</td>
-            <td><img src="https://i.imgur.com/Q1BeM6l.png" alt="Coca Cola crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['water_bucket', 'sugar', 'better_mcdonalds_mod:salt', 'brown_dye', '', '', '', '', '']} result="better_mcdonalds_mod:coca_cola"/></td>
         </tr>
         <tr>
-            <td>[Fanta](fanta)</td>
+            <td>[Fanta](../items/fanta)</td>
             <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Sugar](https://minecraft.wiki/w/Sugar) + Salt + [Yellow Dye](https://minecraft.wiki/w/Yellow_Dye)</td>
-            <td><img src="https://i.imgur.com/BbnKDBl.png" alt="Fanta crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['water_bucket', 'sugar', 'better_mcdonalds_mod:salt', 'yellow_dye', '', '', '', '', '']} result="better_mcdonalds_mod:fanta"/></td>
         </tr>
         <tr>
-            <td>[Sprite](sprite)</td>
+            <td>[Sprite](../items/sprite)</td>
             <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Sugar](https://minecraft.wiki/w/Sugar) + Salt + [Green Dye](https://minecraft.wiki/w/Green_Dye)</td>
-            <td><img src="https://i.imgur.com/oUFhtkQ.png" alt="Sprite crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['water_bucket', 'sugar', 'better_mcdonalds_mod:salt', 'green_dye', '', '', '', '', '']} result="better_mcdonalds_mod:sprite"/></td>
         </tr>
         <tr>
-            <td>[Lipton Ice Tea Peach](lipton_ice_tea_peach)</td>
+            <td>[Lipton Ice Tea Peach](../items/lipton_ice_tea_peach)</td>
             <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Sugar](https://minecraft.wiki/w/Sugar) + Salt + [Pink Dye](https://minecraft.wiki/w/Pink_Dye)</td>
-            <td><img src="https://i.imgur.com/B0GS7mz.png" alt="Lipton Ice Tea Peach crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['water_bucket', 'sugar', 'better_mcdonalds_mod:salt', 'pink_dye', '', '', '', '', '']} result="better_mcdonalds_mod:lipton_ice_tea_peach"/></td>
         </tr>
     </tbody>
 </table>
@@ -117,6 +145,7 @@ Salt is used as an ingredient in some recipes.
             <th>Name</th>
             <th>[Identifier](https://minecraft.wiki/w/Resource_location)</th>
             <th>Form</th>
+            <th>[Item tags](https://minecraft.wiki/w/Tag)</th>
             <th>Translation key</th>
         </tr>
     </thead>
@@ -125,6 +154,7 @@ Salt is used as an ingredient in some recipes.
             <td>Salt</td>
             <td>`salt`</td>
             <td>Item</td>
+            <td>`c:dusts/salt`</td>
             <td>`item.better_mcdonalds_mod.salt`</td>
         </tr>
     </tbody>

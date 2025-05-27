@@ -1,13 +1,7 @@
 ---
 title: Cheese
-hide_meta: true
----
-
-<p align="center">
-    <img src="https://i.imgur.com/a2pl58Y.png" alt="Cheese texture" width="160px"/>
-    Cheese Texture
-</p>
-
+icon: better_mcdonalds_mod:cheese
+type: item
 ---
 
 <table>
@@ -50,8 +44,8 @@ hide_meta: true
     </thead>
     <tbody>
         <tr>
-            <td>[Milk Bucket](https://minecraft.wiki/w/Milk_Bucket) + [Salt](salt)</td>
-            <td><img src="https://i.imgur.com/dW41PpF.png" alt="Cheese crafting recipe" width="320px"/></td>
+            <td>[Milk Bucket](https://minecraft.wiki/w/Milk_Bucket) + [Salt](../items/salt)</td>
+            <td><CraftingRecipe slots={['milk_bucket', 'better_mcdonalds_mod:salt', '', '', '', '', '', '', '']} result="better_mcdonalds_mod:cheese" count={2}/></td>
         </tr>
     </tbody>
 </table>
@@ -74,24 +68,24 @@ Eating cheese restores 2 (<img src="https://minecraft.wiki/images/Hunger_%28icon
     </thead>
     <tbody>
         <tr>
-            <td>[Cheeseburger](cheeseburger)</td>
-            <td>[Bread](https://minecraft.wiki/w/Bread) + [Cooked Beef Patty](cooked_beef_patty) + Cheese</td>
-            <td><img src="https://i.imgur.com/HpVtl5w.png" alt="Cheeseburger crafting recipe" width="320px"/></td>
+            <td>[Cheeseburger](../items/cheeseburger)</td>
+            <td>[Bread](https://minecraft.wiki/w/Bread) + [Cooked Beef Patty](../items/cooked_beef_patty) + Cheese</td>
+            <td><CraftingRecipe slots={['bread', 'better_mcdonalds_mod:cooked_beef_patty', 'better_mcdonalds_mod:cheese', '', '', '', '', '', '']} result="better_mcdonalds_mod:cheeseburger"/></td>
         </tr>
         <tr>
-            <td>[McBacon](mcbacon)</td>
-            <td>[Bread](https://minecraft.wiki/w/Bread) + [Cooked Beef Patty](cooked_beef_patty) + Cheese + [Cooked Bacon](cooked_bacon)</td>
-            <td><img src="https://i.imgur.com/IQKKnle.png" alt="McBacon crafting recipe" width="320px"/></td>
+            <td>[McBacon](../items/mcbacon)</td>
+            <td>[Bread](https://minecraft.wiki/w/Bread) + [Cooked Beef Patty](../items/cooked_beef_patty) + Cheese + [Cooked Bacon](../items/cooked_bacon)</td>
+            <td><CraftingRecipe slots={['bread', 'better_mcdonalds_mod:cooked_beef_patty', 'better_mcdonalds_mod:cheese', 'better_mcdonalds_mod:cooked_bacon', '', '', '', '', '']} result="better_mcdonalds_mod:mcbacon"/></td>
         </tr>
         <tr>
-            <td>[Big Mac](big_mac)</td>
-            <td>[Bread](https://minecraft.wiki/w/Bread) + [Cooked Beef Patty](cooked_beef_patty) + Cheese + [Lettuce](lettuce)</td>
-            <td><img src="https://i.imgur.com/DgBXrWV.png" alt="Big Mac crafting recipe" width="320px"/></td>
+            <td>[Big Mac](../items/big_mac)</td>
+            <td>[Bread](https://minecraft.wiki/w/Bread) + [Cooked Beef Patty](../items/cooked_beef_patty) (2) + Cheese + [Lettuce](../items/lettuce)</td>
+            <td><CraftingRecipe slots={['bread', 'better_mcdonalds_mod:cooked_beef_patty', 'better_mcdonalds_mod:cooked_beef_patty', 'better_mcdonalds_mod:cheese', 'better_mcdonalds_mod:lettuce', '', '', '', '']} result="better_mcdonalds_mod:big_mac"/></td>
         </tr>
         <tr>
-            <td>[Filet-O-Fish](filet_o_fish)</td>
+            <td>[Filet-O-Fish](../items/filet_o_fish)</td>
             <td>[Bread](https://minecraft.wiki/w/Bread) + Cheese + [Cooked Salmon](https://minecraft.wiki/w/Cooked_Salmon)</td>
-            <td><img src="https://i.imgur.com/4PXbi30.png" alt="Filet-O-Fish crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['bread', 'better_mcdonalds_mod:cheese', 'cooked_salmon', '', '', '', '', '', '']} result="better_mcdonalds_mod:filet_o_fish"/></td>
         </tr>
     </tbody>
 </table>
@@ -106,6 +100,7 @@ Eating cheese restores 2 (<img src="https://minecraft.wiki/images/Hunger_%28icon
             <th>Name</th>
             <th>[Identifier](https://minecraft.wiki/w/Resource_location)</th>
             <th>Form</th>
+            <th>[Item tags](https://minecraft.wiki/w/Tag)</th>
             <th>Translation key</th>
         </tr>
     </thead>
@@ -114,6 +109,7 @@ Eating cheese restores 2 (<img src="https://minecraft.wiki/images/Hunger_%28icon
             <td>Cheese</td>
             <td>`cheese`</td>
             <td>Item</td>
+            <td>`c:foods/cheese`</td>
             <td>`item.better_mcdonalds_mod.cheese`</td>
         </tr>
     </tbody>

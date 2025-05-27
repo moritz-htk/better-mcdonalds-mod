@@ -1,5 +1,7 @@
 {
   "id": "better-mcdonalds-mod",
-  "platform": "modrinth",
-  "slug": "better-mcdonalds-mod"
+  "platforms": {
+    "curseforge": "better-mcdonalds-mod",
+    "modrinth": "better-mcdonalds-mod"
+  }
 }
