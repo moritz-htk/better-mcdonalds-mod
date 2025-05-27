@@ -1,13 +1,7 @@
 ---
 title: Tomato
-hide_meta: true
----
-
-<p align="center">
-    <img src="https://i.imgur.com/eLlIfHS.png" alt="Tomato texture" width="160px"/>
-    Tomato Texture
-</p>
-
+icon: better_mcdonalds_mod:tomato
+type: item
 ---
 
 <table>
@@ -41,37 +35,40 @@ A **tomato** is a [food](https://minecraft.wiki/w/Food) [item](https://minecraft
 
 ### Farming
 
-When a fully-grown tomato crop is harvested, it drops 1 tomato and 1 to 4 [tomato seeds](tomato_seeds). A tomato crop has a total of four stages (0-3) from the time it is planted until it can be harvested. If a crop is harvested before it is fully grown, it just drops one seed.
+When a fully-grown tomato crop is harvested, it drops 1 tomato and between 0 and 3 [tomato seeds](../items/tomato_seeds). A tomato crop has a total of four growth stages (0-3) from planting until harvest. If a crop is harvested before it is fully grown, it drops only 1 seed.
 
 ### Chest loot
 
 <table>
     <thead>
         <tr>
-            <th>Structure</th>
-            <th>Container</th>
-            <th>Quantity</th>
+            <th rowspan="2">Source</th>
+            <th colspan="3"><Asset width={16} height={16} location="better_mcdonalds_mod:tomato"/> Tomato</th>
+        </tr>
+        <tr>
+            <th>Amount</th>
             <th>Chance</th>
+            <th>Average</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>[Pillager Outpost](https://minecraft.wiki/w/Pillager_Outpost)</td>
-            <td>Chest</td>
-            <td>1–3</td>
-            <td>58%</td>
+            <td>[Pillager Outpost (Chest)](https://minecraft.wiki/w/Pillager_Outpost#Loot)</td>
+            <td>1-3 <Asset width={16} height={16} location="better_mcdonalds_mod:tomato"/></td>
+            <td>~58% (~19.31% each)</td>
+            <td>~0.84 <Asset width={16} height={16} location="better_mcdonalds_mod:tomato"/></td>
         </tr>
         <tr>
-            <td>[Shipwreck](https://minecraft.wiki/w/Shipwreck)</td>
-            <td>Supply chest</td>
-            <td>1-4</td>
-            <td>42%</td>
+            <td>[Shipwreck (Supply chest)](https://minecraft.wiki/w/Shipwreck#Supply_chests)</td>
+            <td>1-4 <Asset width={16} height={16} location="better_mcdonalds_mod:tomato"/></td>
+            <td>~42% (~10.5% each)</td>
+            <td>~1.05 <Asset width={16} height={16} location="better_mcdonalds_mod:tomato"/></td>
         </tr>
         <tr>
-            <td>[Village](https://minecraft.wiki/w/Village)</td>
-            <td>Savanna house chest</td>
-            <td>1-7</td>
-            <td>72%</td>
+            <td>[Village (Savanna house chest)](https://minecraft.wiki/w/Village#Savanna_house)</td>
+            <td>1-7 <Asset width={16} height={16} location="better_mcdonalds_mod:tomato"/></td>
+            <td>~72% (~10.28% each)</td>
+            <td>~2.88 <Asset width={16} height={16} location="better_mcdonalds_mod:tomato"/></td>
         </tr>
     </tbody>
 </table>
@@ -100,19 +97,42 @@ Tomato is used as an ingredient in some recipes.
     </thead>
     <tbody>
         <tr>
-            <td>[Tomato Seeds](tomato_seeds)</td>
+            <td>[Tomato Seeds](../items/tomato_seeds)</td>
             <td>Tomato</td>
-            <td><img src="https://i.imgur.com/d1nYT8x.png" alt="Tomato Seeds crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['better_mcdonalds_mod:tomato', '', '', '', '', '', '', '', '']} result="better_mcdonalds_mod:tomato_seeds" count={2}/></td>
         </tr>
         <tr>
-            <td>[Ketchup](ketchup)</td>
-            <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Sugar](https://minecraft.wiki/w/Sugar) + [Salt](salt) + Tomato</td>
-            <td><img src="https://i.imgur.com/Fzjaqfm.png" alt="Ketchup crafting recipe" width="320px"/></td>
+            <td>[Ketchup](../items/ketchup)</td>
+            <td>[Water Bucket](https://minecraft.wiki/w/Water_Bucket) + [Sugar](https://minecraft.wiki/w/Sugar) + [Salt](../items/salt) + Tomato</td>
+            <td><CraftingRecipe slots={['water_bucket', 'sugar', 'better_mcdonalds_mod:salt', 'better_mcdonalds_mod:tomato', '', '', '', '', '']} result="better_mcdonalds_mod:ketchup" count={2}/></td>
         </tr>
         <tr>
-            <td>[Snack Salad](snack_salad)</td>
+            <td>[Snack Salad](../items/snack_salad)</td>
             <td>Tomato + [Lettuce](lettuce) + [Carrot](https://minecraft.wiki/w/Carrot)</td>
-            <td><img src="https://i.imgur.com/4yGlseT.png" alt="Snack Salad crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['better_mcdonalds_mod:tomato', 'better_mcdonalds_mod:lettuce', 'carrot', '', '', '', '', '', '']} result="better_mcdonalds_mod:snack_salad"/></td>
+        </tr>
+    </tbody>
+</table>
+
+### Trading
+
+<table>
+    <thead>
+        <tr>
+            <th>Villager</th>
+            <th>Villager wants</th>
+            <th>Player receives</th>
+            <th>Trades in stock</th>
+            <th>Villager XP</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img src="https://minecraft.wiki/images/EntitySprite_villager-farmer.png" alt="Farmer icon"/> [Novice Farmer](https://minecraft.wiki/w/Trading#Farmer)</td>
+            <td>21 × <Asset width={16} height={16} location="better_mcdonalds_mod:tomato"/> Tomato</td>
+            <td><img src="https://minecraft.wiki/images/Invicon_Emerald.png" alt="Emerald icon"/> [Emerald](https://minecraft.wiki/w/Emerald)</td>
+            <td>16</td>
+            <td>2</td>
         </tr>
     </tbody>
 </table>
@@ -127,6 +147,7 @@ Tomato is used as an ingredient in some recipes.
             <th>Name</th>
             <th>[Identifier](https://minecraft.wiki/w/Resource_location)</th>
             <th>Form</th>
+            <th>[Item tags](https://minecraft.wiki/w/Tag)</th>
             <th>Translation key</th>
         </tr>
     </thead>
@@ -135,6 +156,7 @@ Tomato is used as an ingredient in some recipes.
             <td>Tomato</td>
             <td>`tomato`</td>
             <td>Item</td>
+            <td>`minecraft:villager_picks_up`<br/>`c:crops/tomato`<br/>`c:foods/vegetables/tomato`</td>
             <td>`item.better_mcdonalds_mod.tomato`</td>
         </tr>
     </tbody>

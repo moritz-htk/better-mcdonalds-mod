@@ -1,18 +1,7 @@
 ---
 title: Lettuce Seeds
-hide_meta: true
----
-
-<p align="center">
-    <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="160px"/>
-    Lettuce Seeds Texture
-</p>
-
-<p align="center">
-    <img src="https://i.imgur.com/mwuknfb.png" alt="Lettuce Crops texture" width="640px"/>
-    Lettuce Crops Texture
-</p>
-
+icon: better_mcdonalds_mod:lettuce_seeds
+type: item
 ---
 
 <table>
@@ -58,7 +47,18 @@ hide_meta: true
 
 **Lettuce seeds** are [items](https://minecraft.wiki/w/Item) obtained by breaking [grass](https://minecraft.wiki/w/Grass), or more abundantly harvested from lettuce crops, and are used to plant them.
 
-**Lettuce crops** are planted in [farmland](https://minecraft.wiki/w/Farmland) and used to grow [lettuce](lettuce) and lettuce seeds.
+**Lettuce crops** are planted in [farmland](https://minecraft.wiki/w/Farmland) and used to grow [lettuce](../items/lettuce) and lettuce seeds.
+
+<table>
+    <tbody>
+        <tr>
+            <td><Asset width={512} height={512} location="better_mcdonalds_mod:lettuce_crop_stage0"/></td>
+            <td><Asset width={512} height={512} location="better_mcdonalds_mod:lettuce_crop_stage1"/></td>
+            <td><Asset width={512} height={512} location="better_mcdonalds_mod:lettuce_crop_stage2"/></td>
+            <td><Asset width={512} height={512} location="better_mcdonalds_mod:lettuce_crop_stage3"/></td>
+        </tr>
+    </tbody>
+</table>
 
 ## Obtaining
 
@@ -66,9 +66,9 @@ hide_meta: true
 
 Lettuce seeds can be obtained from breaking [short grass](https://minecraft.wiki/w/Short_grass) or [fern](https://minecraft.wiki/w/Fern), which have a 15% chance to yield 1 seed.
 
-Harvesting fully-grown [lettuce](lettuce) crops yields from 1 to 4 seeds per crop harvested (about 2 5⁄7 seeds/crop harvested on average).
+Harvesting fully-grown lettuce crops yields between 0 and 3 seeds per crop (about 1.71 seeds per crop on average).
 
-The looting is calculated by a binomial distribution: a drop is attempted three times with a success rate of around 57% to yield the 0–3 drops. Each level of Fortune enchantment increases the number of attempts by one.
+The drop amount is determined by a binomial distribution: there are three attempts to drop a seed, each with a success probability of about 57%, resulting in 0 to 3 seeds dropped. Each level of [Fortune](https://minecraft.wiki/w/Fortune) enchantment increases the number of attempts by one.
 
 <table>
     <thead>
@@ -77,8 +77,8 @@ The looting is calculated by a binomial distribution: a drop is attempted three 
             <th colspan="5">Drops</th>
         </tr>
         <tr>
-            <th rowspan="2"><img src="https://i.imgur.com/7G576Zn.png" alt="Lettuce texture" width="16px"/> [Lettuce](lettuce)</th>
-            <th colspan="4"><img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> Lettuce Seeds</th>
+            <th rowspan="2"><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce"/> [Lettuce](lettuce)</th>
+            <th colspan="4"><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> Lettuce Seeds</th>
         </tr>
         <tr>
             <th>Default tool</th>
@@ -89,27 +89,27 @@ The looting is calculated by a binomial distribution: a drop is attempted three 
     </thead>
     <tbody>
         <tr>
-            <td><img src="https://i.imgur.com/kSzfhjd.png" alt="Lettuce Crop Stage 3 texture" width="16px"/> Lettuce Crop<br/>(age 0-2)</td>
-            <td>0 <img src="https://i.imgur.com/7G576Zn.png" alt="Lettuce texture" width="16px"/></td>
-            <td>1 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/></td>
-            <td>1 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/></td>
-            <td>1 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/></td>
-            <td>1 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/></td>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage3_flat"/> Lettuce Crop<br/>(age 0-2)</td>
+            <td>0 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce"/></td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
         </tr>
         <tr>
-            <td><img src="https://i.imgur.com/kSzfhjd.png" alt="Lettuce Crop Stage 3 texture" width="16px"/> Lettuce Crop<br/>(age 3)</td>
-            <td>1 <img src="https://i.imgur.com/7G576Zn.png" alt="Lettuce texture" width="16px"/></td>
-            <td>1 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~7.87%)<br/>2 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~31.49%)<br/>3 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~41.98%)<br/>4 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~18.66%)</td>
-            <td>1 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~3.37%)<br/>2 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~17.99%)<br/>3 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~35.98%)<br/>4 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~31.99%)<br/>5 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~10.66%)</td>
-            <td>1 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~1.44%)<br/>2 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~9.64%)<br/>3 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~25.70%)<br/>4 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~34.27%)<br/>5 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~22.85%)<br/>6 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~6.09%)</td>
-            <td>1 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~0.62%)<br/>2 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~4.96%)<br/>3 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~16.52%)<br/>4 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~29.38%)<br/>5 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~29.38%)<br/>6 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~15.67%)<br/>7 <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/> (~3.48%)</td>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage3_flat"/> Lettuce Crop<br/>(age 3)</td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce"/></td>
+            <td>0 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~7.87%)<br/>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~31.49%)<br/>2 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~41.98%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~18.66%)</td>
+            <td>0 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~3.37%)<br/>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~17.99%)<br/>2 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~35.99%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~31.99%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~10.66%)</td>
+            <td>0 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~1.45%)<br/>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~9.64%)<br/>2 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~25.70%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~34.27%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~22.85%)<br/>5 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~6.09%)</td>
+            <td>0 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~0.62%)<br/>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~4.96%)<br/>2 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~16.52%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~29.38%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~29.38%)<br/>5 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~15.67%)<br/>6 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~3.48%)</td>
         </tr>
         <tr>
             <td colspan="2">Average drops</td>
-            <td>~2.71 (2 5⁄7) <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/></td>
-            <td>~3.29 (3 2⁄7) <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/></td>
-            <td>~3.86 (3 6⁄7) <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/></td>
-            <td>~4.43 (4 3⁄7) <img src="https://i.imgur.com/RJFWgy8.png" alt="Lettuce Seeds texture" width="16px"/></td>
+            <td>~1.71 (1 5⁄7) <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>~2.29 (2 2⁄7) <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>~2.86 (2 6⁄7) <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>~3.43 (3 3⁄7) <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
         </tr>
     </tbody>
 </table>
@@ -125,8 +125,8 @@ The looting is calculated by a binomial distribution: a drop is attempted three 
     </thead>
     <tbody>
         <tr>
-            <td>[Lettuce](lettuce)</td>
-            <td><img src="https://i.imgur.com/sUUNcT9.png" alt="Lettuce Seeds crafting recipe" width="320px"/></td>
+            <td>[Lettuce](../items/lettuce)</td>
+            <td><CraftingRecipe slots={['better_mcdonalds_mod:lettuce', '', '', '', '', '', '', '', '']} result="better_mcdonalds_mod:lettuce_seeds" count={2}/></td>
         </tr>
     </tbody>
 </table>
@@ -139,7 +139,7 @@ Lettuce seeds can be placed on [farmland](https://minecraft.wiki/w/Farmland) by 
 
 Crops grow faster if the farmland they are planted on is [hydrated](https://minecraft.wiki/w/Hydrated). Using [bone meal](https://minecraft.wiki/w/Bone_meal) on crops also increases the speed of growth by randomly increasing their growth stage.
 
-Breaking the final stage produces 1 to 4 lettuce seeds (or more with Fortune) and 1 [lettuce](lettuce). If they are harvested early, they drop 1 seed without any lettuce. Crops break if pushed by a [piston](https://minecraft.wiki/w/Piston) or if their supporting farmland breaks or turns to dirt (e.g. by being trampled), dropping their usual drops.
+Breaking fully-grown lettuce crops yields 1 [lettuce](../items/lettuce) and between 0 and 3 seeds (more seeds can drop with [Fortune](https://minecraft.wiki/w/Fortune)). If harvested early, the crop drops 1 seed but no [lettuce](../items/lettuce). Crops will also break if pushed by a [piston](https://minecraft.wiki/w/Piston) or if their supporting [farmland](https://minecraft.wiki/w/Farmland) is destroyed or reverts to [dirt](https://minecraft.wiki/w/Dirt) (e.g., by being trampled), dropping their usual items.
 
 ### Composting
 
@@ -155,7 +155,7 @@ Placing lettuce seeds into a [composter](https://minecraft.wiki/w/Composter) has
             <th>Name</th>
             <th>[Identifier](https://minecraft.wiki/w/Resource_location)</th>
             <th>Form</th>
-            <th>[Block tags](https://minecraft.wiki/w/Tag)</th>
+            <th>[Tags](https://minecraft.wiki/w/Tag)</th>
             <th>Translation key</th>
         </tr>
     </thead>
@@ -164,14 +164,14 @@ Placing lettuce seeds into a [composter](https://minecraft.wiki/w/Composter) has
             <td>Lettuce Crop</td>
             <td>`lettuce_crop`</td>
             <td>Block</td>
-            <td>`bee_growables` `crops`</td>
+            <td>`minecraft:crops`<br/>`minecraft:maintains_farmland`<br/>`sereneseasons:autumn_crops`</td>
             <td>`block.better_mcdonalds_mod.lettuce_crop`</td>
         </tr>
         <tr>
             <td>Lettuce Seeds</td>
             <td>`lettuce_seeds`</td>
             <td>Item</td>
-            <td>-</td>
+            <td>`minecraft:villager_plantable_seeds`<br/>`c:seeds/lettuce`<br/>`sereneseasons:autumn_crops`</td>
             <td>`item.better_mcdonalds_mod.lettuce_seeds`</td>
         </tr>
     </tbody>
@@ -193,19 +193,19 @@ Placing lettuce seeds into a [composter](https://minecraft.wiki/w/Composter) has
             <td rowspan="4">age</td>
             <td rowspan="4">`0`</td>
             <td>`0`</td>
-            <td><img src="https://i.imgur.com/gZfat4E.png" alt="Lettuce Crop Stage 0 texture" width="16px"/></td>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage0_flat"/></td>
         </tr>
         <tr>
             <td>`1`</td>
-            <td><img src="https://i.imgur.com/NB4Jnzb.png" alt="Lettuce Crop Stage 1 texture" width="16px"/></td>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage1_flat"/></td>
         </tr>
         <tr>
             <td>`2`</td>
-            <td><img src="https://i.imgur.com/9TSe98g.png" alt="Lettuce Crop Stage 2 texture" width="16px"/></td>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage2_flat"/></td>
         </tr>
         <tr>
             <td>`3`</td>
-            <td><img src="https://i.imgur.com/kSzfhjd.png" alt="Lettuce Crop Stage 3 texture" width="16px"/> Fully grown.</td>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage3_flat"/> Fully grown.</td>
         </tr>
     </tbody>
 </table>

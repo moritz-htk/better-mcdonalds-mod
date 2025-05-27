@@ -1,20 +1,14 @@
 ---
 title: Salt Block
-hide_meta: true
----
-
-<p align="center">
-    <img src="https://i.imgur.com/hakcyzD.png" alt="Salt Block texture" width="160px"/>
-    Salt Block Texture
-</p>
-
+icon: better_mcdonalds_mod:salt_block
+type: block
 ---
 
 <table>
     <tbody>
         <tr>
             <td>[Renewable](https://minecraft.wiki/w/Renewable_resource)</td>
-            <td>Yes</td>
+            <td>No</td>
         </tr>
         <tr>
             <td>Stackable</td>
@@ -57,7 +51,45 @@ hide_meta: true
 
 ### Breaking
 
-Salt blocks can be mined with any item, but [shovels](https://minecraft.wiki/w/Shovel) are quickest. Destroying a salt block yields 2-4 [salt](../items/salt). If broken with a tool enchanted with [Silk Touch](https://minecraft.wiki/w/Silk_Touch), it drops itself instead. Using a tool with [Fortune](https://minecraft.wiki/w/Fortune) to destroy a salt block does increase the amount of salt that is dropped.
+Salt blocks can be mined with any item, but [shovels](https://minecraft.wiki/w/Shovel) are quickest. Breaking a salt block with a regular tool drops 2–4 [salt](../items/salt). The [Fortune](https://minecraft.wiki/w/Fortune) enchantment increases the chance of getting more [salt](../items/salt) within this range, but does not increase the maximum amount. Using a tool with [Silk Touch](https://minecraft.wiki/w/Silk_Touch) makes the block drop itself instead.
+
+<table>
+    <thead>
+        <tr>
+            <th rowspan="3">Source</th>
+            <th colspan="5">Drops</th>
+        </tr>
+        <tr>
+            <th colspan="4"><Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> [Salt](../items/salt)</th>
+            <th><Asset width={16} height={16} location="better_mcdonalds_mod:salt_block"/> Salt Block</th>
+        </tr>
+        <tr>
+            <th>Default tool</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) I</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) II</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) III</th>
+            <th>With [Silk Touch](https://minecraft.wiki/w/Silk_Touch)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:salt_block"/> Salt Block</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~33.33%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~33.33%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~33.33%)</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~25%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~25%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~50%)</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~20%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~20%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~60%)</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~16.67%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~16.67%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~66.68%)</td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:salt_block"/></td>
+        </tr>
+        <tr>
+            <td>Average drops</td>
+            <td>~3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td>~3.25 (3 1⁄4) <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td>~3.4 (3 2⁄5) <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td>~3.5 (3 1⁄2) <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td/>
+        </tr>
+    </tbody>
+</table>
 
 ### Natural generation
 
@@ -75,7 +107,7 @@ Salt blocks are found at the bottoms of [rivers](https://minecraft.wiki/w/River)
     <tbody>
         <tr>
             <td>[Salt](../items/salt)</td>
-            <td><img src="https://i.imgur.com/iDmmUjN.png" alt="Salt Block crafting recipe" width="320px"/></td>
+            <td><CraftingRecipe slots={['better_mcdonalds_mod:salt', 'better_mcdonalds_mod:salt', '', 'better_mcdonalds_mod:salt', 'better_mcdonalds_mod:salt', '', '', '', '']} result="better_mcdonalds_mod:salt_block"/></td>
         </tr>
     </tbody>
 </table>
@@ -103,7 +135,7 @@ If the supporting block below a salt block is removed, it falls until it lands o
             <td>Salt Block</td>
             <td>`salt_block`</td>
             <td>Block & Item</td>
-            <td>`mineable/shovel`</td>
+            <td>`minecraft:mineable/shovel`</td>
             <td>`block.better_mcdonalds_mod.salt_block`</td>
         </tr>
     </tbody>
