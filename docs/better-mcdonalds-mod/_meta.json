@@ -3,8 +3,8 @@
     "name": "Blocks",
     "icon": "Box"
   },
-  "items": {
-    "name": "Items",
-    "icon": "Hamburger"
+  "ingredients": {
+    "name": "Ingredients",
+    "icon": "Apple"
   }
 }
