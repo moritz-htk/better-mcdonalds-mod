@@ -8,10 +8,10 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
@@ -23,7 +23,7 @@ public class BMMBiomeModifiers {
         HolderGetter<Biome> biomeGetter = context.lookup(Registries.BIOME);
         HolderGetter<PlacedFeature> placedFeatureGetter = context.lookup(Registries.PLACED_FEATURE);
 
-        context.register(SALT_BLOCK, new BiomeModifiers.AddFeaturesBiomeModifier(biomeGetter.getOrThrow(BiomeTags.IS_RIVER), HolderSet.direct(placedFeatureGetter.getOrThrow(BMMPlacedFeatures.SALT_BLOCK)), GenerationStep.Decoration.RAW_GENERATION));
+        context.register(SALT_BLOCK, new BiomeModifiers.AddFeaturesBiomeModifier(biomeGetter.getOrThrow(Tags.Biomes.IS_AQUATIC), HolderSet.direct(placedFeatureGetter.getOrThrow(BMMPlacedFeatures.SALT_BLOCK)), GenerationStep.Decoration.RAW_GENERATION));
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
