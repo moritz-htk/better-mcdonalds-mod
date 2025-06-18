@@ -60,7 +60,7 @@ repositories {
 }
 
 dependencies {
-    implementation fg.deobf("maven.modrinth:better-mcdonalds-mod:${better_mcdonalds_mod_version}-neoforge")
+    implementation "maven.modrinth:better-mcdonalds-mod:${better_mcdonalds_mod_version}-neoforge"
 }
 ```
 
@@ -68,7 +68,7 @@ Add the following to your `gradle.properties` file:
 
 ### ⚙️ `gradle.properties`
 ```
-better_mcdonalds_mod_version=4.4.3+1.21.5
+better_mcdonalds_mod_version=4.4.4+1.21.5
 ```
 
 📌 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
