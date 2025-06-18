@@ -7,9 +7,13 @@ import net.kyronis.better_mcdonalds_mod.common.registry.BMMTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.TagAppender;
 import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagBuilder;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
@@ -95,6 +99,11 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.SERENE_SEASON_SUMMER_CROPS).add(BMMItems.TOMATO_SEEDS.getKey());
             tag(BMMTags.Items.SERENE_SEASON_AUTUMN_CROPS).add(BMMItems.LETTUCE_SEEDS.getKey());
         }
+
+        private TagAppender<ResourceKey<Item>, Item> tag(TagKey<Item> tag) {
+            TagBuilder tagbuilder = this.getOrCreateRawBuilder(tag);
+            return TagAppender.forBuilder(tagbuilder);
+        }
     }
 
     public static class Blocks extends TagsProvider<Block> {
@@ -111,6 +120,11 @@ public class BMMTagsProvider {
             // Serene Season Crop Tags
             tag(BMMTags.Blocks.SERENE_SEASON_SUMMER_CROPS).add(BMMBlocks.TOMATO_CROP.getKey());
             tag(BMMTags.Blocks.SERENE_SEASON_AUTUMN_CROPS).add(BMMBlocks.LETTUCE_CROP.getKey());
+        }
+
+        private TagAppender<ResourceKey<Block>, Block> tag(TagKey<Block> tag) {
+            TagBuilder tagbuilder = this.getOrCreateRawBuilder(tag);
+            return TagAppender.forBuilder(tagbuilder);
         }
     }
 }

@@ -4,7 +4,7 @@ import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMBlocks;
 import net.kyronis.better_mcdonalds_mod.neoforge.registry.BMMLootModifiers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -23,8 +23,8 @@ public class BMMNeoForge {
     public static class BMMClientEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(BMMBlocks.TOMATO_CROP.get(), RenderType.CUTOUT);
-            ItemBlockRenderTypes.setRenderLayer(BMMBlocks.LETTUCE_CROP.get(), RenderType.CUTOUT);
+            ItemBlockRenderTypes.setRenderLayer(BMMBlocks.TOMATO_CROP.get(), ChunkSectionLayer.CUTOUT);
+            ItemBlockRenderTypes.setRenderLayer(BMMBlocks.LETTUCE_CROP.get(), ChunkSectionLayer.CUTOUT);
         }
     }
 }
