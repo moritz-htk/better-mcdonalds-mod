@@ -1,9 +1,6 @@
 package net.kyronis.better_mcdonalds_mod.common;
 
-import net.kyronis.better_mcdonalds_mod.common.registry.BMMBlocks;
-import net.kyronis.better_mcdonalds_mod.common.registry.BMMCreativeTabs;
-import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
-import net.kyronis.better_mcdonalds_mod.common.registry.BMMVillagerTrades;
+import net.kyronis.better_mcdonalds_mod.common.registry.*;
 
 public class BetterMcDonaldsMod {
     public static final String MOD_ID = "better_mcdonalds_mod";
@@ -11,7 +8,7 @@ public class BetterMcDonaldsMod {
     public static void init() {
         BMMBlocks.BLOCKS.register();
         BMMCreativeTabs.TABS.register();
-        BMMItems.register();
+        BMMRecipes.register();
         BMMVillagerTrades.register();
     }
 }

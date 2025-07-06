@@ -1,5 +1,8 @@
 {
-  "type": "minecraft:stonecutting",
+  "type": "better_mcdonalds_mod:frying",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 1.0,
   "ingredient": "minecraft:cooked_chicken",
   "result": {
     "count": 2,

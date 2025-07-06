@@ -1,6 +1,7 @@
 package net.kyronis.better_mcdonalds_mod.datagen.provider;
 
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.kyronis.better_mcdonalds_mod.common.recipe.builder.BMMFryingRecipeBuilder;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMBlocks;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMTags;
@@ -71,15 +72,15 @@ public class BMMRecipeProvider extends RecipeProvider {
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(BMMItems.BEEF_PATTY.get()), RecipeCategory.FOOD, BMMItems.COOKED_BEEF_PATTY.get(), 1.0f, 200)
                 .unlockedBy(getHasName(BMMItems.BEEF_PATTY.get()), has(BMMItems.BEEF_PATTY.get()))
-                .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BEEF_PATTY.get()) + "_smelting")));
+                .save(output, registerRecipe(BMMItems.COOKED_BEEF_PATTY.get(), "_smelting"));
 
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(BMMItems.BEEF_PATTY.get()), RecipeCategory.FOOD, BMMItems.COOKED_BEEF_PATTY.get(), 1.0f, 100)
                 .unlockedBy(getHasName(BMMItems.BEEF_PATTY.get()), has(BMMItems.BEEF_PATTY.get()))
-                .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BEEF_PATTY.get()) + "_smoking")));
+                .save(output, registerRecipe(BMMItems.COOKED_BEEF_PATTY.get(), "_smoking"));
 
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(BMMItems.BEEF_PATTY.get()), RecipeCategory.FOOD, BMMItems.COOKED_BEEF_PATTY.get(), 1.0f, 600)
                 .unlockedBy(getHasName(BMMItems.BEEF_PATTY.get()), has(BMMItems.BEEF_PATTY.get()))
-                .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BEEF_PATTY.get()) + "_campfire_cooking")));
+                .save(output, registerRecipe(BMMItems.COOKED_BEEF_PATTY.get(), "_campfire_cooking"));
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.PORKCHOP), RecipeCategory.FOOD, BMMItems.RAW_BACON.get(), 2)
                 .unlockedBy(getHasName(Items.PORKCHOP), has(Items.PORKCHOP))
@@ -87,15 +88,15 @@ public class BMMRecipeProvider extends RecipeProvider {
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(BMMItems.RAW_BACON.get()), RecipeCategory.FOOD, BMMItems.COOKED_BACON.get(), 1.0f, 200)
                 .unlockedBy(getHasName(BMMItems.RAW_BACON.get()), has(BMMItems.RAW_BACON.get()))
-                .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BACON.get()) + "_smelting")));
+                .save(output, registerRecipe(BMMItems.COOKED_BACON.get(), "_smelting"));
 
         SimpleCookingRecipeBuilder.smoking(Ingredient.of(BMMItems.RAW_BACON.get()), RecipeCategory.FOOD, BMMItems.COOKED_BACON.get(), 1.0f, 100)
                 .unlockedBy(getHasName(BMMItems.RAW_BACON.get()), has(BMMItems.RAW_BACON.get()))
-                .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BACON.get()) + "_smoking")));
+                .save(output, registerRecipe(BMMItems.COOKED_BACON.get(), "_smoking"));
 
         SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(BMMItems.RAW_BACON.get()), RecipeCategory.FOOD, BMMItems.COOKED_BACON.get(), 1.0f, 600)
                 .unlockedBy(getHasName(BMMItems.RAW_BACON.get()), has(BMMItems.RAW_BACON.get()))
-                .save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(BMMItems.COOKED_BACON.get()) + "_campfire_cooking")));
+                .save(output, registerRecipe(BMMItems.COOKED_BACON.get(), "_campfire_cooking"));
 
         ShapelessRecipeBuilder.shapeless(items, RecipeCategory.FOOD, BMMItems.MAYONNAISE.get(), 2)
                 .requires(Items.MILK_BUCKET)
@@ -226,13 +227,13 @@ public class BMMRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.CARROT), has(Items.CARROT))
                 .save(output, registerRecipe(BMMItems.SNACK_SALAD.get()));
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.COOKED_CHICKEN), RecipeCategory.FOOD, BMMItems.CHICKEN_MCNUGGETS.get(), 2)
+        BMMFryingRecipeBuilder.frying(Ingredient.of(Items.COOKED_CHICKEN), RecipeCategory.FOOD, BMMItems.CHICKEN_MCNUGGETS.get(), 2, 1.0f, 200)
                 .unlockedBy(getHasName(Items.COOKED_CHICKEN), has(Items.COOKED_CHICKEN))
-                .save(output, registerRecipe(BMMItems.CHICKEN_MCNUGGETS.get()));
+                .save(output, registerRecipe(BMMItems.CHICKEN_MCNUGGETS.get(), "_frying"));
 
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(Items.BAKED_POTATO), RecipeCategory.FOOD, BMMItems.FRIES.get(), 2)
+        BMMFryingRecipeBuilder.frying(Ingredient.of(Items.BAKED_POTATO), RecipeCategory.FOOD, BMMItems.FRIES.get(), 2, 1.0f, 200)
                 .unlockedBy(getHasName(Items.BAKED_POTATO), has(Items.BAKED_POTATO))
-                .save(output, registerRecipe(BMMItems.FRIES.get()));
+                .save(output, registerRecipe(BMMItems.FRIES.get(), "_frying"));
 
         ShapelessRecipeBuilder.shapeless(items, RecipeCategory.FOOD, BMMItems.HAPPY_MEAL.get())
                 .requires(BMMTags.Items.BURGER)
@@ -310,8 +311,9 @@ public class BMMRecipeProvider extends RecipeProvider {
                 .save(output, registerRecipe(BMMItems.MCFLURRY_CHOCOLATE.get()));
     }
 
-    public static ResourceKey<Recipe<?>> registerRecipe(ItemLike item) {
-        return ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(item)));
+    public static ResourceKey<Recipe<?>> registerRecipe(ItemLike item, String... string) {
+        String type = string.length > 0 ? string[0] : "";
+        return ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, getItemName(item) + type));
     }
 
     public static class Runner extends RecipeProvider.Runner {
