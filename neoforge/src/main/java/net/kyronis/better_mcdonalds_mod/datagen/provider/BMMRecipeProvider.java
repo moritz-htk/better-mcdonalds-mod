@@ -229,11 +229,11 @@ public class BMMRecipeProvider extends RecipeProvider {
 
         BMMFryingRecipeBuilder.frying(Ingredient.of(Items.COOKED_CHICKEN), RecipeCategory.FOOD, BMMItems.CHICKEN_MCNUGGETS.get(), 2, 1.0f, 200)
                 .unlockedBy(getHasName(Items.COOKED_CHICKEN), has(Items.COOKED_CHICKEN))
-                .save(output, registerRecipe(BMMItems.CHICKEN_MCNUGGETS.get(), "_frying"));
+                .save(output, registerRecipe(BMMItems.CHICKEN_MCNUGGETS.get()));
 
         BMMFryingRecipeBuilder.frying(Ingredient.of(Items.BAKED_POTATO), RecipeCategory.FOOD, BMMItems.FRIES.get(), 2, 1.0f, 200)
                 .unlockedBy(getHasName(Items.BAKED_POTATO), has(Items.BAKED_POTATO))
-                .save(output, registerRecipe(BMMItems.FRIES.get(), "_frying"));
+                .save(output, registerRecipe(BMMItems.FRIES.get()));
 
         ShapelessRecipeBuilder.shapeless(items, RecipeCategory.FOOD, BMMItems.HAPPY_MEAL.get())
                 .requires(BMMTags.Items.BURGER)

@@ -7,6 +7,7 @@ public class BetterMcDonaldsMod {
 
     public static void init() {
         BMMBlocks.BLOCKS.register();
+        BMMItems.register();
         BMMCreativeTabs.TABS.register();
         BMMRecipes.register();
         BMMVillagerTrades.register();

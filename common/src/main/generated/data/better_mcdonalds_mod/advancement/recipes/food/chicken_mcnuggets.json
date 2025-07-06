@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_baked_potato": {
+    "has_cooked_chicken": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:baked_potato"
+            "items": "minecraft:cooked_chicken"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:fries_frying"
+        "recipe": "better_mcdonalds_mod:chicken_mcnuggets"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_baked_potato"
+      "has_cooked_chicken"
     ]
   ],
   "rewards": {
     "recipes": [
-      "better_mcdonalds_mod:fries_frying"
+      "better_mcdonalds_mod:chicken_mcnuggets"
     ]
   }
 }
