@@ -19,9 +19,9 @@ public class BMMItems {
     public static final RegistrySupplier<BlockItem> SALT_BLOCK = BLOCK_ITEMS.register("salt_block", () -> new BlockItem(BMMBlocks.SALT_BLOCK.get(), registerItemProperties("salt_block").useBlockDescriptionPrefix()));
     public static final RegistrySupplier<Item> SALT = ITEMS.register("salt", () -> new Item(registerItemProperties("salt")));
     public static final RegistrySupplier<Item> TOMATO = ITEMS.register("tomato", () -> new Item(registerItemProperties("tomato").food(registerFoodValues(1, 0.3f))));
-    public static final RegistrySupplier<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds", () -> new BlockItem(BMMBlocks.TOMATO_CROP.get(), registerItemProperties("tomato_seeds").useItemDescriptionPrefix()));
+    public static final RegistrySupplier<Item> TOMATO_SEEDS = BLOCK_ITEMS.register("tomato_seeds", () -> new BlockItem(BMMBlocks.TOMATO_CROP.get(), registerItemProperties("tomato_seeds").useItemDescriptionPrefix()));
     public static final RegistrySupplier<Item> LETTUCE = ITEMS.register("lettuce", () -> new Item(registerItemProperties("lettuce").food(registerFoodValues(1, 0.3f))));
-    public static final RegistrySupplier<Item> LETTUCE_SEEDS = ITEMS.register("lettuce_seeds", () -> new BlockItem(BMMBlocks.LETTUCE_CROP.get(), registerItemProperties("lettuce_seeds").useItemDescriptionPrefix()));
+    public static final RegistrySupplier<Item> LETTUCE_SEEDS = BLOCK_ITEMS.register("lettuce_seeds", () -> new BlockItem(BMMBlocks.LETTUCE_CROP.get(), registerItemProperties("lettuce_seeds").useItemDescriptionPrefix()));
     public static final RegistrySupplier<Item> CHEESE = ITEMS.register("cheese", () -> new Item(registerItemProperties("cheese").food(registerFoodValues(2, 0.4f))));
     public static final RegistrySupplier<Item> TORTILLA = ITEMS.register("tortilla", () -> new Item(registerItemProperties("tortilla").food(registerFoodValues(2, 0.4f))));
     public static final RegistrySupplier<Item> BEEF_PATTY = ITEMS.register("beef_patty", () -> new Item(registerItemProperties("beef_patty").food(registerFoodValues(4, 0.4f))));

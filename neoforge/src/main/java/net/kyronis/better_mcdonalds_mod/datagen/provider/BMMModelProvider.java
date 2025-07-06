@@ -35,8 +35,14 @@ public class BMMModelProvider extends ModelProvider {
 
     private void generateItemModels(ItemModelGenerators itemModels) {
         for (RegistrySupplier<Item> item : BMMItems.ITEMS) {
-            Set<Item> excludedItems = Set.of(BMMItems.SALT_BLOCK.get(), BMMItems.TOMATO_SEEDS.get(), BMMItems.LETTUCE_SEEDS.get());
-            if (!excludedItems.contains(item.get())) {
+            boolean isBlockItem = false;
+            for (RegistrySupplier<Item> blockItem : BMMItems.BLOCK_ITEMS) {
+                if (blockItem.get() == item.get()) {
+                    isBlockItem = true;
+                    break;
+                }
+            }
+            if (!isBlockItem) {
                 itemModels.generateFlatItem(item.get(), ModelTemplates.FLAT_ITEM);
             }
         }
