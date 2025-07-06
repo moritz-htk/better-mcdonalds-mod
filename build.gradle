@@ -58,4 +58,11 @@ subprojects {
             options.release = 21
         }
     }
+
+    idea {
+        module {
+            downloadSources = true
+            downloadJavadoc = true
+        }
+    }
 }
