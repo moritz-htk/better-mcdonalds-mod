@@ -49,7 +49,6 @@ processResources {
 }
 
 shadowJar {
-    exclude '**/better_mcdonalds_mod/datagen/**'
     exclude '.cache/**'
     from project(':').file('LICENSE.md')
 
