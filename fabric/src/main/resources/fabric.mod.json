@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "better_mcdonalds_mod",
-  "version": "${version}",
+  "version": "${mod_version}",
   "name": "Better McDonald's Mod",
   "description": "This Minecraft mod adds many new items and food from McDonald's.",
   "authors": [
@@ -31,11 +31,11 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=0.16.14",
-    "minecraft": ">=1.21.6",
+    "fabricloader": ">=${fabric_loader_version}",
+    "minecraft": ">=${minecraft_version}",
     "java": ">=21",
     "fabric-api": "*",
-    "architectury": ">=17.0.4"
+    "architectury": ">=${architectury_api_version}"
   },
   "custom": {
     "catalogue": {

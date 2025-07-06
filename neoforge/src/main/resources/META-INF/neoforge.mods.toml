@@ -5,7 +5,7 @@ issueTrackerURL="https://github.com/moritz-htk/better-mcdonalds-mod/issues"
 
 [[mods]]
     modId="better_mcdonalds_mod"
-    version="${version}"
+    version="${mod_version}"
     displayName="Better McDonald's Mod"
     updateJSONURL="https://api.modrinth.com/updates/better-mcdonalds-mod/forge_updates.json?neoforge=only"
     displayURL="https://kyronis.net/better-mcdonalds-mod"
@@ -24,14 +24,14 @@ issueTrackerURL="https://github.com/moritz-htk/better-mcdonalds-mod/issues"
 [[dependencies.better_mcdonalds_mod]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21.6, 1.22)"
+    versionRange="[${minecraft_version}, 1.22)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.better_mcdonalds_mod]]
     modId="architectury"
     type="required"
-    versionRange="[17.0.4,)"
+    versionRange="[${architectury_api_version},)"
     ordering="AFTER"
     side="BOTH"
 
