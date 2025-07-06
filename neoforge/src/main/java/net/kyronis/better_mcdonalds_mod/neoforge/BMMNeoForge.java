@@ -19,7 +19,7 @@ public class BMMNeoForge {
         BMMLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
     }
 
-    @EventBusSubscriber(modid = BetterMcDonaldsMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = BetterMcDonaldsMod.MOD_ID, value = Dist.CLIENT)
     public static class BMMClientEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
