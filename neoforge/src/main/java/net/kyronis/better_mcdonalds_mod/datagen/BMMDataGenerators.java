@@ -11,7 +11,7 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = BetterMcDonaldsMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = BetterMcDonaldsMod.MOD_ID)
 public class BMMDataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent.Client event) {

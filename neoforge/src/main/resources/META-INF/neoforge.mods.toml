@@ -17,7 +17,7 @@ issueTrackerURL="https://github.com/moritz-htk/better-mcdonalds-mod/issues"
 [[dependencies.better_mcdonalds_mod]]
     modId="neoforge"
     type="required"
-    versionRange="[21.6,)"
+    versionRange="[21.7,)"
     ordering="NONE"
     side="BOTH"
 
