@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "better_mcdonalds_mod:cooked_beef_patty"
+    },
+    {
+      "tag": "c:foods/cheese"
+    },
+    {
+      "tag": "c:foods/cooked_bacon"
+    }
+  ],
+  "result": {
+    "item": "better_mcdonalds_mod:mcbacon"
+  }
+}

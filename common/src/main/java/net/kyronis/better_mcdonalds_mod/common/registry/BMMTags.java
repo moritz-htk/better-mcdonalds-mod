@@ -21,23 +21,28 @@ public class BMMTags {
         public static final TagKey<Item> SEEDS_LETTUCE = registerCommonKey("seeds/lettuce");
 
         // Food Tags
+        public static final TagKey<Item> FOODS = registerCommonKey("foods");
         public static final TagKey<Item> FOODS_CHEESE = registerCommonKey("foods/cheese");
+        public static final TagKey<Item> FOODS_BREAD = registerCommonKey("foods/bread");
         public static final TagKey<Item> FOODS_SAUCE = registerCommonKey("foods/sauce");
         public static final TagKey<Item> FOODS_BURGER = registerCommonKey("foods/burger");
         public static final TagKey<Item> FOODS_ICE_CREAM = registerCommonKey("foods/ice_cream");
 
-        public static final TagKey<Item> BURGER = registerModKey("burger");
-        public static final TagKey<Item> SIDE_DISHES = registerModKey("side_dishes");
+        public static final TagKey<Item> MOD_BURGER = registerModKey("burger");
+        public static final TagKey<Item> MOD_SIDE_DISHES = registerModKey("side_dishes");
 
         // Vegetable Food Tags
+        public static final TagKey<Item> FOODS_VEGETABLE = registerCommonKey("foods/vegetable");
         public static final TagKey<Item> FOODS_VEGETABLES_TOMATO = registerCommonKey("foods/vegetables/tomato");
         public static final TagKey<Item> FOODS_VEGETABLES_LETTUCE = registerCommonKey("foods/vegetables/lettuce");
 
         // Raw Meat Food Tags
+        public static final TagKey<Item> FOODS_RAW_MEAT = registerCommonKey("foods/raw_meat");
         public static final TagKey<Item> FOODS_RAW_BEEF = registerCommonKey("foods/raw_beef");
         public static final TagKey<Item> FOODS_RAW_BACON = registerCommonKey("foods/raw_bacon");
 
         // Cooked Meat Food Tags
+        public static final TagKey<Item> FOODS_COOKED_MEAT = registerCommonKey("foods/cooked_meat");
         public static final TagKey<Item> FOODS_COOKED_BEEF = registerCommonKey("foods/cooked_beef");
         public static final TagKey<Item> FOODS_COOKED_BACON = registerCommonKey("foods/cooked_bacon");
 
@@ -54,24 +59,26 @@ public class BMMTags {
         public static final TagKey<Item> FOODS_BURGERS_FISHBURGER = registerCommonKey("foods/burgers/fishburger");
 
         // Drink Tags
-        public static final TagKey<Item> DRINKS = registerModKey("drinks");
+        public static final TagKey<Item> DRINKS = registerCommonKey("drinks");
         public static final TagKey<Item> DRINKS_SODA = registerCommonKey("drinks/soda");
         public static final TagKey<Item> DRINKS_TEA = registerCommonKey("drinks/tea");
+
+        public static final TagKey<Item> MOD_DRINKS = registerModKey("drinks");
 
         // Serene Season Crop Tags
         public static final TagKey<Item> SERENE_SEASON_SUMMER_CROPS = registerCompatibilityKey("sereneseasons", "summer_crops");
         public static final TagKey<Item> SERENE_SEASON_AUTUMN_CROPS = registerCompatibilityKey("sereneseasons", "autumn_crops");
 
         private static TagKey<Item> registerCommonKey(String path) {
-            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", path));
+            return TagKey.create(Registries.ITEM, new ResourceLocation("c", path));
         }
 
         private static TagKey<Item> registerModKey(String path) {
-            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, path));
+            return TagKey.create(Registries.ITEM, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, path));
         }
 
         private static TagKey<Item> registerCompatibilityKey(String namespace, String path) {
-            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(namespace, path));
+            return TagKey.create(Registries.ITEM, new ResourceLocation(namespace, path));
         }
     }
 
@@ -81,7 +88,7 @@ public class BMMTags {
         public static final TagKey<Block> SERENE_SEASON_AUTUMN_CROPS = registerCompatibilityKey("sereneseasons", "autumn_crops");
 
         private static TagKey<Block> registerCompatibilityKey(String namespace, String path) {
-            return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(namespace, path));
+            return TagKey.create(Registries.BLOCK, new ResourceLocation(namespace, path));
         }
     }
 }

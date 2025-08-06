@@ -1,0 +1,414 @@
+{
+  "parent": "better_mcdonalds_mod:better_mcdonalds_mod/root",
+  "criteria": {
+    "beef_patty": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:beef_patty"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "big_mac": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:big_mac"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "cheese": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:cheese"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "cheeseburger": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:cheeseburger"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "chicken_mcnuggets": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:chicken_mcnuggets"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "chickenburger": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:chickenburger"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "coca_cola": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:coca_cola"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "cooked_bacon": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:cooked_bacon"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "cooked_beef_patty": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:cooked_beef_patty"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "fanta": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:fanta"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "filet_o_fish": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:filet_o_fish"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "fries": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:fries"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "hamburger": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:hamburger"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "happy_meal": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:happy_meal"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "ketchup": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:ketchup"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "lettuce": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:lettuce"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "lipton_ice_tea_peach": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:lipton_ice_tea_peach"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "mayonnaise": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:mayonnaise"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "mcbacon": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:mcbacon"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "mcchicken": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:mcchicken"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "mcflurry": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:mcflurry"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "mcflurry_chocolate": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:mcflurry_chocolate"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "mcwrap": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:mcwrap"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "mustard": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:mustard"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "raw_bacon": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:raw_bacon"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "snack_salad": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:snack_salad"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "sprite": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:sprite"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "sweet_sour_sauce": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:sweet_sour_sauce"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "tomato": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:tomato"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "tortilla": {
+      "conditions": {
+        "item": {
+          "items": [
+            "better_mcdonalds_mod:tortilla"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/red_concrete_powder.png",
+    "description": {
+      "translate": "advancement.better_mcdonalds_mod.consume_everything.description"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "better_mcdonalds_mod:big_mac"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.better_mcdonalds_mod.consume_everything.title"
+    }
+  },
+  "requirements": [
+    [
+      "tomato"
+    ],
+    [
+      "lettuce"
+    ],
+    [
+      "cheese"
+    ],
+    [
+      "tortilla"
+    ],
+    [
+      "beef_patty"
+    ],
+    [
+      "cooked_beef_patty"
+    ],
+    [
+      "raw_bacon"
+    ],
+    [
+      "cooked_bacon"
+    ],
+    [
+      "mayonnaise"
+    ],
+    [
+      "sweet_sour_sauce"
+    ],
+    [
+      "ketchup"
+    ],
+    [
+      "mustard"
+    ],
+    [
+      "hamburger"
+    ],
+    [
+      "cheeseburger"
+    ],
+    [
+      "mcbacon"
+    ],
+    [
+      "big_mac"
+    ],
+    [
+      "chickenburger"
+    ],
+    [
+      "mcchicken"
+    ],
+    [
+      "filet_o_fish"
+    ],
+    [
+      "mcwrap"
+    ],
+    [
+      "snack_salad"
+    ],
+    [
+      "chicken_mcnuggets"
+    ],
+    [
+      "fries"
+    ],
+    [
+      "happy_meal"
+    ],
+    [
+      "coca_cola"
+    ],
+    [
+      "fanta"
+    ],
+    [
+      "sprite"
+    ],
+    [
+      "lipton_ice_tea_peach"
+    ],
+    [
+      "mcflurry"
+    ],
+    [
+      "mcflurry_chocolate"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

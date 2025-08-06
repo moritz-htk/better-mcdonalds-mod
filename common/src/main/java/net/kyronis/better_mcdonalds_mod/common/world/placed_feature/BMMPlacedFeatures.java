@@ -5,7 +5,7 @@ import net.kyronis.better_mcdonalds_mod.common.world.configured_feature.BMMConfi
 import net.kyronis.better_mcdonalds_mod.common.world.placement.BMMDiskPlacement;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -17,7 +17,7 @@ import net.minecraft.world.level.material.Fluids;
 public class BMMPlacedFeatures {
     public static final ResourceKey<PlacedFeature> SALT_BLOCK = registerKey("salt_block");
 
-    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         context.register(SALT_BLOCK, saltBlockFeature(configuredFeatures));
@@ -33,6 +33,6 @@ public class BMMPlacedFeatures {
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, name));
+        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(BetterMcDonaldsMod.MOD_ID, name));
     }
 }

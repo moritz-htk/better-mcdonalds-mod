@@ -64,7 +64,7 @@ unifiedPublishing {
     project {
         displayName = "[Fabric ${project.minecraft_version}] Better McDonald's Mod ${project.version}"
         version = "${project.version}"
-        releaseType = 'release'
+        releaseType = 'beta'
         gameVersions = ["${project.minecraft_version}"]
         gameLoaders = ['fabric']
         changelog = project(':').file('changelog.md').text

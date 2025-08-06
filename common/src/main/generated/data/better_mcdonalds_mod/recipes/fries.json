@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "minecraft:baked_potato"
+  },
+  "result": "better_mcdonalds_mod:fries"
+}

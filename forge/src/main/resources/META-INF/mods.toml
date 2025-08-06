@@ -1,0 +1,39 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="mSLA v2.0"
+issueTrackerURL="https://github.com/moritz-htk/better-mcdonalds-mod/issues"
+
+[[mods]]
+    modId="better_mcdonalds_mod"
+    version="${mod_version}"
+    displayName="Better McDonald's Mod"
+    updateJSONURL="https://api.modrinth.com/updates/better-mcdonalds-mod/forge_updates.json"
+    displayURL="https://kyronis.net/better-mcdonalds-mod"
+    logoFile="assets/better_mcdonalds_mod/icon.png"
+    credits="Volwert123, rporotos, kohari_nk, sovseabird"
+    authors="Kyronis"
+    description='''This Minecraft mod adds many new items and food from McDonald's.'''
+
+[[dependencies.better_mcdonalds_mod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.better_mcdonalds_mod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[${minecraft_version}, 1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.better_mcdonalds_mod]]
+    modId="architectury"
+    mandatory=true
+    versionRange="[${architectury_api_version},)"
+    ordering="AFTER"
+    side="BOTH"
+
+[modproperties.better_mcdonalds_mod]
+    catalogueItemIcon="better_mcdonalds_mod:happy_meal"

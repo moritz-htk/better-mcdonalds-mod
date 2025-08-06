@@ -1,0 +1,106 @@
+plugins {
+    id 'com.gradleup.shadow'
+    id 'me.shedaniel.unified-publishing'
+}
+
+architectury {
+    platformSetupLoomIde()
+    forge()
+}
+
+loom {
+    runs {
+        data {
+            data()
+            programArgs "--all", "--mod", "better_mcdonalds_mod"
+            programArgs "--output", project(":common").file("src/main/generated").absolutePath
+            programArgs "--existing", project(":common").file("src/main/resources").absolutePath
+        }
+    }
+}
+
+configurations {
+    common {
+        canBeResolved = true
+        canBeConsumed = false
+    }
+
+    shadowCommon
+    compileClasspath.extendsFrom common
+    runtimeClasspath.extendsFrom common
+    developmentForge.extendsFrom common
+
+    shadowBundle {
+        canBeResolved = true
+        canBeConsumed = false
+    }
+}
+
+dependencies {
+    forge "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
+
+    modApi "dev.architectury:architectury-forge:${project.architectury_api_version}"
+
+    common(project(path: ':common', configuration: 'namedElements')) { transitive false }
+    shadowBundle project(path: ':common', configuration: 'transformProductionForge')
+}
+
+processResources {
+    var replaceProperties = [
+            mod_version             : mod_version,
+            minecraft_version       : minecraft_version,
+            architectury_api_version: architectury_api_version
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching('META-INF/mods.toml') {
+        expand replaceProperties
+    }
+}
+
+shadowJar {
+    exclude '**/better_mcdonalds_mod/datagen/**'
+    exclude '.cache/**'
+    from project(':').file('LICENSE.md')
+
+    configurations = [project.configurations.shadowBundle]
+    archiveClassifier = 'dev-shadow'
+}
+
+remapJar {
+    input.set shadowJar.archiveFile
+}
+
+unifiedPublishing {
+    project {
+        displayName = "[Forge ${project.minecraft_version}] Better McDonald's Mod ${project.version}"
+        version = "${project.version}"
+        releaseType = 'beta'
+        gameVersions = ["${project.minecraft_version}"]
+        gameLoaders = ['forge']
+        changelog = project(':').file('changelog.md').text
+
+        mainPublication tasks.remapJar
+
+        relations {
+            depends {
+                curseforge = 'architectury-api'
+                modrinth = 'architectury-api'
+            }
+        }
+
+        if (curseforgeApiKey != null) {
+            curseforge {
+                token = curseforgeApiKey
+                id = '546816'
+            }
+        }
+
+        if (modrinthApiKey != null) {
+            modrinth {
+                token = modrinthApiKey
+                id = 'kdnePgr1'
+            }
+        }
+    }
+}

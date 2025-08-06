@@ -1,0 +1,39 @@
+{
+  "parent": "better_mcdonalds_mod:better_mcdonalds_mod/get_salt",
+  "criteria": {
+    "coca_cola": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "better_mcdonalds_mod:coca_cola"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/red_concrete_powder.png",
+    "description": {
+      "translate": "advancement.better_mcdonalds_mod.craft_drink.description"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "better_mcdonalds_mod:coca_cola"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.better_mcdonalds_mod.craft_drink.title"
+    }
+  },
+  "requirements": [
+    [
+      "coca_cola"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

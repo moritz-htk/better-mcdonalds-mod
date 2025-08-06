@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_water",
+  "features": "better_mcdonalds_mod:salt_block",
+  "step": "raw_generation"
+}

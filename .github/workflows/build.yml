@@ -5,7 +5,7 @@ jobs:
   build:
     strategy:
       matrix:
-        java: [21]
+        java: [17]
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
@@ -25,7 +25,7 @@ jobs:
           CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
           MODRINTH_API_KEY: ${{ secrets.MODRINTH_API_KEY }}
       - name: Capture Build Artifacts
-        if: ${{ matrix.java == '21' }}
+        if: ${{ matrix.java == '17' }}
         uses: actions/upload-artifact@v4
         with:
           name: Build Artifacts

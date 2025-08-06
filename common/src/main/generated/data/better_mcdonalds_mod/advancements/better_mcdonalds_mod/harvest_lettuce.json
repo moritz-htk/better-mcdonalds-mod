@@ -1,0 +1,39 @@
+{
+  "parent": "better_mcdonalds_mod:better_mcdonalds_mod/get_seeds",
+  "criteria": {
+    "lettuce": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "better_mcdonalds_mod:lettuce"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/red_concrete_powder.png",
+    "description": {
+      "translate": "advancement.better_mcdonalds_mod.harvest_lettuce.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "better_mcdonalds_mod:lettuce"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.better_mcdonalds_mod.harvest_lettuce.title"
+    }
+  },
+  "requirements": [
+    [
+      "lettuce"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

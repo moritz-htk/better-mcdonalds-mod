@@ -1,6 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "#c:is_aquatic",
-  "features": "better_mcdonalds_mod:salt_block",
-  "step": "raw_generation"
-}
