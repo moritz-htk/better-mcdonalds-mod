@@ -1,0 +1,21 @@
+{
+  "better_mcdonalds_mod:salt_block": {
+    "stack_size": 64,
+    "required_tool": "minecraft:wooden_shovel",
+    "blast_resistance": 0.5,
+    "hardness": 0.5,
+    "flammable": false
+  },
+  "better_mcdonalds_mod:tomato_crop": {
+    "stack_size": 64,
+    "blast_resistance": 0.0,
+    "hardness": 0.0,
+    "flammable": false
+  },
+  "better_mcdonalds_mod:lettuce_crop": {
+    "stack_size": 64,
+    "blast_resistance": 0.0,
+    "hardness": 0.0,
+    "flammable": false
+  }
+}
