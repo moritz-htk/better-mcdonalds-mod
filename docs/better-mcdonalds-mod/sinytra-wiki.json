@@ -4,5 +4,8 @@
   "platforms": {
     "curseforge": "better-mcdonalds-mod",
     "modrinth": "better-mcdonalds-mod"
+  },
+  "links": {
+    "website": "https://kyronis.net/mods/better-mcdonalds-mod"
   }
 }
