@@ -18,7 +18,7 @@ public class BMMTomatoCropBlock extends CropBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 
     public BMMTomatoCropBlock(Properties properties) {
-        super(properties.mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY).noOcclusion());
+        super(properties.mapColor(MapColor.PLANT).noCollision().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY).noOcclusion());
     }
 
     @Override

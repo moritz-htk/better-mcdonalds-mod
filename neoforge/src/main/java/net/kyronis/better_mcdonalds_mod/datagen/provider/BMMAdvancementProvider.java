@@ -55,7 +55,7 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                             item.getDefaultInstance(),
                             Component.literal("Better McDonald's Mod"),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".root.description"),
-                            Optional.of(new ClientAsset(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
+                            Optional.of(new ClientAsset.ResourceTexture(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
                             AdvancementType.TASK, false, false, false))
                     .addCriterion("tick", criterion)
                     .save(consumer, String.valueOf(ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + "root")));
@@ -67,7 +67,7 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                             item.getDefaultInstance(),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + id + ".title"),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + id + ".description"),
-                            Optional.of(new ClientAsset(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
+                            Optional.of(new ClientAsset.ResourceTexture(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
                             type, true, true, false))
                     .addCriterion(criterionName, criterion)
                     .parent(parent)
@@ -80,7 +80,7 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                             item.getDefaultInstance(),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".consume_everything.title"),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".consume_everything.description"),
-                            Optional.of(new ClientAsset(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
+                            Optional.of(new ClientAsset.ResourceTexture(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
                             AdvancementType.CHALLENGE, true, true, false))
                     .parent(parent);
 
