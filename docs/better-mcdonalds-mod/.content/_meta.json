@@ -1,0 +1,22 @@
+{
+  "blocks": {
+    "name": "Blocks",
+    "icon": "Box"
+  },
+  "vegetables": {
+    "name": "Vegetables",
+    "icon": "LeafyGreen"
+  },
+  "ingredients": {
+    "name": "Ingredients",
+    "icon": "Apple"
+  },
+  "burger": {
+    "name": "Burger",
+    "icon": "Hamburger"
+  },
+  "drinks": {
+    "name": "Drinks",
+    "icon": "CupSoda"
+  }
+}

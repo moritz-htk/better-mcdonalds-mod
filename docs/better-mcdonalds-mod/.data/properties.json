@@ -1,0 +1,174 @@
+{
+  "better_mcdonalds_mod:lettuce_seeds": {
+    "stack_size": 64,
+    "rarity": "common",
+    "blast_resistance": 0.0,
+    "hardness": 0.0,
+    "flammable": false
+  },
+  "better_mcdonalds_mod:cheese": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 2
+  },
+  "better_mcdonalds_mod:mcflurry_chocolate": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 6
+  },
+  "better_mcdonalds_mod:tortilla": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 2
+  },
+  "better_mcdonalds_mod:cooked_bacon": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 4
+  },
+  "better_mcdonalds_mod:beef_patty": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 4
+  },
+  "better_mcdonalds_mod:fries": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 5
+  },
+  "better_mcdonalds_mod:happy_meal": {
+    "stack_size": 64,
+    "rarity": "uncommon",
+    "nutrition": 14
+  },
+  "better_mcdonalds_mod:salt": {
+    "stack_size": 64,
+    "rarity": "common"
+  },
+  "better_mcdonalds_mod:cooked_beef_patty": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 5
+  },
+  "better_mcdonalds_mod:hamburger": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 6
+  },
+  "better_mcdonalds_mod:filet_o_fish": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 6
+  },
+  "better_mcdonalds_mod:coca_cola": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 3
+  },
+  "better_mcdonalds_mod:mcbacon": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 8
+  },
+  "better_mcdonalds_mod:lipton_ice_tea_peach": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 3
+  },
+  "better_mcdonalds_mod:sprite": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 3
+  },
+  "better_mcdonalds_mod:raw_bacon": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 3
+  },
+  "better_mcdonalds_mod:mcchicken": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 8
+  },
+  "better_mcdonalds_mod:lettuce": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 1
+  },
+  "better_mcdonalds_mod:cheeseburger": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 8
+  },
+  "better_mcdonalds_mod:big_mac": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 10
+  },
+  "better_mcdonalds_mod:mayonnaise": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 1
+  },
+  "better_mcdonalds_mod:ketchup": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 1
+  },
+  "better_mcdonalds_mod:sweet_sour_sauce": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 1
+  },
+  "better_mcdonalds_mod:mustard": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 1
+  },
+  "better_mcdonalds_mod:snack_salad": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 4
+  },
+  "better_mcdonalds_mod:tomato": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 1
+  },
+  "better_mcdonalds_mod:salt_block": {
+    "stack_size": 64,
+    "rarity": "common"
+  },
+  "better_mcdonalds_mod:mcwrap": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 5
+  },
+  "better_mcdonalds_mod:chicken_mcnuggets": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 4
+  },
+  "better_mcdonalds_mod:tomato_seeds": {
+    "stack_size": 64,
+    "rarity": "common",
+    "blast_resistance": 0.0,
+    "hardness": 0.0,
+    "flammable": false
+  },
+  "better_mcdonalds_mod:mcflurry": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 6
+  },
+  "better_mcdonalds_mod:chickenburger": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 7
+  },
+  "better_mcdonalds_mod:fanta": {
+    "stack_size": 64,
+    "rarity": "common",
+    "nutrition": 3
+  }
+}

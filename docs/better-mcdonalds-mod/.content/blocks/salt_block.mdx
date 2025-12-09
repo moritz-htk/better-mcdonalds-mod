@@ -1,0 +1,89 @@
+---
+id: better_mcdonalds_mod:salt_block
+type: block
+---
+
+# Salt Block
+
+**Salt Block** is a gravity-affected [block](https://minecraft.wiki/w/Block) found in all aquatic [biomes](https://minecraft.wiki/w/Biome) (tagged with `c:is_aquatic`), in patches in shallow surface water.
+
+## Obtaining
+
+### Breaking
+
+Salt blocks can be mined with any item, but [shovels](https://minecraft.wiki/w/Shovel) are quickest. Breaking a salt block with a regular tool drops 2–4 [salt](@better_mcdonalds_mod:salt). The [Fortune](https://minecraft.wiki/w/Fortune) enchantment increases the chance of getting more [salt](@better_mcdonalds_mod:salt) within this range, but does not increase the maximum amount. Using a tool with [Silk Touch](https://minecraft.wiki/w/Silk_Touch) makes the block drop itself instead.
+
+<table>
+    <thead>
+        <tr>
+            <th rowspan="3">Source</th>
+            <th colspan="5">Drops</th>
+        </tr>
+        <tr>
+            <th colspan="4"><Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> [Salt](@better_mcdonalds_mod:salt)</th>
+            <th><Asset width={16} height={16} location="better_mcdonalds_mod:salt_block"/> Salt Block</th>
+        </tr>
+        <tr>
+            <th>Default tool</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) I</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) II</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) III</th>
+            <th>With [Silk Touch](https://minecraft.wiki/w/Silk_Touch)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:salt_block"/> Salt Block</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~33.33%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~33.33%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~33.33%)</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~25%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~25%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~50%)</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~20%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~20%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~60%)</td>
+            <td>2 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~16.67%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~16.67%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/> (~66.68%)</td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:salt_block"/></td>
+        </tr>
+        <tr>
+            <td>Average drops</td>
+            <td>~3 <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td>~3.25 (3 1⁄4) <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td>~3.4 (3 2⁄5) <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td>~3.5 (3 1⁄2) <Asset width={16} height={16} location="better_mcdonalds_mod:salt"/></td>
+            <td/>
+        </tr>
+    </tbody>
+</table>
+
+### Natural generation
+
+Salt blocks are found at the bottoms of all aquatic [biomes](https://minecraft.wiki/w/Biome) (tagged with `c:is_aquatic`) in [disk](https://minecraft.wiki/w/Disk)-like formations, disregarding adjacency to other types of blocks.
+
+### Crafting
+
+<ProjectRecipe id="better_mcdonalds_mod:salt_block" />
+
+## Usage
+
+If the supporting block below a salt block is removed, it falls until it lands on the next available block. More specifically, the salt block becomes a "[falling block](https://minecraft.wiki/w/Falling_block)" [entity](https://minecraft.wiki/w/Entity), which is affected by gravity. When the falling block lands on a [solid block](https://minecraft.wiki/w/Solid_block), it becomes a block again.
+
+## Data values
+
+### ID
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>[Identifier](https://minecraft.wiki/w/Resource_location)</th>
+            <th>Form</th>
+            <th>[Block tags](https://minecraft.wiki/w/Tag)</th>
+            <th>Translation key</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Salt Block</td>
+            <td>`salt_block`</td>
+            <td>Block & Item</td>
+            <td>`minecraft:mineable/shovel`</td>
+            <td>`block.better_mcdonalds_mod.salt_block`</td>
+        </tr>
+    </tbody>
+</table>

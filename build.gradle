@@ -3,6 +3,7 @@ plugins {
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.gradleup.shadow' version '9.3.0' apply false
     id 'me.shedaniel.unified-publishing' version '0.1.13' apply false
+    id 'org.moddedmc.wiki.toolkit' version '0.3.2' apply false
 }
 
 def localPropertiesFile = file('local.properties')

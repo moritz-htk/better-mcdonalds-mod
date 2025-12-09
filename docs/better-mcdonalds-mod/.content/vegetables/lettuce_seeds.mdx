@@ -1,0 +1,158 @@
+---
+id: better_mcdonalds_mod:lettuce_seeds
+type: item
+---
+
+# Lettuce Seeds
+
+**Lettuce seeds** are [items](https://minecraft.wiki/w/Item) obtained by breaking [grass](https://minecraft.wiki/w/Grass), or more abundantly harvested from lettuce crops, and are used to plant them.
+
+**Lettuce crops** are planted in [farmland](https://minecraft.wiki/w/Farmland) and used to grow [lettuce](@better_mcdonalds_mod:lettuce) and lettuce seeds.
+
+<table>
+    <tbody>
+        <tr>
+            <td><Asset width={512} height={512} location="better_mcdonalds_mod:lettuce_crop_stage0"/></td>
+            <td><Asset width={512} height={512} location="better_mcdonalds_mod:lettuce_crop_stage1"/></td>
+            <td><Asset width={512} height={512} location="better_mcdonalds_mod:lettuce_crop_stage2"/></td>
+            <td><Asset width={512} height={512} location="better_mcdonalds_mod:lettuce_crop_stage3"/></td>
+        </tr>
+    </tbody>
+</table>
+
+## Obtaining
+
+### Breaking
+
+Lettuce seeds can be obtained from breaking [short grass](https://minecraft.wiki/w/Short_grass) or [fern](https://minecraft.wiki/w/Fern), which have a 15% chance to yield 1 seed.
+
+Harvesting fully-grown lettuce crops yields between 0 and 3 seeds per crop (about 1.71 seeds per crop on average).
+
+The drop amount is determined by a binomial distribution: there are three attempts to drop a seed, each with a success probability of about 57%, resulting in 0 to 3 seeds dropped. Each level of [Fortune](https://minecraft.wiki/w/Fortune) enchantment increases the number of attempts by one.
+
+<table>
+    <thead>
+        <tr>
+            <th rowspan="3">Source</th>
+            <th colspan="5">Drops</th>
+        </tr>
+        <tr>
+            <th rowspan="2"><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce"/> [Lettuce](@better_mcdonalds_mod:lettuce)</th>
+            <th colspan="4"><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> Lettuce Seeds</th>
+        </tr>
+        <tr>
+            <th>Default tool</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) I</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) II</th>
+            <th>With [Fortune](https://minecraft.wiki/w/Fortune) III</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage3_flat"/> Lettuce Crop<br/>(age 0-2)</td>
+            <td>0 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce"/></td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+        </tr>
+        <tr>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage3_flat"/> Lettuce Crop<br/>(age 3)</td>
+            <td>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce"/></td>
+            <td>0 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~7.87%)<br/>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~31.49%)<br/>2 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~41.98%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~18.66%)</td>
+            <td>0 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~3.37%)<br/>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~17.99%)<br/>2 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~35.99%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~31.99%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~10.66%)</td>
+            <td>0 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~1.45%)<br/>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~9.64%)<br/>2 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~25.70%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~34.27%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~22.85%)<br/>5 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~6.09%)</td>
+            <td>0 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~0.62%)<br/>1 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~4.96%)<br/>2 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~16.52%)<br/>3 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~29.38%)<br/>4 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~29.38%)<br/>5 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~15.67%)<br/>6 <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/> (~3.48%)</td>
+        </tr>
+        <tr>
+            <td colspan="2">Average drops</td>
+            <td>~1.71 (1 5⁄7) <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>~2.29 (2 2⁄7) <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>~2.86 (2 6⁄7) <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+            <td>~3.43 (3 3⁄7) <Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_seeds"/></td>
+        </tr>
+    </tbody>
+</table>
+
+### Crafting
+
+<ProjectRecipe id="better_mcdonalds_mod:lettuce_seeds" />
+
+## Usage
+
+### Crop
+
+Lettuce seeds can be placed on [farmland](https://minecraft.wiki/w/Farmland) by right-clicking, where they grow through four stages. When left alone, lettuce seeds planted on farmland grow to become lettuce crops, which can be harvested by the player. Seeds require a light level of 8 or greater to plant and 9 or greater to grow.
+
+Crops grow faster if the farmland they are planted on is [hydrated](https://minecraft.wiki/w/Hydrated). Using [bone meal](https://minecraft.wiki/w/Bone_meal) on crops also increases the speed of growth by randomly increasing their growth stage.
+
+Breaking fully-grown lettuce crops yields 1 [lettuce](@better_mcdonalds_mod:lettuce) and between 0 and 3 seeds (more seeds can drop with [Fortune](https://minecraft.wiki/w/Fortune)). If harvested early, the crop drops 1 seed but no [lettuce](@better_mcdonalds_mod:lettuce). Crops will also break if pushed by a [piston](https://minecraft.wiki/w/Piston) or if their supporting [farmland](https://minecraft.wiki/w/Farmland) is destroyed or reverts to [dirt](https://minecraft.wiki/w/Dirt) (e.g., by being trampled), dropping their usual items.
+
+### Composting
+
+Placing lettuce seeds into a [composter](https://minecraft.wiki/w/Composter) has a 20% chance of raising the compost level by 1.
+
+## Data values
+
+### ID
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>[Identifier](https://minecraft.wiki/w/Resource_location)</th>
+            <th>Form</th>
+            <th>[Tags](https://minecraft.wiki/w/Tag)</th>
+            <th>Translation key</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Lettuce Crop</td>
+            <td>`lettuce_crop`</td>
+            <td>Block</td>
+            <td>`minecraft:crops`<br/>`minecraft:maintains_farmland`<br/>`sereneseasons:autumn_crops`</td>
+            <td>`block.better_mcdonalds_mod.lettuce_crop`</td>
+        </tr>
+        <tr>
+            <td>Lettuce Seeds</td>
+            <td>`lettuce_seeds`</td>
+            <td>Item</td>
+            <td>`minecraft:villager_plantable_seeds`<br/>`c:seeds/lettuce`<br/>`sereneseasons:autumn_crops`</td>
+            <td>`item.better_mcdonalds_mod.lettuce_seeds`</td>
+        </tr>
+    </tbody>
+</table>
+
+### Block states
+
+<table>
+    <thead>
+        <tr>
+            <th>[Name](https://minecraft.wiki/w/Block_states)</th>
+            <th>Default value</th>
+            <th>Allowed values</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="4">age</td>
+            <td rowspan="4">`0`</td>
+            <td>`0`</td>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage0_flat"/></td>
+        </tr>
+        <tr>
+            <td>`1`</td>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage1_flat"/></td>
+        </tr>
+        <tr>
+            <td>`2`</td>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage2_flat"/></td>
+        </tr>
+        <tr>
+            <td>`3`</td>
+            <td><Asset width={16} height={16} location="better_mcdonalds_mod:lettuce_crop_stage3_flat"/> Fully grown.</td>
+        </tr>
+    </tbody>
+</table>

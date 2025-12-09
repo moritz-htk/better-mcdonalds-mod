@@ -1,0 +1,11 @@
+{
+  "id": "better-mcdonalds-mod",
+  "modid": "better_mcdonalds_mod",
+  "platforms": {
+    "curseforge": "better-mcdonalds-mod",
+    "modrinth": "better-mcdonalds-mod"
+  },
+  "links": {
+    "website": "https://kyronis.net/mods/better-mcdonalds-mod"
+  }
+}

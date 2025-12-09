@@ -1,6 +1,7 @@
 plugins {
     id 'com.gradleup.shadow'
     id 'me.shedaniel.unified-publishing'
+    id 'org.moddedmc.wiki.toolkit'
 }
 
 architectury {
@@ -12,9 +13,20 @@ loom {
     runs {
         dataClient {
             clientData()
-            programArgs "--all", "--mod", "better_mcdonalds_mod"
-            programArgs "--output", project(":common").file("src/main/generated").absolutePath
-            programArgs "--existing", project(":common").file("src/main/resources").absolutePath
+            programArgs '--all', '--mod', 'better_mcdonalds_mod'
+            programArgs '--output', project(':common').file('src/main/generated').absolutePath
+            programArgs '--existing', project(':common').file('src/main/resources').absolutePath
+        }
+
+        exportClient {
+            client()
+            property 'wiki_exporter.enabled', 'true'
+        }
+
+        exportServer {
+            server()
+            programArgs 'nogui'
+            property 'wiki_exporter.enabled', 'true'
         }
     }
 }
@@ -38,12 +50,14 @@ configurations {
 
 repositories {
     maven { url 'https://maven.neoforged.net/releases/' }
+    maven { url 'https://maven.sinytra.org' }
 }
 
 dependencies {
     neoForge "net.neoforged:neoforge:${project.neoforge_version}"
 
     modApi "dev.architectury:architectury-neoforge:${project.architectury_api_version}"
+    modRuntimeOnly "org.sinytra:wiki-exporter-neoforge:${project.wiki_exporter_version}"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')
@@ -105,6 +119,14 @@ unifiedPublishing {
                 token = modrinthApiKey
                 id = 'kdnePgr1'
             }
+        }
+    }
+}
+
+wiki {
+    docs {
+        'better-mcdonalds-mod' {
+            root = project(':').file('docs/better-mcdonalds-mod')
         }
     }
 }
