@@ -1,2 +1,2 @@
 **Changes:**
-- Update to Minecraft 1.21.9
+- Update to Minecraft 1.21.10

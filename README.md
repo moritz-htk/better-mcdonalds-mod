@@ -22,7 +22,7 @@ A full and always up-to-date version list is now available [here](https://kyroni
 - Danish, Dutch, English, French, German, Italian, Japanese, Portuguese, Russian, Spanish, Swedish, Ukrainian
 
 ## 📖 Wiki
-The [Better McDonald's Mod Wiki](https://kyronis.gitbook.io/better-mcdonalds-mod) (currently work in progress 🏗️) provides all the necessary information about items and functions.
+The [Better McDonald's Mod Wiki](https://moddedmc.wiki/project/better-mcdonalds-mod) provides full documentation about blocks, items and functions.
 
 ## 🔮 Planned Features
 - ⚙️ machines for manufacturing
@@ -35,7 +35,7 @@ The [Better McDonald's Mod Wiki](https://kyronis.gitbook.io/better-mcdonalds-mod
 - 🎨 [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
 
 ## 🔗 Dependencies
-- [Architectury API](https://github.com/architectury/architectury-api) (v18.0.3 and above)
+- [Architectury API](https://github.com/architectury/architectury-api) (v18.0.8 and above)
 
 ## 📦 Maven
 Better McDonald's Mod is available via [Modrinth Maven](https://support.modrinth.com/en/articles/8801191-modrinth-maven) for developers wishing to make use of my mod.
@@ -68,7 +68,7 @@ Add the following to your `gradle.properties` file:
 
 ### ⚙️ `gradle.properties`
 ```
-better_mcdonalds_mod_version=4.4.4+1.21.9
+better_mcdonalds_mod_version=4.4.4+1.21.10
 ```
 
 📌 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
