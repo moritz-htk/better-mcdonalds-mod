@@ -15,8 +15,16 @@
     "name": "Burger",
     "icon": "Hamburger"
   },
+  "side_dishes": {
+    "name": "Side Dishes",
+    "icon": "Salad"
+  },
   "drinks": {
     "name": "Drinks",
     "icon": "CupSoda"
+  },
+  "desserts": {
+    "name": "Desserts",
+    "icon": "Dessert"
   }
 }
