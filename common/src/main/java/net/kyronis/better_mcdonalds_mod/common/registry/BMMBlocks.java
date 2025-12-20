@@ -7,8 +7,8 @@ import net.kyronis.better_mcdonalds_mod.common.block.BMMLettuceCropBlock;
 import net.kyronis.better_mcdonalds_mod.common.block.BMMSaltBlock;
 import net.kyronis.better_mcdonalds_mod.common.block.BMMTomatoCropBlock;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
@@ -20,6 +20,6 @@ public class BMMBlocks {
     public static final RegistrySupplier<Block> LETTUCE_CROP  = BLOCKS.register("lettuce_crop", () -> new BMMLettuceCropBlock(BlockBehaviour.Properties.of().setId(registerBlockId("lettuce_crop"))));
 
     private static ResourceKey<Block> registerBlockId(String id) {
-        return ResourceKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, id));
+        return ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, id));
     }
 }

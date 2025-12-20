@@ -5,7 +5,7 @@ import net.kyronis.better_mcdonalds_mod.common.block.BMMLettuceCropBlock;
 import net.kyronis.better_mcdonalds_mod.common.block.BMMTomatoCropBlock;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMBlocks;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
-import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.advancements.criterion.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -48,7 +48,7 @@ public class BMMLootTableProvider {
 
         @Override
         protected @NotNull Iterable<Block> getKnownBlocks() {
-            return BuiltInRegistries.BLOCK.entrySet().stream().filter(e -> e.getKey().location().getNamespace().equals(BetterMcDonaldsMod.MOD_ID)).map(Map.Entry::getValue).toList();
+            return BuiltInRegistries.BLOCK.entrySet().stream().filter(e -> e.getKey().identifier().getNamespace().equals(BetterMcDonaldsMod.MOD_ID)).map(Map.Entry::getValue).toList();
         }
     }
 }

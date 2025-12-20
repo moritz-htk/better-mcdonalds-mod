@@ -4,8 +4,8 @@ import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
@@ -31,6 +31,6 @@ public class BMMConfiguredFeatures {
     }
 
     private static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, Identifier.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, name));
     }
 }

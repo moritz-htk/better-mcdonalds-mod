@@ -5,8 +5,8 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 import net.kyronis.better_mcdonalds_mod.common.item.BMMDrinkItem;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -52,7 +52,7 @@ public class BMMItems {
     public static final RegistrySupplier<Item> MCFLURRY_CHOCOLATE = ITEMS.register("mcflurry_chocolate", () -> new Item(registerItemProperties("mcflurry_chocolate").food(registerFoodValues(6, 0.4f))));
 
     private static Item.Properties registerItemProperties(String id) {
-        return new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, id))).arch$tab(BMMCreativeTabs.BETTER_MCDONALDS_MOD_MAIN);
+        return new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, id))).arch$tab(BMMCreativeTabs.BETTER_MCDONALDS_MOD_MAIN);
     }
 
     private static FoodProperties registerFoodValues(int nutrition, float saturation) {

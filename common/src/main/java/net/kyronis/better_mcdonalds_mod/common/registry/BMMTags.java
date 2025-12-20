@@ -2,7 +2,7 @@ package net.kyronis.better_mcdonalds_mod.common.registry;
 
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -63,15 +63,15 @@ public class BMMTags {
         public static final TagKey<Item> SERENE_SEASON_AUTUMN_CROPS = registerCompatibilityKey("sereneseasons", "autumn_crops");
 
         private static TagKey<Item> registerCommonKey(String path) {
-            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", path));
+            return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath("c", path));
         }
 
         private static TagKey<Item> registerModKey(String path) {
-            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, path));
+            return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, path));
         }
 
         private static TagKey<Item> registerCompatibilityKey(String namespace, String path) {
-            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(namespace, path));
+            return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(namespace, path));
         }
     }
 
@@ -81,7 +81,7 @@ public class BMMTags {
         public static final TagKey<Block> SERENE_SEASON_AUTUMN_CROPS = registerCompatibilityKey("sereneseasons", "autumn_crops");
 
         private static TagKey<Block> registerCompatibilityKey(String namespace, String path) {
-            return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(namespace, path));
+            return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(namespace, path));
         }
     }
 }

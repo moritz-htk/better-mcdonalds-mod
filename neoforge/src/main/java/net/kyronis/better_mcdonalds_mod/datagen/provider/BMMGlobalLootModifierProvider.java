@@ -7,8 +7,8 @@ import net.kyronis.better_mcdonalds_mod.neoforge.loot.BMMAddItemModifier;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -36,14 +36,14 @@ public class BMMGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
-        addChestLoot("tomato_pillager_outpost", BMMItems.TOMATO.get(), 0.58f, UniformGenerator.between(1, 3), BuiltInLootTables.PILLAGER_OUTPOST.location());
-        addChestLoot("tomato_shipwreck_supply", BMMItems.TOMATO.get(), 0.42f, UniformGenerator.between(1, 4), BuiltInLootTables.SHIPWRECK_SUPPLY.location());
-        addChestLoot("tomato_villager_savanna_house", BMMItems.TOMATO.get(), 0.72f, UniformGenerator.between(1, 7), BuiltInLootTables.VILLAGE_SAVANNA_HOUSE.location());
+        addChestLoot("tomato_pillager_outpost", BMMItems.TOMATO.get(), 0.58f, UniformGenerator.between(1, 3), BuiltInLootTables.PILLAGER_OUTPOST.identifier());
+        addChestLoot("tomato_shipwreck_supply", BMMItems.TOMATO.get(), 0.42f, UniformGenerator.between(1, 4), BuiltInLootTables.SHIPWRECK_SUPPLY.identifier());
+        addChestLoot("tomato_villager_savanna_house", BMMItems.TOMATO.get(), 0.72f, UniformGenerator.between(1, 7), BuiltInLootTables.VILLAGE_SAVANNA_HOUSE.identifier());
         addBlockLoot("tomato_seeds_grass", BMMItems.TOMATO_SEEDS.get(), Blocks.SHORT_GRASS);
         addBlockLoot("tomato_seeds_fern", BMMItems.TOMATO_SEEDS.get(), Blocks.FERN);
-        addChestLoot("lettuce_pillager_outpost", BMMItems.LETTUCE.get(), 0.58f, UniformGenerator.between(1, 3), BuiltInLootTables.PILLAGER_OUTPOST.location());
-        addChestLoot("lettuce_shipwreck_supply", BMMItems.LETTUCE.get(), 0.42f, UniformGenerator.between(1, 4), BuiltInLootTables.SHIPWRECK_SUPPLY.location());
-        addChestLoot("lettuce_villager_savanna_house", BMMItems.LETTUCE.get(), 0.72f, UniformGenerator.between(1, 7), BuiltInLootTables.VILLAGE_SAVANNA_HOUSE.location());
+        addChestLoot("lettuce_pillager_outpost", BMMItems.LETTUCE.get(), 0.58f, UniformGenerator.between(1, 3), BuiltInLootTables.PILLAGER_OUTPOST.identifier());
+        addChestLoot("lettuce_shipwreck_supply", BMMItems.LETTUCE.get(), 0.42f, UniformGenerator.between(1, 4), BuiltInLootTables.SHIPWRECK_SUPPLY.identifier());
+        addChestLoot("lettuce_villager_savanna_house", BMMItems.LETTUCE.get(), 0.72f, UniformGenerator.between(1, 7), BuiltInLootTables.VILLAGE_SAVANNA_HOUSE.identifier());
         addBlockLoot("lettuce_seeds_grass", BMMItems.LETTUCE_SEEDS.get(), Blocks.SHORT_GRASS);
         addBlockLoot("lettuce_seeds_fern", BMMItems.LETTUCE_SEEDS.get(), Blocks.FERN);
         addMobLoot("beef_patty_cow", BMMItems.BEEF_PATTY.get(), UniformGenerator.between(1, 2), EntityType.COW.getDefaultLootTable().get());
@@ -57,7 +57,7 @@ public class BMMGlobalLootModifierProvider extends GlobalLootModifierProvider {
         }, item, List.of(Holder.direct(SetItemCountFunction.setCount(ConstantValue.exactly(1)).build()))));
     }
 
-    private void addChestLoot(String id, Item item, float probability, NumberProvider count, ResourceLocation lootTable) {
+    private void addChestLoot(String id, Item item, float probability, NumberProvider count, Identifier lootTable) {
         add(id, new BMMAddItemModifier(new LootItemCondition[]{
                 LootItemRandomChanceCondition.randomChance(probability).build(),
                 new LootTableIdCondition.Builder(lootTable).build()
@@ -67,7 +67,7 @@ public class BMMGlobalLootModifierProvider extends GlobalLootModifierProvider {
     private void addMobLoot(String id, Item item, NumberProvider count, ResourceKey<LootTable> lootTable) {
         add(id, new BMMAddItemModifier(new LootItemCondition[]{
                 LootItemRandomChanceCondition.randomChance(0.5f).build(),
-                new LootTableIdCondition.Builder(lootTable.location()).build()
+                new LootTableIdCondition.Builder(lootTable.identifier()).build()
         }, item, List.of(Holder.direct(SetItemCountFunction.setCount(count).build()), Holder.direct(SmeltItemFunction.smelted().when(BMMSmeltingConditionBuilder.shouldSmeltLoot(registries)).build()))));
     }
 }

@@ -4,9 +4,9 @@ import com.ibm.icu.impl.Pair;
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
 import net.minecraft.advancements.*;
-import net.minecraft.advancements.critereon.ConsumeItemTrigger;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.PlayerTrigger;
+import net.minecraft.advancements.criterion.ConsumeItemTrigger;
+import net.minecraft.advancements.criterion.InventoryChangeTrigger;
+import net.minecraft.advancements.criterion.PlayerTrigger;
 import net.minecraft.core.ClientAsset;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
@@ -15,7 +15,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.advancements.AdvancementProvider;
 import net.minecraft.data.advancements.AdvancementSubProvider;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import org.jetbrains.annotations.NotNull;
 
@@ -55,10 +55,10 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                             item.getDefaultInstance(),
                             Component.literal("Better McDonald's Mod"),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".root.description"),
-                            Optional.of(new ClientAsset.ResourceTexture(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
+                            Optional.of(new ClientAsset.ResourceTexture(Identifier.withDefaultNamespace("block/red_concrete_powder"))),
                             AdvancementType.TASK, false, false, false))
                     .addCriterion("tick", criterion)
-                    .save(consumer, String.valueOf(ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + "root")));
+                    .save(consumer, String.valueOf(Identifier.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + "root")));
         }
 
         private AdvancementHolder createAdvancement(String id, Item item, AdvancementType type, String criterionName, Criterion<InventoryChangeTrigger.TriggerInstance> criterion, AdvancementHolder parent, Consumer<AdvancementHolder> consumer) {
@@ -67,11 +67,11 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                             item.getDefaultInstance(),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + id + ".title"),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + "." + id + ".description"),
-                            Optional.of(new ClientAsset.ResourceTexture(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
+                            Optional.of(new ClientAsset.ResourceTexture(Identifier.withDefaultNamespace("block/red_concrete_powder"))),
                             type, true, true, false))
                     .addCriterion(criterionName, criterion)
                     .parent(parent)
-                    .save(consumer, String.valueOf(ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + id)));
+                    .save(consumer, String.valueOf(Identifier.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + id)));
         }
 
         private AdvancementHolder createConsumeEverythingAdvancement(Item item, AdvancementHolder parent, Consumer<AdvancementHolder> consumer) {
@@ -80,7 +80,7 @@ public class BMMAdvancementProvider extends AdvancementProvider {
                             item.getDefaultInstance(),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".consume_everything.title"),
                             Component.translatable("advancement." + BetterMcDonaldsMod.MOD_ID + ".consume_everything.description"),
-                            Optional.of(new ClientAsset.ResourceTexture(ResourceLocation.withDefaultNamespace("block/red_concrete_powder"))),
+                            Optional.of(new ClientAsset.ResourceTexture(Identifier.withDefaultNamespace("block/red_concrete_powder"))),
                             AdvancementType.CHALLENGE, true, true, false))
                     .parent(parent);
 
@@ -104,7 +104,7 @@ public class BMMAdvancementProvider extends AdvancementProvider {
 
             items.forEach(pair -> builder.addCriterion(pair.first, ConsumeItemTrigger.TriggerInstance.usedItem(this.items, pair.second)));
 
-            return builder.save(consumer, String.valueOf(ResourceLocation.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + "consume_everything")));
+            return builder.save(consumer, String.valueOf(Identifier.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, BetterMcDonaldsMod.MOD_ID + "/" + "consume_everything")));
         }
     }
 }
