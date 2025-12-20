@@ -35,7 +35,7 @@ The [Better McDonald's Mod Wiki](https://moddedmc.wiki/project/better-mcdonalds-
 - 🎨 [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
 
 ## 🔗 Dependencies
-- [Architectury API](https://github.com/architectury/architectury-api) (v18.0.8 and above)
+- [Architectury API](https://github.com/architectury/architectury-api) (v19.0.1 and above)
 
 ## 📦 Maven
 Better McDonald's Mod is available via [Modrinth Maven](https://support.modrinth.com/en/articles/8801191-modrinth-maven) for developers wishing to make use of my mod.
@@ -68,7 +68,7 @@ Add the following to your `gradle.properties` file:
 
 ### ⚙️ `gradle.properties`
 ```
-better_mcdonalds_mod_version=4.5.0+1.21.10
+better_mcdonalds_mod_version=4.5.0+1.21.11
 ```
 
 📌 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
