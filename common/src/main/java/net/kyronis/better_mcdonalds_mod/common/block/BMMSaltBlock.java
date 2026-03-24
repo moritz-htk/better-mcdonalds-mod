@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import org.jetbrains.annotations.NotNull;
 
 public class BMMSaltBlock extends FallingBlock {
     public static final MapCodec<BMMSaltBlock> CODEC = simpleCodec(BMMSaltBlock::new);
@@ -18,7 +17,7 @@ public class BMMSaltBlock extends FallingBlock {
     }
 
     @Override
-    protected @NotNull MapCodec<? extends FallingBlock> codec() {
+    protected MapCodec<? extends FallingBlock> codec() {
         return CODEC;
     }
 

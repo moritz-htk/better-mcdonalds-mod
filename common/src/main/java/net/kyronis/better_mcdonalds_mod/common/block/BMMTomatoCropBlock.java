@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import org.jetbrains.annotations.NotNull;
 
 public class BMMTomatoCropBlock extends CropBlock {
     public static final int MAX_AGE = 3;
@@ -22,12 +21,12 @@ public class BMMTomatoCropBlock extends CropBlock {
     }
 
     @Override
-    protected @NotNull ItemLike getBaseSeedId() {
-        return BMMItems.TOMATO_SEEDS.get();
+    protected ItemLike getBaseSeedId() {
+        return BMMItems.TOMATO_SEEDS.asItem();
     }
 
     @Override
-    protected @NotNull IntegerProperty getAgeProperty() {
+    protected IntegerProperty getAgeProperty() {
         return AGE;
     }
 

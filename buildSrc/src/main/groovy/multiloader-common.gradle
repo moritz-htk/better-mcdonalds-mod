@@ -1,0 +1,76 @@
+plugins {
+    id 'org.relativitymc.neo-loom'
+    id 'java-library'
+    id 'maven-publish'
+    id 'idea'
+}
+
+group = project.mod_group
+version = project.mod_version
+
+base {
+    archivesName = "${project.mod_id}-${project.name}"
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(project.java_version)
+    withSourcesJar()
+}
+
+repositories {
+    maven {
+        name = 'Twelve Iterations'
+        url = 'https://maven.twelveiterations.com/repository/maven-public/'
+    }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+}
+
+jar {
+    from(rootProject.file('LICENSE.md'))
+    exclude '**/better_mcdonalds_mod/datagen/**'
+}
+
+sourcesJar {
+    from(rootProject.file('LICENSE.md'))
+}
+
+processResources {
+    var replaceProperties = [
+            mod_id                 : mod_id,
+            mod_group              : mod_group,
+            mod_version            : mod_version,
+            mod_name               : mod_name,
+            mod_description        : mod_description,
+            mod_author             : mod_author,
+            mod_homepage           : mod_homepage,
+            mod_github             : mod_github,
+            mod_license            : mod_license,
+            mod_icon               : mod_icon,
+            java_version           : java_version,
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            fabric_loader_version  : fabric_loader_version,
+            fabric_api_version     : fabric_api_version,
+            neoforge_version       : neoforge_version
+    ]
+
+    filesMatching(['fabric.mod.json', 'META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
+    }
+
+    inputs.properties replaceProperties
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}

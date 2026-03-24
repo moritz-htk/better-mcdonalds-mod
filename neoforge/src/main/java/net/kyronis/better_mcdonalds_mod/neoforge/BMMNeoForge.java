@@ -1,30 +1,17 @@
 package net.kyronis.better_mcdonalds_mod.neoforge;
 
+import net.blay09.mods.balm.Balm;
+import net.blay09.mods.balm.neoforge.platform.runtime.NeoForgeLoadContext;
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
-import net.kyronis.better_mcdonalds_mod.common.registry.BMMBlocks;
 import net.kyronis.better_mcdonalds_mod.neoforge.registry.BMMLootModifiers;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod(BetterMcDonaldsMod.MOD_ID)
 public class BMMNeoForge {
-    public BMMNeoForge(IEventBus modEventBus) {
-        BetterMcDonaldsMod.init();
+    public BMMNeoForge(ModContainer modContainer, IEventBus modEventBus) {
+        Balm.initializeMod(BetterMcDonaldsMod.MOD_ID, new NeoForgeLoadContext(modContainer, modEventBus), BetterMcDonaldsMod::initialize);
         BMMLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
-    }
-
-    @EventBusSubscriber(modid = BetterMcDonaldsMod.MOD_ID, value = Dist.CLIENT)
-    public static class BMMClientEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(BMMBlocks.TOMATO_CROP.get(), ChunkSectionLayer.CUTOUT);
-            ItemBlockRenderTypes.setRenderLayer(BMMBlocks.LETTUCE_CROP.get(), ChunkSectionLayer.CUTOUT);
-        }
     }
 }

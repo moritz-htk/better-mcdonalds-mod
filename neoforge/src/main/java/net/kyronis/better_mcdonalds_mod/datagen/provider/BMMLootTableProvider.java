@@ -18,16 +18,15 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-public class BMMLootTableProvider {
-    public static LootTableProvider create(PackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
-        return new LootTableProvider(output, Set.of(), List.of(new LootTableProvider.SubProviderEntry(BMMBlockLootTables::new, LootContextParamSets.BLOCK)), completableFuture);
+public class BMMLootTableProvider extends LootTableProvider {
+    public BMMLootTableProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+        super(output, Set.of(), List.of(new LootTableProvider.SubProviderEntry(BMMBlockLootTables::new, LootContextParamSets.BLOCK)), registries);
     }
 
     public static class BMMBlockLootTables extends BlockLootSubProvider {
@@ -37,17 +36,17 @@ public class BMMLootTableProvider {
 
         @Override
         protected void generate() {
-            add(BMMBlocks.SALT_BLOCK.get(), (block) -> createOreDrop(BMMBlocks.SALT_BLOCK.get(), BMMItems.SALT.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))));
+            add(BMMBlocks.SALT_BLOCK.asBlock(), (block) -> createOreDrop(BMMBlocks.SALT_BLOCK.asBlock(), BMMItems.SALT.asItem()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))));
 
-            LootItemCondition.Builder tomatoConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BMMBlocks.TOMATO_CROP.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BMMTomatoCropBlock.AGE, 3));
-            add(BMMBlocks.TOMATO_CROP.get(), createCropDrops(BMMBlocks.TOMATO_CROP.get(), BMMItems.TOMATO.get(), BMMItems.TOMATO_SEEDS.get(), tomatoConditionBuilder));
+            LootItemCondition.Builder tomatoConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BMMBlocks.TOMATO_CROP.asBlock()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BMMTomatoCropBlock.AGE, 3));
+            add(BMMBlocks.TOMATO_CROP.asBlock(), createCropDrops(BMMBlocks.TOMATO_CROP.asBlock(), BMMItems.TOMATO.asItem(), BMMItems.TOMATO_SEEDS.asItem(), tomatoConditionBuilder));
 
-            LootItemCondition.Builder lettuceConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BMMBlocks.LETTUCE_CROP.get()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BMMLettuceCropBlock.AGE, 3));
-            add(BMMBlocks.LETTUCE_CROP.get(), createCropDrops(BMMBlocks.LETTUCE_CROP.get(), BMMItems.LETTUCE.get(), BMMItems.LETTUCE_SEEDS.get(), lettuceConditionBuilder));
+            LootItemCondition.Builder lettuceConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(BMMBlocks.LETTUCE_CROP.asBlock()).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BMMLettuceCropBlock.AGE, 3));
+            add(BMMBlocks.LETTUCE_CROP.asBlock(), createCropDrops(BMMBlocks.LETTUCE_CROP.asBlock(), BMMItems.LETTUCE.asItem(), BMMItems.LETTUCE_SEEDS.asItem(), lettuceConditionBuilder));
         }
 
         @Override
-        protected @NotNull Iterable<Block> getKnownBlocks() {
+        protected Iterable<Block> getKnownBlocks() {
             return BuiltInRegistries.BLOCK.entrySet().stream().filter(e -> e.getKey().identifier().getNamespace().equals(BetterMcDonaldsMod.MOD_ID)).map(Map.Entry::getValue).toList();
         }
     }

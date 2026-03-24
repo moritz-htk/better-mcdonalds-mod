@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "better_mcdonalds_mod",
+  "id": "${mod_id}",
   "version": "${mod_version}",
-  "name": "Better McDonald's Mod",
-  "description": "This Minecraft mod adds many new items and food from McDonald's.",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
   "authors": [
-    "Kyronis"
+    "${mod_author}"
   ],
   "contributors": [
     "Volwert123",
@@ -15,40 +15,33 @@
   ],
   "contact": {
     "email": "info@kyronis.net",
-    "homepage": "https://kyronis.net/better-mcdonalds-mod",
-    "issues": "https://github.com/moritz-htk/better-mcdonalds-mod/issues",
-    "sources": "https://github.com/moritz-htk/better-mcdonalds-mod"
+    "homepage": "${mod_homepage}",
+    "issues": "${mod_github}/issues",
+    "sources": "${mod_github}"
   },
-  "license": "mSLA v2.0",
-  "icon": "assets/better_mcdonalds_mod/icon.png",
+  "license": "${mod_license}",
+  "icon": "${mod_icon}",
   "environment": "*",
   "entrypoints": {
     "main": [
       "net.kyronis.better_mcdonalds_mod.fabric.BMMFabric"
-    ],
-    "client": [
-      "net.kyronis.better_mcdonalds_mod.fabric.client.BMMFabricClient"
     ]
   },
+  "accessWidener": "${mod_id}.classtweaker",
   "depends": {
-    "fabricloader": ">=${fabric_loader_version}",
+    "java": ">=${java_version}",
     "minecraft": ">=${minecraft_version}",
-    "fabric-api": "*",
-    "architectury": ">=${architectury_api_version}"
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": ">=${fabric_api_version}",
+    "balm": ">=${balm_version}"
   },
   "custom": {
-    "catalogue": {
-      "icon": {
-        "item": "better_mcdonalds_mod:happy_meal"
-      }
-    },
     "modmenu": {
       "update_checker": true,
       "links": {
         "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/better-mcdonalds-mod",
-        "modmenu.github_releases": "https://github.com/moritz-htk/better-mcdonalds-mod/releases",
+        "modmenu.github_releases": "${mod_github}/releases",
         "modmenu.modrinth": "https://modrinth.com/mod/better-mcdonalds-mod",
-        "modmenu.paypal": "https://www.paypal.com/donate/?hosted_button_id=CADH35AVDHEMW",
         "modmenu.wiki": "https://moddedmc.wiki/project/better-mcdonalds-mod"
       }
     }

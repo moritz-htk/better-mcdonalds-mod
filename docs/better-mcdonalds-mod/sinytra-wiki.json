@@ -1,9 +1,18 @@
 {
   "id": "better-mcdonalds-mod",
-  "modid": "better_mcdonalds_mod",
   "platforms": {
     "curseforge": "better-mcdonalds-mod",
     "modrinth": "better-mcdonalds-mod"
+  },
+  "modid": "better_mcdonalds_mod",
+  "licenses": {
+    "project": {
+      "id": "GPL-3.0"
+    }
+  },
+  "versions": {
+    "1.21.11": "1.21.11",
+    "1.21.10": "1.21.10"
   },
   "links": {
     "website": "https://kyronis.net/mods/better-mcdonalds-mod"
