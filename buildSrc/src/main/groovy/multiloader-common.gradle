@@ -54,7 +54,8 @@ processResources {
             minecraft_version_range: minecraft_version_range,
             fabric_loader_version  : fabric_loader_version,
             fabric_api_version     : fabric_api_version,
-            neoforge_version       : neoforge_version
+            neoforge_version       : neoforge_version,
+            balm_version           : balm_version
     ]
 
     filesMatching(['fabric.mod.json', 'META-INF/neoforge.mods.toml']) {
