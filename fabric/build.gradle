@@ -26,7 +26,6 @@ publisher {
     setChangelog(rootProject.file('changelog.md').text)
 
     setArtifact(tasks.jar)
-    addAdditionalFile(tasks.sourcesJar)
 
     curseDepends {
         required 'balm', 'fabric-api'
