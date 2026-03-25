@@ -1,33 +1,37 @@
-# Build output directories
-build/
-out/
-output/
-bin/
-classes/
+# Gradle
 .gradle/
+bin/
+build/
+libs/
+out/
 
-# IntelliJ IDEA files
+# IntelliJ IDEA
+.idea/
+*.iml
 *.ipr
 *.iws
-*.iml
-.idea/
 
-# Eclipse files
+# Eclipse
+.apt_generated
 .classpath
+.eclipse/
+.factorypath
 .project
-.metadata
-
-# Visual Studio Code files
-.vscode
-
-# Local and project-specific configuration
-local.properties
 .settings
+.springBeans
+.sts4-cache
 
-# Datagen cache
-common/src/main/generated/.cache/
+# VS Code
+.vscode/
 
-# Miscellaneous
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Minecraft Modding
 run/
-libs/
-*.launch
+**/src/main/generated/.cache/

@@ -4,13 +4,13 @@
       "chance": 0.65
     },
     "better_mcdonalds_mod:lettuce_seeds": {
-      "chance": 0.2
+      "chance": 0.3
     },
     "better_mcdonalds_mod:tomato": {
       "chance": 0.65
     },
     "better_mcdonalds_mod:tomato_seeds": {
-      "chance": 0.2
+      "chance": 0.3
     }
   }
 }

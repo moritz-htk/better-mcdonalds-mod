@@ -5,7 +5,6 @@
   "experience": 1.0,
   "ingredient": "better_mcdonalds_mod:raw_bacon",
   "result": {
-    "count": 1,
     "id": "better_mcdonalds_mod:cooked_bacon"
   }
 }

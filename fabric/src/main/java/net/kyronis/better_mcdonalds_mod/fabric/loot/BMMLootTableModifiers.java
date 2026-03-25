@@ -7,7 +7,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -15,25 +14,20 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.functions.SmeltItemFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 public class BMMLootTableModifiers {
-    public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
-            addLoot(key, BuiltInLootTables.PILLAGER_OUTPOST, tableBuilder, 0.58f, BMMItems.TOMATO.get(), UniformGenerator.between(1, 3));
-            addLoot(key, BuiltInLootTables.SHIPWRECK_SUPPLY, tableBuilder, 0.42f, BMMItems.TOMATO.get(), UniformGenerator.between(1, 4));
-            addLoot(key, BuiltInLootTables.VILLAGE_SAVANNA_HOUSE, tableBuilder, 0.72f, BMMItems.TOMATO.get(), UniformGenerator.between(1, 7));
-            addLoot(key, Blocks.SHORT_GRASS.getLootTable().get(), tableBuilder, 0.15f, BMMItems.TOMATO_SEEDS.get(), ConstantValue.exactly(1));
-            addLoot(key, Blocks.FERN.getLootTable().get(), tableBuilder, 0.15f, BMMItems.TOMATO_SEEDS.get(), ConstantValue.exactly(1));
-            addLoot(key, BuiltInLootTables.PILLAGER_OUTPOST, tableBuilder, 0.58f, BMMItems.LETTUCE.get(), UniformGenerator.between(1, 3));
-            addLoot(key, BuiltInLootTables.SHIPWRECK_SUPPLY, tableBuilder, 0.42f, BMMItems.LETTUCE.get(), UniformGenerator.between(1, 4));
-            addLoot(key, BuiltInLootTables.VILLAGE_SAVANNA_HOUSE, tableBuilder, 0.72f, BMMItems.LETTUCE.get(), UniformGenerator.between(1, 7));
-            addLoot(key, Blocks.SHORT_GRASS.getLootTable().get(), tableBuilder, 0.15f, BMMItems.LETTUCE_SEEDS.get(), ConstantValue.exactly(1));
-            addLoot(key, Blocks.FERN.getLootTable().get(), tableBuilder, 0.15f, BMMItems.LETTUCE_SEEDS.get(), ConstantValue.exactly(1));
-            addMobLoot(key, EntityType.COW.getDefaultLootTable().get(), tableBuilder, BMMItems.BEEF_PATTY.get(), registries);
-            addMobLoot(key, EntityType.PIG.getDefaultLootTable().get(), tableBuilder, BMMItems.RAW_BACON.get(), registries);
+    public static void initialize() {
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, holder) -> {
+            addLoot(key, BuiltInLootTables.PILLAGER_OUTPOST, tableBuilder, 0.58f, BMMItems.TOMATO.asItem(), UniformGenerator.between(1, 3));
+            addLoot(key, BuiltInLootTables.SHIPWRECK_SUPPLY, tableBuilder, 0.42f, BMMItems.TOMATO.asItem(), UniformGenerator.between(1, 4));
+            addLoot(key, BuiltInLootTables.VILLAGE_SAVANNA_HOUSE, tableBuilder, 0.72f, BMMItems.TOMATO.asItem(), UniformGenerator.between(1, 7));
+            addLoot(key, BuiltInLootTables.PILLAGER_OUTPOST, tableBuilder, 0.58f, BMMItems.LETTUCE.asItem(), UniformGenerator.between(1, 3));
+            addLoot(key, BuiltInLootTables.SHIPWRECK_SUPPLY, tableBuilder, 0.42f, BMMItems.LETTUCE.asItem(), UniformGenerator.between(1, 4));
+            addLoot(key, BuiltInLootTables.VILLAGE_SAVANNA_HOUSE, tableBuilder, 0.72f, BMMItems.LETTUCE.asItem(), UniformGenerator.between(1, 7));
+            addMobLoot(key, EntityType.COW.getDefaultLootTable().get(), tableBuilder, BMMItems.BEEF_PATTY.asItem(), holder);
+            addMobLoot(key, EntityType.PIG.getDefaultLootTable().get(), tableBuilder, BMMItems.RAW_BACON.asItem(), holder);
         });
     }
 

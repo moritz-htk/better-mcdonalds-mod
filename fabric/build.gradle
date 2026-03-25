@@ -1,99 +1,41 @@
 plugins {
-    id 'com.gradleup.shadow'
-    id 'me.shedaniel.unified-publishing'
-}
-
-architectury {
-    platformSetupLoomIde()
-    fabric()
-}
-
-configurations {
-    common {
-        canBeResolved = true
-        canBeConsumed = false
-    }
-
-    compileClasspath.extendsFrom common
-    runtimeClasspath.extendsFrom common
-    developmentFabric.extendsFrom common
-
-    shadowBundle {
-        canBeResolved = true
-        canBeConsumed = false
-    }
+    id 'multiloader-loader'
+    id 'com.hypherionmc.modutils.modpublisher'
 }
 
 dependencies {
-    modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
-    modApi "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+    implementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-    modApi "dev.architectury:architectury-fabric:${project.architectury_api_version}"
-
-    common(project(path: ':common', configuration: 'namedElements')) { transitive false }
-    shadowBundle project(path: ':common', configuration: 'transformProductionFabric')
-}
-
-processResources {
-    var replaceProperties = [
-            mod_version             : mod_version,
-            minecraft_version       : minecraft_version,
-            fabric_loader_version   : fabric_loader_version,
-            architectury_api_version: architectury_api_version
-    ]
-    inputs.properties replaceProperties
-
-    filesMatching('fabric.mod.json') {
-        expand replaceProperties
+    implementation("net.blay09.mods:balm-fabric:${project.balm_version}") {
+        changing = project.balm_version.contains('SNAPSHOT')
     }
 }
 
-shadowJar {
-    exclude '.cache/**'
-    from project(':').file('LICENSE.md')
-
-    configurations = [project.configurations.shadowBundle]
-    archiveClassifier = 'dev-shadow'
-}
-
-remapJar {
-    input.set shadowJar.archiveFile
-}
-
-unifiedPublishing {
-    project {
-        displayName = "[Fabric ${project.minecraft_version}] Better McDonald's Mod ${project.version}"
-        version = "${project.version}"
-        releaseType = 'release'
-        gameVersions = ["${project.minecraft_version}"]
-        gameLoaders = ['fabric']
-        changelog = project(':').file('changelog.md').text
-
-        mainPublication tasks.remapJar
-
-        relations {
-            depends {
-                curseforge = 'architectury-api'
-                modrinth = 'architectury-api'
-            }
-            depends {
-                curseforge = 'fabric-api'
-                modrinth = 'fabric-api'
-            }
-        }
-
-        if (curseforgeApiKey != null) {
-            curseforge {
-                token = curseforgeApiKey
-                id = '546816'
-            }
-        }
-
-        if (modrinthApiKey != null) {
-            modrinth {
-                token = modrinthApiKey
-                id = 'kdnePgr1'
-            }
-        }
+publisher {
+    apiKeys {
+        curseforge System.getenv('CURSEFORGE_TOKEN')
+        modrinth System.getenv('MODRINTH_TOKEN')
     }
+
+    setDisplayName("[Fabric ${project.minecraft_version}] Better McDonald's Mod ${project.version}")
+    setVersion(project.version)
+    setVersionType('release')
+    setGameVersions(project.minecraft_version)
+    setLoaders(project.name)
+    setChangelog(rootProject.file('changelog.md').text)
+
+    setArtifact(tasks.jar)
+    addAdditionalFile(tasks.sourcesJar)
+
+    curseDepends {
+        required 'balm', 'fabric-api'
+    }
+
+    modrinthDepends {
+        required 'balm', 'fabric-api'
+    }
+
+    setCurseID('546816')
+    setModrinthID('kdnePgr1')
 }

@@ -11,7 +11,6 @@
       "translate": "advancement.better_mcdonalds_mod.root.description"
     },
     "icon": {
-      "count": 1,
       "id": "better_mcdonalds_mod:happy_meal"
     },
     "show_toast": false,

@@ -1,66 +1,113 @@
 package net.kyronis.better_mcdonalds_mod.common.registry;
 
-import dev.architectury.registry.registries.DeferredRegister;
-import dev.architectury.registry.registries.RegistrySupplier;
-import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.blay09.mods.balm.world.item.BalmItemRegistrar;
+import net.blay09.mods.balm.world.item.DeferredItem;
 import net.kyronis.better_mcdonalds_mod.common.item.BMMDrinkItem;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+
 public class BMMItems {
-    public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(BetterMcDonaldsMod.MOD_ID, Registries.ITEM);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(BetterMcDonaldsMod.MOD_ID, Registries.ITEM);
+    public static DeferredItem SALT_BLOCK;
 
-    public static final RegistrySupplier<BlockItem> SALT_BLOCK = BLOCK_ITEMS.register("salt_block", () -> new BlockItem(BMMBlocks.SALT_BLOCK.get(), registerItemProperties("salt_block").useBlockDescriptionPrefix()));
-    public static final RegistrySupplier<Item> SALT = ITEMS.register("salt", () -> new Item(registerItemProperties("salt")));
-    public static final RegistrySupplier<Item> TOMATO = ITEMS.register("tomato", () -> new Item(registerItemProperties("tomato").food(registerFoodValues(1, 0.3f))));
-    public static final RegistrySupplier<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds", () -> new BlockItem(BMMBlocks.TOMATO_CROP.get(), registerItemProperties("tomato_seeds").useItemDescriptionPrefix()));
-    public static final RegistrySupplier<Item> LETTUCE = ITEMS.register("lettuce", () -> new Item(registerItemProperties("lettuce").food(registerFoodValues(1, 0.3f))));
-    public static final RegistrySupplier<Item> LETTUCE_SEEDS = ITEMS.register("lettuce_seeds", () -> new BlockItem(BMMBlocks.LETTUCE_CROP.get(), registerItemProperties("lettuce_seeds").useItemDescriptionPrefix()));
-    public static final RegistrySupplier<Item> CHEESE = ITEMS.register("cheese", () -> new Item(registerItemProperties("cheese").food(registerFoodValues(2, 0.4f))));
-    public static final RegistrySupplier<Item> TORTILLA = ITEMS.register("tortilla", () -> new Item(registerItemProperties("tortilla").food(registerFoodValues(2, 0.4f))));
-    public static final RegistrySupplier<Item> BEEF_PATTY = ITEMS.register("beef_patty", () -> new Item(registerItemProperties("beef_patty").food(registerFoodValues(4, 0.4f))));
-    public static final RegistrySupplier<Item> COOKED_BEEF_PATTY = ITEMS.register("cooked_beef_patty", () -> new Item(registerItemProperties("cooked_beef_patty").food(registerFoodValues(5, 0.4f))));
-    public static final RegistrySupplier<Item> RAW_BACON = ITEMS.register("raw_bacon", () -> new Item(registerItemProperties("raw_bacon").food(registerFoodValues(3, 0.4f))));
-    public static final RegistrySupplier<Item> COOKED_BACON = ITEMS.register("cooked_bacon", () -> new Item(registerItemProperties("cooked_bacon").food(registerFoodValues(4, 0.4f))));
-    public static final RegistrySupplier<Item> MAYONNAISE = ITEMS.register("mayonnaise", () -> new Item(registerItemProperties("mayonnaise").food(registerFoodValues(1, 0.3f))));
-    public static final RegistrySupplier<Item> SWEET_SOUR_SAUCE = ITEMS.register("sweet_sour_sauce", () -> new Item(registerItemProperties("sweet_sour_sauce").food(registerFoodValues(1, 0.3f))));
-    public static final RegistrySupplier<Item> KETCHUP = ITEMS.register("ketchup", () -> new Item(registerItemProperties("ketchup").food(registerFoodValues(1, 0.3f))));
-    public static final RegistrySupplier<Item> MUSTARD = ITEMS.register("mustard", () -> new Item(registerItemProperties("mustard").food(registerFoodValues(1, 0.3f))));
-    public static final RegistrySupplier<Item> HAMBURGER = ITEMS.register("hamburger", () -> new Item(registerItemProperties("hamburger").food(registerFoodValues(6, 0.5f))));
-    public static final RegistrySupplier<Item> CHEESEBURGER = ITEMS.register("cheeseburger", () -> new Item(registerItemProperties("cheeseburger").food(registerFoodValues(8, 0.5f))));
-    public static final RegistrySupplier<Item> MCBACON = ITEMS.register("mcbacon", () -> new Item(registerItemProperties("mcbacon").food(registerFoodValues(8, 0.5f))));
-    public static final RegistrySupplier<Item> BIG_MAC = ITEMS.register("big_mac", () -> new Item(registerItemProperties("big_mac").food(registerFoodValues(10, 0.5f))));
-    public static final RegistrySupplier<Item> CHICKENBURGER = ITEMS.register("chickenburger", () -> new Item(registerItemProperties("chickenburger").food(registerFoodValues(7, 0.5f))));
-    public static final RegistrySupplier<Item> MCCHICKEN = ITEMS.register("mcchicken", () -> new Item(registerItemProperties("mcchicken").food(registerFoodValues(8, 0.5f))));
-    public static final RegistrySupplier<Item> FILET_O_FISH = ITEMS.register("filet_o_fish", () -> new Item(registerItemProperties("filet_o_fish").food(registerFoodValues(6, 0.5f))));
-    public static final RegistrySupplier<Item> MCWRAP = ITEMS.register("mcwrap", () -> new Item(registerItemProperties("mcwrap").food(registerFoodValues(5, 0.4f))));
-    public static final RegistrySupplier<Item> SNACK_SALAD = ITEMS.register("snack_salad", () -> new Item(registerItemProperties("snack_salad").food(registerFoodValues(4, 0.4f))));
-    public static final RegistrySupplier<Item> CHICKEN_MCNUGGETS = ITEMS.register("chicken_mcnuggets", () -> new Item(registerItemProperties("chicken_mcnuggets").food(registerFoodValues(4, 0.4f))));
-    public static final RegistrySupplier<Item> FRIES = ITEMS.register("fries", () -> new Item(registerItemProperties("fries").food(registerFoodValues(5, 0.4f))));
-    public static final RegistrySupplier<Item> HAPPY_MEAL = ITEMS.register("happy_meal", () -> new Item(registerItemProperties("happy_meal").rarity(Rarity.UNCOMMON).food(registerFoodValues(14, 0.5f))));
-    public static final RegistrySupplier<Item> COCA_COLA = ITEMS.register("coca_cola", () -> new BMMDrinkItem(registerItemProperties("coca_cola").food(registerFoodValues(3, 0.4f))));
-    public static final RegistrySupplier<Item> FANTA = ITEMS.register("fanta", () -> new BMMDrinkItem(registerItemProperties("fanta").food(registerFoodValues(3, 0.4f))));
-    public static final RegistrySupplier<Item> SPRITE = ITEMS.register("sprite", () -> new BMMDrinkItem(registerItemProperties("sprite").food(registerFoodValues(3, 0.4f))));
-    public static final RegistrySupplier<Item> LIPTON_ICE_TEA_PEACH = ITEMS.register("lipton_ice_tea_peach", () -> new BMMDrinkItem(registerItemProperties("lipton_ice_tea_peach").food(registerFoodValues(3, 0.4f))));
-    public static final RegistrySupplier<Item> MCFLURRY = ITEMS.register("mcflurry", () -> new Item(registerItemProperties("mcflurry").food(registerFoodValues(6, 0.4f))));
-    public static final RegistrySupplier<Item> MCFLURRY_CHOCOLATE = ITEMS.register("mcflurry_chocolate", () -> new Item(registerItemProperties("mcflurry_chocolate").food(registerFoodValues(6, 0.4f))));
+    public static DeferredItem TOMATO;
+    public static DeferredItem TOMATO_SEEDS;
+    public static DeferredItem LETTUCE;
+    public static DeferredItem LETTUCE_SEEDS;
 
-    private static Item.Properties registerItemProperties(String id) {
-        return new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(BetterMcDonaldsMod.MOD_ID, id))).arch$tab(BMMCreativeTabs.BETTER_MCDONALDS_MOD_MAIN);
+    public static DeferredItem SALT;
+    public static DeferredItem CHEESE;
+    public static DeferredItem TORTILLA;
+    public static DeferredItem BEEF_PATTY;
+    public static DeferredItem COOKED_BEEF_PATTY;
+    public static DeferredItem RAW_BACON;
+    public static DeferredItem COOKED_BACON;
+    public static DeferredItem MAYONNAISE;
+    public static DeferredItem SWEET_SOUR_SAUCE;
+    public static DeferredItem KETCHUP;
+    public static DeferredItem MUSTARD;
+
+    public static DeferredItem HAMBURGER;
+    public static DeferredItem CHEESEBURGER;
+    public static DeferredItem MCBACON;
+    public static DeferredItem BIG_MAC;
+    public static DeferredItem CHICKENBURGER;
+    public static DeferredItem MCCHICKEN;
+    public static DeferredItem FILET_O_FISH;
+    public static DeferredItem MCWRAP;
+
+    public static DeferredItem SNACK_SALAD;
+    public static DeferredItem CHICKEN_MCNUGGETS;
+    public static DeferredItem FRIES;
+
+    public static DeferredItem HAPPY_MEAL;
+
+    public static DeferredItem COCA_COLA;
+    public static DeferredItem FANTA;
+    public static DeferredItem SPRITE;
+    public static DeferredItem LIPTON_ICE_TEA_PEACH;
+
+    public static DeferredItem MCFLURRY;
+    public static DeferredItem MCFLURRY_CHOCOLATE;
+
+    public static final List<DeferredItem> ITEMS = new ArrayList<>();
+
+    public static void initialize(BalmItemRegistrar items) {
+        SALT_BLOCK = registerItem(items, "salt_block", properties -> new BlockItem(BMMBlocks.SALT_BLOCK.asBlock(), properties.useBlockDescriptionPrefix()));
+
+        TOMATO = registerItem(items, "tomato", properties -> new Item(properties.food(registerFoodValues(1, 0.3f))));
+        TOMATO_SEEDS = registerItem(items, "tomato_seeds", properties -> new BlockItem(BMMBlocks.TOMATO_CROP.asBlock(), properties.useItemDescriptionPrefix()));
+        LETTUCE = registerItem(items, "lettuce", properties -> new Item(properties.food(registerFoodValues(1, 0.3f))));
+        LETTUCE_SEEDS = registerItem(items, "lettuce_seeds", properties -> new BlockItem(BMMBlocks.LETTUCE_CROP.asBlock(), properties.useItemDescriptionPrefix()));
+
+        SALT = registerItem(items, "salt", Item::new);
+        CHEESE = registerItem(items, "cheese", properties -> new Item(properties.food(registerFoodValues(2, 0.4f))));
+        TORTILLA = registerItem(items, "tortilla", properties -> new Item(properties.food(registerFoodValues(2, 0.4f))));
+        BEEF_PATTY = registerItem(items, "beef_patty", properties -> new Item(properties.food(registerFoodValues(4, 0.4f))));
+        COOKED_BEEF_PATTY = registerItem(items, "cooked_beef_patty", properties -> new Item(properties.food(registerFoodValues(5, 0.4f))));
+        RAW_BACON = registerItem(items, "raw_bacon", properties -> new Item(properties.food(registerFoodValues(3, 0.4f))));
+        COOKED_BACON = registerItem(items, "cooked_bacon", properties -> new Item(properties.food(registerFoodValues(4, 0.4f))));
+        MAYONNAISE = registerItem(items, "mayonnaise", properties -> new Item(properties.food(registerFoodValues(1, 0.3f))));
+        SWEET_SOUR_SAUCE = registerItem(items, "sweet_sour_sauce", properties -> new Item(properties.food(registerFoodValues(1, 0.3f))));
+        KETCHUP = registerItem(items, "ketchup", properties -> new Item(properties.food(registerFoodValues(1, 0.3f))));
+        MUSTARD = registerItem(items, "mustard", properties -> new Item(properties.food(registerFoodValues(1, 0.3f))));
+
+        HAMBURGER = registerItem(items, "hamburger", properties -> new Item(properties.food(registerFoodValues(6, 0.5f))));
+        CHEESEBURGER = registerItem(items, "cheeseburger", properties -> new Item(properties.food(registerFoodValues(8, 0.5f))));
+        MCBACON = registerItem(items, "mcbacon", properties -> new Item(properties.food(registerFoodValues(8, 0.5f))));
+        BIG_MAC = registerItem(items, "big_mac", properties -> new Item(properties.food(registerFoodValues(10, 0.5f))));
+        CHICKENBURGER = registerItem(items, "chickenburger", properties -> new Item(properties.food(registerFoodValues(7, 0.5f))));
+        MCCHICKEN = registerItem(items, "mcchicken", properties -> new Item(properties.food(registerFoodValues(8, 0.5f))));
+        FILET_O_FISH = registerItem(items, "filet_o_fish", properties -> new Item(properties.food(registerFoodValues(6, 0.5f))));
+        MCWRAP = registerItem(items, "mcwrap", properties -> new Item(properties.food(registerFoodValues(5, 0.4f))));
+
+        SNACK_SALAD = registerItem(items, "snack_salad", properties -> new Item(properties.food(registerFoodValues(4, 0.4f))));
+        CHICKEN_MCNUGGETS = registerItem(items, "chicken_mcnuggets", properties -> new Item(properties.food(registerFoodValues(4, 0.4f))));
+        FRIES = registerItem(items, "fries", properties -> new Item(properties.food(registerFoodValues(5, 0.4f))));
+
+        HAPPY_MEAL = registerItem(items, "happy_meal", properties -> new Item(properties.rarity(Rarity.UNCOMMON).food(registerFoodValues(14, 0.5f))));
+
+        COCA_COLA = registerItem(items, "coca_cola", properties -> new BMMDrinkItem(properties.food(registerFoodValues(3, 0.4f))));
+        FANTA = registerItem(items, "fanta", properties -> new BMMDrinkItem(properties.food(registerFoodValues(3, 0.4f))));
+        SPRITE = registerItem(items, "sprite", properties -> new BMMDrinkItem(properties.food(registerFoodValues(3, 0.4f))));
+        LIPTON_ICE_TEA_PEACH = registerItem(items, "lipton_ice_tea_peach", properties -> new BMMDrinkItem(properties.food(registerFoodValues(3, 0.4f))));
+
+        MCFLURRY = registerItem(items, "mcflurry", properties -> new Item(properties.food(registerFoodValues(6, 0.4f))));
+        MCFLURRY_CHOCOLATE = registerItem(items, "mcflurry_chocolate", properties -> new Item(properties.food(registerFoodValues(6, 0.4f))));
+    }
+
+    private static DeferredItem registerItem(BalmItemRegistrar items, String name, Function<Item.Properties, Item> factory) {
+        DeferredItem item = items.register(name, factory, new Item.Properties()).asDeferredItem();
+        ITEMS.add(item);
+        return item;
     }
 
     private static FoodProperties registerFoodValues(int nutrition, float saturation) {
         return new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).build();
-    }
-
-    public static void register() {
-        BLOCK_ITEMS.register();
-        ITEMS.register();
     }
 }
