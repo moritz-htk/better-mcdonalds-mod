@@ -30,11 +30,13 @@ dependencies {
 
 jar {
     from(rootProject.file('LICENSE.md'))
+    exclude '.cache/**'
     exclude '**/better_mcdonalds_mod/datagen/**'
 }
 
 sourcesJar {
     from(rootProject.file('LICENSE.md'))
+    exclude '.cache/**'
 }
 
 processResources {
