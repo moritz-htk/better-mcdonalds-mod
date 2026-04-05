@@ -3,7 +3,7 @@ package net.kyronis.better_mcdonalds_mod.datagen.provider;
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMBlocks;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
-import net.kyronis.better_mcdonalds_mod.common.registry.BMMTags;
+import net.kyronis.better_mcdonalds_mod.common.tags.BMMTags;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 

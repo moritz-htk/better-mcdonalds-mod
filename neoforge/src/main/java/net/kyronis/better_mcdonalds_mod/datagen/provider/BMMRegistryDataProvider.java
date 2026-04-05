@@ -1,7 +1,7 @@
 package net.kyronis.better_mcdonalds_mod.datagen.provider;
 
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
-import net.kyronis.better_mcdonalds_mod.common.registry.BMMVillagerTrades;
+import net.kyronis.better_mcdonalds_mod.common.trading.BMMVillagerTrades;
 import net.kyronis.better_mcdonalds_mod.common.worldgen.configured_feature.BMMConfiguredFeatures;
 import net.kyronis.better_mcdonalds_mod.common.worldgen.placed_feature.BMMPlacedFeatures;
 import net.minecraft.core.HolderLookup;

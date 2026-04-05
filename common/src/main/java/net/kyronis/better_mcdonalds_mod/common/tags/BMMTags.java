@@ -1,4 +1,4 @@
-package net.kyronis.better_mcdonalds_mod.common.registry;
+package net.kyronis.better_mcdonalds_mod.common.tags;
 
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 import net.minecraft.core.registries.Registries;

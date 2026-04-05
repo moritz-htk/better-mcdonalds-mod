@@ -1,4 +1,4 @@
-package net.kyronis.better_mcdonalds_mod.common.worldgen;
+package net.kyronis.better_mcdonalds_mod.common.registry;
 
 import net.blay09.mods.balm.world.level.levelgen.BalmWorldGen;
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;

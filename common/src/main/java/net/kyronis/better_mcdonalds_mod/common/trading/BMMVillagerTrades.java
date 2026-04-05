@@ -1,6 +1,7 @@
-package net.kyronis.better_mcdonalds_mod.common.registry;
+package net.kyronis.better_mcdonalds_mod.common.trading;
 
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
