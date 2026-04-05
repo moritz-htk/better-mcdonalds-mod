@@ -5,6 +5,8 @@ plugins {
 }
 
 loom {
+    convertAw2At(tasks.named('jar'), ["${project.mod_id}.classtweaker"])
+
     runs {
         clientData {
             client()

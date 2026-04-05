@@ -13,6 +13,9 @@ issueTrackerURL="${mod_github}/issues"
     authors="${mod_author}"
     description='''${mod_description}'''
 
+[[accessTransformers]]
+    file="accesstransformer.cfg"
+
 [[dependencies.${mod_id}]]
     modId="neoforge"
     type="required"
