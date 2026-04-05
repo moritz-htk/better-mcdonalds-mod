@@ -35,7 +35,7 @@ The [Better McDonald's Mod Wiki](https://moddedmc.wiki/project/better-mcdonalds-
 - 🎨 [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
 
 ## 🔗 Dependencies
-- [Balm](https://github.com/twelveiterations/balm) (v26.1.0.1 and above)
+- [Balm](https://github.com/twelveiterations/balm) (v26.1.0.7 and above)
 
 ## 📦 Maven
 Better McDonald's Mod is available via [Modrinth Maven](https://support.modrinth.com/en/articles/8801191-modrinth-maven) for developers wishing to make use of my mod.
@@ -68,7 +68,7 @@ Add the following to your `gradle.properties` file:
 
 ### ⚙️ `gradle.properties`
 ```
-better_mcdonalds_mod_version=5.0.0+26.1
+better_mcdonalds_mod_version=5.0.1+26.1.1
 ```
 
 📌 To get the version number, go to the [download page of my mod](https://modrinth.com/mod/better-mcdonalds-mod/versions), click on the file you want to use and the version number will be on the right side under **Version number**.
