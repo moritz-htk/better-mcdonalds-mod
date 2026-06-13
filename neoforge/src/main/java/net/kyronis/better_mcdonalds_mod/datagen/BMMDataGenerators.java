@@ -22,8 +22,6 @@ public class BMMDataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = datapackProvider.getRegistryProvider();
 
         event.addProvider(new BMMAdvancementProvider(packOutput, lookupProvider));
-        event.addProvider(new BMMDataMapProvider(packOutput, lookupProvider));
-        event.addProvider(new BMMLootModifierProvider(packOutput, lookupProvider));
         event.addProvider(new BMMLanguageProvider(packOutput));
         event.addProvider(new BMMLootTableProvider(packOutput, lookupProvider));
         event.addProvider(new BMMModelProvider(packOutput));

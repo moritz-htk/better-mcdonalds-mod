@@ -3,11 +3,13 @@ package net.kyronis.better_mcdonalds_mod.common.loot.modifier;
 import net.blay09.mods.balm.world.item.DeferredItem;
 import net.blay09.mods.balm.world.level.storage.loot.BalmLootModifier;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 
 import java.util.List;
@@ -19,7 +21,7 @@ public class BMMSeedLootModifier implements BalmLootModifier {
     private static final Set<DeferredItem> SEEDS = Set.of(BMMItems.TOMATO_SEEDS, BMMItems.LETTUCE_SEEDS);
 
     @Override
-    public void apply(LootContext context, List<ItemStack> loot) {
+    public void apply(LootContext context, List<ItemStack> loot, ResourceKey<LootTable> lootTableId) {
         if (!context.hasParameter(LootContextParams.BLOCK_STATE)) {
             return;
         }

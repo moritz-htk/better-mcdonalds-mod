@@ -11,6 +11,7 @@ public class BetterMcDonaldsMod {
         registrars.blocks(BMMBlocks::initialize);
         registrars.items(BMMItems::initialize);
         registrars.creativeModeTabs(BMMCreativeTabs::initialize);
+        registrars.compostables(BMMCompostables::initialize);
         BMMLootTables.initialize(Balm.lootModifiers());
         BMMWorldGen.initialize(Balm.biomeModifications());
     }

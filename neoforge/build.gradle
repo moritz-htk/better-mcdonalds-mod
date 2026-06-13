@@ -41,12 +41,12 @@ repositories {
 }
 
 dependencies {
-    neoForge "net.neoforged:neoforge:${project.neoforge_version}"
+    forgeUserdev "net.neoforged:neoforge:${project.neoforge_version}:userdev"
 
     implementation("net.blay09.mods:balm-neoforge:${project.balm_version}") {
         changing = project.balm_version.contains('SNAPSHOT')
     }
-//    runtimeOnly "org.sinytra:wiki-exporter-neoforge:${project.wiki_exporter_version}"
+    runtimeOnly "org.sinytra:wiki-exporter-neoforge:${project.wiki_exporter_version}"
 }
 
 publisher {

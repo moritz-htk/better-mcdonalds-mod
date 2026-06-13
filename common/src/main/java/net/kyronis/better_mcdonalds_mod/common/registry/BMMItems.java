@@ -2,11 +2,11 @@ package net.kyronis.better_mcdonalds_mod.common.registry;
 
 import net.blay09.mods.balm.world.item.BalmItemRegistrar;
 import net.blay09.mods.balm.world.item.DeferredItem;
-import net.kyronis.better_mcdonalds_mod.common.item.BMMDrinkItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.component.Consumables;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,10 +92,10 @@ public class BMMItems {
 
         HAPPY_MEAL = registerItem(items, "happy_meal", properties -> new Item(properties.rarity(Rarity.UNCOMMON).food(registerFoodValues(14, 0.5f))));
 
-        COCA_COLA = registerItem(items, "coca_cola", properties -> new BMMDrinkItem(properties.food(registerFoodValues(3, 0.4f))));
-        FANTA = registerItem(items, "fanta", properties -> new BMMDrinkItem(properties.food(registerFoodValues(3, 0.4f))));
-        SPRITE = registerItem(items, "sprite", properties -> new BMMDrinkItem(properties.food(registerFoodValues(3, 0.4f))));
-        LIPTON_ICE_TEA_PEACH = registerItem(items, "lipton_ice_tea_peach", properties -> new BMMDrinkItem(properties.food(registerFoodValues(3, 0.4f))));
+        COCA_COLA = registerItem(items, "coca_cola", properties -> new Item(properties.food(registerFoodValues(3, 0.4f), Consumables.DEFAULT_DRINK)));
+        FANTA = registerItem(items, "fanta", properties -> new Item(properties.food(registerFoodValues(3, 0.4f), Consumables.DEFAULT_DRINK)));
+        SPRITE = registerItem(items, "sprite", properties -> new Item(properties.food(registerFoodValues(3, 0.4f), Consumables.DEFAULT_DRINK)));
+        LIPTON_ICE_TEA_PEACH = registerItem(items, "lipton_ice_tea_peach", properties -> new Item(properties.food(registerFoodValues(3, 0.4f), Consumables.DEFAULT_DRINK)));
 
         MCFLURRY = registerItem(items, "mcflurry", properties -> new Item(properties.food(registerFoodValues(6, 0.4f))));
         MCFLURRY_CHOCOLATE = registerItem(items, "mcflurry_chocolate", properties -> new Item(properties.food(registerFoodValues(6, 0.4f))));
