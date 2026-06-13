@@ -79,7 +79,7 @@ publisher {
 wiki {
     docs {
         'better-mcdonalds-mod' {
-            root = rootProject.file('docs/better-mcdonalds-mod')
+            root = rootProject.file('docs')
         }
     }
 }
