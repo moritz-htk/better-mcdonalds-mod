@@ -1,0 +1,23 @@
+[
+  { "version": "26.2", "latestVersion": "5.0.1+26.2", "modLoader": "Fabric • NeoForge", "support": "Active" },
+  { "version": "26.1.2", "latestVersion": "5.0.1+26.1.2", "modLoader": "Fabric • NeoForge", "support": "Active" },
+  { "version": "26.1.1", "latestVersion": "5.0.1+26.1.1", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "26.1", "latestVersion": "5.0.0+26.1", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.21.11", "latestVersion": "4.5.0+1.21.11", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.21.10", "latestVersion": "4.4.4+1.21.10", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.21.9", "latestVersion": "4.4.4+1.21.9", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.21.8", "latestVersion": "4.4.4+1.21.8", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.21.7", "latestVersion": "4.4.4+1.21.7", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.21.6", "latestVersion": "4.4.4+1.21.6", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.21.5", "latestVersion": "4.4.4+1.21.5", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.21.4", "latestVersion": "4.4.1+1.21.4", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.21.3", "latestVersion": "4.3.1+1.21.3", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.21.1", "latestVersion": "4.4.4+1.21.1", "modLoader": "Fabric • NeoForge", "support": "Only critical bug fixes ⚠️" },
+  { "version": "1.21", "latestVersion": "4.2.0+1.21", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.20.6", "latestVersion": "4.3.0+1.20.6", "modLoader": "Fabric • NeoForge", "support": "Stopped" },
+  { "version": "1.20.4", "latestVersion": "3.1.0", "modLoader": "Fabric • Forge • NeoForge", "support": "Stopped" },
+  { "version": "1.20.1", "latestVersion": "4.4.4+1.20.1", "modLoader": "Fabric • Forge", "support": "Only critical bug fixes ⚠️" },
+  { "version": "1.20", "latestVersion": "3.0.0", "modLoader": "Fabric • Forge", "support": "Stopped" },
+  { "version": "1.19.4", "latestVersion": "3.0.3", "modLoader": "Fabric • Forge", "support": "Stopped" },
+  { "version": "1.19.2", "latestVersion": "2.0.1", "modLoader": "Fabric • Forge", "support": "Stopped" }
+]
