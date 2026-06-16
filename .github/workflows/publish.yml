@@ -3,10 +3,18 @@ on: workflow_dispatch
 
 jobs:
   publish:
+    name: Publish ${{ matrix.loader }} to ${{ matrix.platform.name }}
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         java: [25]
+        loader: [fabric, neoforge]
+        platform:
+          - name: curseforge
+            task: publishCurseforge
+          - name: modrinth
+            task: publishModrinth
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -19,8 +27,8 @@ jobs:
         uses: gradle/actions/wrapper-validation@v5
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
-      - name: Publish with Gradle
-        run: ./gradlew publishMod
+      - name: Publish ${{ matrix.loader }} to ${{ matrix.platform.name }}
+        run: ./gradlew :${{ matrix.loader }}:${{ matrix.platform.task }}
         env:
           CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
