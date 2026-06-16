@@ -2,10 +2,14 @@ package net.kyronis.better_mcdonalds_mod.datagen.provider;
 
 import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
-import net.minecraft.advancements.*;
-import net.minecraft.advancements.criterion.ConsumeItemTrigger;
-import net.minecraft.advancements.criterion.InventoryChangeTrigger;
-import net.minecraft.advancements.criterion.PlayerTrigger;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.AdvancementType;
+import net.minecraft.advancements.DisplayInfo;
+import net.minecraft.advancements.triggers.ConsumeItemTrigger;
+import net.minecraft.advancements.triggers.Criterion;
+import net.minecraft.advancements.triggers.InventoryChangeTrigger;
+import net.minecraft.advancements.triggers.PlayerTrigger;
 import net.minecraft.core.ClientAsset;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;

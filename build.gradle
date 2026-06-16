@@ -1,5 +1,5 @@
 plugins {
-    id 'org.relativitymc.neo-loom' version '1.16-SNAPSHOT' apply false
+    id 'org.relativitymc.neo-loom' version '1.17.0-alpha.28' apply false
     id 'com.hypherionmc.modutils.modpublisher' version '2.2.+' apply false
     id 'org.moddedmc.wiki.toolkit' version '0.4.+' apply false
 }

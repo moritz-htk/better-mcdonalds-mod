@@ -7,7 +7,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.EnchantmentTags;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -32,8 +32,8 @@ public class BMMMobLootModifier implements BalmLootModifier {
             return;
         }
 
-        addMobLoot(context, loot, lootTableId, EntityType.COW.getDefaultLootTable().get(), BMMItems.BEEF_PATTY.asItem(), UniformGenerator.between(1, 2));
-        addMobLoot(context, loot, lootTableId, EntityType.PIG.getDefaultLootTable().get(), BMMItems.RAW_BACON.asItem(), UniformGenerator.between(1, 2));
+        addMobLoot(context, loot, lootTableId, EntityTypes.COW.getDefaultLootTable().get(), BMMItems.BEEF_PATTY.asItem(), UniformGenerator.between(1, 2));
+        addMobLoot(context, loot, lootTableId, EntityTypes.PIG.getDefaultLootTable().get(), BMMItems.RAW_BACON.asItem(), UniformGenerator.between(1, 2));
     }
 
     private static void addMobLoot(LootContext context, List<ItemStack> loot, ResourceKey<LootTable> currentLootTable, ResourceKey<LootTable> targetLootTable, Item item, NumberProvider count) {

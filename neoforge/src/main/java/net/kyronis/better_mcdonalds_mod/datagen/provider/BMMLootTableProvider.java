@@ -5,7 +5,7 @@ import net.kyronis.better_mcdonalds_mod.common.block.BMMLettuceCropBlock;
 import net.kyronis.better_mcdonalds_mod.common.block.BMMTomatoCropBlock;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMBlocks;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
-import net.minecraft.advancements.criterion.StatePropertiesPredicate;
+import net.minecraft.advancements.predicates.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
