@@ -10,21 +10,21 @@ loom {
     runs {
         clientData {
             client()
-            environment('clientData')
-            programArgs '--all', '--mod', "${project.mod_id}"
-            programArgs '--output', project(':common').file('src/main/generated').absolutePath
-            programArgs '--existing', project(':common').file('src/main/resources').absolutePath
+            runtimeEnvironment.set('clientData')
+            programArguments.addAll(['--all', '--mod', "${project.mod_id}"])
+            programArguments.addAll(['--output', project(':common').file('src/main/generated').absolutePath])
+            programArguments.addAll(['--existing', project(':common').file('src/main/resources').absolutePath])
         }
 
         exportClient {
             client()
-            property 'wiki_exporter.enabled', 'true'
+            systemProperties.put('wiki_exporter.enabled', 'true')
         }
 
         exportServer {
             server()
-            programArgs 'nogui'
-            property 'wiki_exporter.enabled', 'true'
+            programArguments.addAll('nogui')
+            systemProperties.put('wiki_exporter.enabled', 'true')
         }
     }
 }
