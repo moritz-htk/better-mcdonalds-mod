@@ -1,5 +1,6 @@
 modLoader="javafml"
 license="${mod_license}"
+licenseURL="https://www.gnu.org/licenses/gpl-3.0.html"
 issueTrackerURL="${mod_github}/issues"
 
 [[mods]]
@@ -8,7 +9,8 @@ issueTrackerURL="${mod_github}/issues"
     displayName="${mod_name}"
     updateJSONURL="https://api.modrinth.com/updates/better-mcdonalds-mod/forge_updates.json?neoforge=only"
     displayURL="${mod_homepage}"
-    logoFile="${mod_icon}"
+    iconFile="${mod_icon}"
+    bannerFile="assets/better_mcdonalds_mod/banner.png"
     credits="Volwert123, rporotos, kohari_nk, sovseabird"
     authors="${mod_author}"
     description='''${mod_description}'''
