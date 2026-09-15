@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:tortilla"
+        "recipes": "better_mcdonalds_mod:tortilla"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

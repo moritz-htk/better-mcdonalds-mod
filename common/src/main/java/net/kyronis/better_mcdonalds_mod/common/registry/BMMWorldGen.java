@@ -15,7 +15,7 @@ public class BMMWorldGen {
                 biomeHolder -> biomeHolder.is(TagKey.create(Registries.BIOME, Identifier.fromNamespaceAndPath("c", "is_aquatic"))),
                 (biome, builder) -> builder.addFeature(
                         GenerationStep.Decoration.RAW_GENERATION,
-                        BMMPlacedFeatures.SALT_BLOCK
+                        BMMPlacedFeatures.DISK_SALT
                 ));
     }
 }

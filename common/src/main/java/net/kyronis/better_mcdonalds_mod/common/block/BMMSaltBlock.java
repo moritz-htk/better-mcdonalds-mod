@@ -1,6 +1,5 @@
 package net.kyronis.better_mcdonalds_mod.common.block;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.BlockGetter;
@@ -10,15 +9,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 public class BMMSaltBlock extends FallingBlock {
-    public static final MapCodec<BMMSaltBlock> CODEC = simpleCodec(BMMSaltBlock::new);
-
     public BMMSaltBlock(Properties properties) {
         super(properties.mapColor(DyeColor.WHITE).instrument(NoteBlockInstrument.SNARE).strength(0.5F).sound(SoundType.SAND));
-    }
-
-    @Override
-    protected MapCodec<? extends FallingBlock> codec() {
-        return CODEC;
     }
 
     @Override

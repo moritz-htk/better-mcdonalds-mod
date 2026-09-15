@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:tomato_seeds"
+        "recipes": "better_mcdonalds_mod:tomato_seeds"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

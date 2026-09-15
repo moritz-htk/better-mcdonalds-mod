@@ -43,7 +43,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:mcbacon"
+        "recipes": "better_mcdonalds_mod:mcbacon"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

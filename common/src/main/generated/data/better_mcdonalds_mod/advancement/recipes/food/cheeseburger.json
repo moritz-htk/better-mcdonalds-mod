@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:cheeseburger"
+        "recipes": "better_mcdonalds_mod:cheeseburger"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

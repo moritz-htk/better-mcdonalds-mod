@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:salt_block"
+        "recipes": "better_mcdonalds_mod:salt_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

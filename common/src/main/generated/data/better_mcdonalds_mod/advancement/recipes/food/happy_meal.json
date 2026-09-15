@@ -43,7 +43,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:happy_meal"
+        "recipes": "better_mcdonalds_mod:happy_meal"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

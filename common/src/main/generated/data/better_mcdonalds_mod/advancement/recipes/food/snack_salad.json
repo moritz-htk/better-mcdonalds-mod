@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:snack_salad"
+        "recipes": "better_mcdonalds_mod:snack_salad"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

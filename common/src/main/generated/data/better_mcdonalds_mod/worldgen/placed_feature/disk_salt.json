@@ -1,5 +1,5 @@
 {
-  "feature": "better_mcdonalds_mod:salt_block",
+  "feature": "better_mcdonalds_mod:disk_salt",
   "placement": [
     {
       "type": "minecraft:count",

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:beef_patty"
+        "recipes": "better_mcdonalds_mod:beef_patty"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

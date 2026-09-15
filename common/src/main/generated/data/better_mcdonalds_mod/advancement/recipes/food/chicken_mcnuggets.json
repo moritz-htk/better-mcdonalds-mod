@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:chicken_mcnuggets"
+        "recipes": "better_mcdonalds_mod:chicken_mcnuggets"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

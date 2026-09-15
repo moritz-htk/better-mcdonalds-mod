@@ -3,6 +3,14 @@ plugins {
     id 'com.hypherionmc.modutils.modpublisher'
 }
 
+fabricApi {
+    configureDataGeneration {
+        client = true
+        outputDirectory = project(':common').file('src/main/generated')
+        addToResources = false
+    }
+}
+
 dependencies {
     implementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"

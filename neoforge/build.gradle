@@ -8,14 +8,6 @@ loom {
     convertAw2At(tasks.named('jar'), ["${project.mod_id}.classtweaker"])
 
     runs {
-        clientData {
-            client()
-            runtimeEnvironment.set('clientData')
-            programArguments.addAll(['--all', '--mod', "${project.mod_id}"])
-            programArguments.addAll(['--output', project(':common').file('src/main/generated').absolutePath])
-            programArguments.addAll(['--existing', project(':common').file('src/main/resources').absolutePath])
-        }
-
         exportClient {
             client()
             systemProperties.put('wiki_exporter.enabled', 'true')

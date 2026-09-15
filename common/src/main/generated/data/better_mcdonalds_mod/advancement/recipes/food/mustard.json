@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:mustard"
+        "recipes": "better_mcdonalds_mod:mustard"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

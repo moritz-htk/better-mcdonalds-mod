@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:cooked_beef_patty_campfire_cooking"
+        "recipes": "better_mcdonalds_mod:cooked_beef_patty_campfire_cooking"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

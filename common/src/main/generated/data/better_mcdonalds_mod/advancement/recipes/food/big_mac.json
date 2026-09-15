@@ -43,7 +43,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:big_mac"
+        "recipes": "better_mcdonalds_mod:big_mac"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

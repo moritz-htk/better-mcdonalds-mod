@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:sweet_sour_sauce"
+        "recipes": "better_mcdonalds_mod:sweet_sour_sauce"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

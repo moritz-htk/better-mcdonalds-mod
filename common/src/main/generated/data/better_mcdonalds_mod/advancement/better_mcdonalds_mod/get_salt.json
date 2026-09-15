@@ -13,7 +13,6 @@
     }
   },
   "display": {
-    "background": "minecraft:block/red_concrete_powder",
     "description": {
       "translate": "advancement.better_mcdonalds_mod.get_salt.description"
     },

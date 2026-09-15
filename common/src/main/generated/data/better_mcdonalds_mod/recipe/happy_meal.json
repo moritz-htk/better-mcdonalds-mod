@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "#better_mcdonalds_mod:burger",
     "#better_mcdonalds_mod:side_dishes",

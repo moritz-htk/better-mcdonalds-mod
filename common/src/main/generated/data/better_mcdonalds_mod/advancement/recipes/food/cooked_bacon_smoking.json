@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:cooked_bacon_smoking"
+        "recipes": "better_mcdonalds_mod:cooked_bacon_smoking"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

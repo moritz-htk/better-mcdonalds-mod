@@ -43,7 +43,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:mcflurry_chocolate"
+        "recipes": "better_mcdonalds_mod:mcflurry_chocolate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

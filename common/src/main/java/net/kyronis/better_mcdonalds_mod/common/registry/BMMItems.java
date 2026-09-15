@@ -7,6 +7,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,10 +61,10 @@ public class BMMItems {
     public static void initialize(BalmItemRegistrar items) {
         SALT_BLOCK = registerItem(items, "salt_block", properties -> new BlockItem(BMMBlocks.SALT_BLOCK.asBlock(), properties.useBlockDescriptionPrefix()));
 
-        TOMATO = registerItem(items, "tomato", properties -> new Item(properties.food(registerFoodValues(1, 0.3f))));
-        TOMATO_SEEDS = registerItem(items, "tomato_seeds", properties -> new BlockItem(BMMBlocks.TOMATO_CROP.asBlock(), properties.useItemDescriptionPrefix()));
-        LETTUCE = registerItem(items, "lettuce", properties -> new Item(properties.food(registerFoodValues(1, 0.3f))));
-        LETTUCE_SEEDS = registerItem(items, "lettuce_seeds", properties -> new BlockItem(BMMBlocks.LETTUCE_CROP.asBlock(), properties.useItemDescriptionPrefix()));
+        TOMATO = registerItem(items, "tomato", properties -> new Item(properties.food(registerFoodValues(1, 0.3f)).compostable(ContextIntProviders.COMPOSTABLE_MEDIUM)));
+        TOMATO_SEEDS = registerItem(items, "tomato_seeds", properties -> new BlockItem(BMMBlocks.TOMATO_CROP.asBlock(), properties.compostable(ContextIntProviders.COMPOSTABLE_LOW).useItemDescriptionPrefix()));
+        LETTUCE = registerItem(items, "lettuce", properties -> new Item(properties.food(registerFoodValues(1, 0.3f)).compostable(ContextIntProviders.COMPOSTABLE_MEDIUM)));
+        LETTUCE_SEEDS = registerItem(items, "lettuce_seeds", properties -> new BlockItem(BMMBlocks.LETTUCE_CROP.asBlock(), properties.compostable(ContextIntProviders.COMPOSTABLE_LOW).useItemDescriptionPrefix()));
 
         SALT = registerItem(items, "salt", Item::new);
         CHEESE = registerItem(items, "cheese", properties -> new Item(properties.food(registerFoodValues(2, 0.4f))));

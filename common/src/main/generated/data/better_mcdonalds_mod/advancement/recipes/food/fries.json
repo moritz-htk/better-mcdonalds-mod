@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better_mcdonalds_mod:fries"
+        "recipes": "better_mcdonalds_mod:fries"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

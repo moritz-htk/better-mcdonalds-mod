@@ -6,6 +6,8 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.EnchantmentTags;
+import net.minecraft.util.valueproviders.IntProvider;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.LivingEntity;
@@ -17,8 +19,6 @@ import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.functions.SmeltItemFunction;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
-import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import org.jspecify.annotations.Nullable;
 
 import java.util.List;
@@ -32,11 +32,11 @@ public class BMMMobLootModifier implements BalmLootModifier {
             return;
         }
 
-        addMobLoot(context, loot, lootTableId, EntityTypes.COW.getDefaultLootTable().get(), BMMItems.BEEF_PATTY.asItem(), UniformGenerator.between(1, 2));
-        addMobLoot(context, loot, lootTableId, EntityTypes.PIG.getDefaultLootTable().get(), BMMItems.RAW_BACON.asItem(), UniformGenerator.between(1, 2));
+        addMobLoot(context, loot, lootTableId, EntityTypes.COW.getDefaultLootTable().get(), BMMItems.BEEF_PATTY.asItem(), UniformInt.of(1, 2));
+        addMobLoot(context, loot, lootTableId, EntityTypes.PIG.getDefaultLootTable().get(), BMMItems.RAW_BACON.asItem(), UniformInt.of(1, 2));
     }
 
-    private static void addMobLoot(LootContext context, List<ItemStack> loot, ResourceKey<LootTable> currentLootTable, ResourceKey<LootTable> targetLootTable, Item item, NumberProvider count) {
+    private static void addMobLoot(LootContext context, List<ItemStack> loot, ResourceKey<LootTable> currentLootTable, ResourceKey<LootTable> targetLootTable, Item item, IntProvider count) {
         if (!currentLootTable.equals(targetLootTable)) {
             return;
         }
@@ -45,7 +45,7 @@ public class BMMMobLootModifier implements BalmLootModifier {
             return;
         }
 
-        ItemStack stack = new ItemStack(item, count.getInt(context));
+        ItemStack stack = new ItemStack(item, count.sample(context.getRandom()));
 
         if (shouldSmeltLoot(context)) {
             stack = SmeltItemFunction.smelted().build().apply(stack, context);
@@ -57,12 +57,12 @@ public class BMMMobLootModifier implements BalmLootModifier {
     }
 
     private static boolean shouldSmeltLoot(LootContext context) {
-        Entity entity = context.getOptionalParameter(LootContextParams.THIS_ENTITY);
+        Entity entity = context.getOptional(LootContextParams.THIS_ENTITY);
         if (entity != null && entity.isOnFire()) {
             return true;
         }
 
-        Entity attacker = context.getOptionalParameter(LootContextParams.DIRECT_ATTACKING_ENTITY);
+        Entity attacker = context.getOptional(LootContextParams.DIRECT_ATTACKING_ENTITY);
         if (!(attacker instanceof LivingEntity livingAttacker)) {
             return false;
         }

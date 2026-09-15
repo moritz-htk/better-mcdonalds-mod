@@ -25,6 +25,9 @@
   "entrypoints": {
     "main": [
       "net.kyronis.better_mcdonalds_mod.fabric.BMMFabric"
+    ],
+    "fabric-datagen": [
+      "net.kyronis.better_mcdonalds_mod.datagen.BMMDataGenerators"
     ]
   },
   "accessWidener": "${mod_id}.classtweaker",

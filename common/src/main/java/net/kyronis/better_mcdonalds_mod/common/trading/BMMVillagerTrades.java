@@ -11,9 +11,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.TradeCost;
 import net.minecraft.world.item.trading.VillagerTrade;
 
-import java.util.List;
-import java.util.Optional;
-
 public class BMMVillagerTrades {
     public static final ResourceKey<VillagerTrade> FARMER_1_TOMATO_EMERALD = registerKey("farmer/1/tomato_emerald");
     public static final ResourceKey<VillagerTrade> FARMER_1_LETTUCE_EMERALD = registerKey("farmer/1/lettuce_emerald");
@@ -28,35 +25,31 @@ public class BMMVillagerTrades {
     }
 
     private static VillagerTrade farmer1TomatoEmerald() {
-        return new VillagerTrade(
+        return VillagerTrade.builder(
                 new TradeCost(BMMItems.TOMATO.asItem(), 21),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 2, 0.05f,
-                Optional.empty(), List.of());
+                16, 2, 0.05f).build();
     }
 
     private static VillagerTrade farmer1LettuceEmerald() {
-        return new VillagerTrade(
+        return VillagerTrade.builder(
                 new TradeCost(BMMItems.LETTUCE.asItem(), 21),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 2, 0.05f,
-                Optional.empty(), List.of());
+                16, 2, 0.05f).build();
     }
 
     private static VillagerTrade butcher2EmeraldCookedBeefPatty() {
-        return new VillagerTrade(
+        return VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(BMMItems.COOKED_BEEF_PATTY.asItem(), 6),
-                16, 5, 0.05f,
-                Optional.empty(), List.of());
+                16, 5, 0.05f).build();
     }
 
     private static VillagerTrade butcher2EmeraldCookedBacon() {
-        return new VillagerTrade(
+        return VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(BMMItems.COOKED_BACON.asItem(), 6),
-                16, 5, 0.05f,
-                Optional.empty(), List.of());
+                16, 5, 0.05f).build();
     }
 
     private static ResourceKey<VillagerTrade> registerKey(String path) {

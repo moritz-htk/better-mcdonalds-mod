@@ -1,52 +1,49 @@
 package net.kyronis.better_mcdonalds_mod.datagen.provider;
 
-import net.kyronis.better_mcdonalds_mod.common.BetterMcDonaldsMod;
+import net.blay09.mods.balm.tags.ConventionalItemTags;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMBlocks;
 import net.kyronis.better_mcdonalds_mod.common.registry.BMMItems;
 import net.kyronis.better_mcdonalds_mod.common.tags.BMMTags;
 import net.kyronis.better_mcdonalds_mod.common.trading.BMMVillagerTrades;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.VillagerTradeTags;
 import net.minecraft.world.item.trading.VillagerTrade;
-import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ItemTagsProvider;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class BMMTagsProvider {
-    public static class Items extends ItemTagsProvider {
-        public Items(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-            super(output, registries, BetterMcDonaldsMod.MOD_ID);
+    public static class Items extends FabricTagsProvider.ItemTagsProvider {
+        public Items(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
+            super(output, registryLookupFuture, new Blocks(output, registryLookupFuture));
         }
 
         @Override
-        protected void addTags(HolderLookup.Provider provider) {
+        protected void addTags(HolderLookup.Provider registries) {
             // Dust Tags
-            tag(Tags.Items.DUSTS).addTag(BMMTags.Items.DUSTS_SALT);
+            tag(ConventionalItemTags.DUSTS).addTag(BMMTags.Items.DUSTS_SALT);
             tag(BMMTags.Items.DUSTS_SALT).add(BMMItems.SALT.asResourceKey());
 
             // Crop Tags
-            tag(Tags.Items.CROPS).addTag(BMMTags.Items.CROPS_TOMATO).addTag(BMMTags.Items.CROPS_LETTUCE);
+            tag(ConventionalItemTags.CROPS).addTag(BMMTags.Items.CROPS_TOMATO).addTag(BMMTags.Items.CROPS_LETTUCE);
             tag(BMMTags.Items.CROPS_TOMATO).add(BMMItems.TOMATO.asResourceKey());
             tag(BMMTags.Items.CROPS_LETTUCE).add(BMMItems.LETTUCE.asResourceKey());
 
             // Seed Tags
             tag(ItemTags.VILLAGER_PLANTABLE_SEEDS).addAll(List.of(BMMItems.TOMATO_SEEDS.asResourceKey(), BMMItems.LETTUCE_SEEDS.asResourceKey()));
-            tag(Tags.Items.SEEDS).addTag(BMMTags.Items.SEEDS_TOMATO).addTag(BMMTags.Items.SEEDS_LETTUCE);
+            tag(ConventionalItemTags.SEEDS).addTag(BMMTags.Items.SEEDS_TOMATO).addTag(BMMTags.Items.SEEDS_LETTUCE);
             tag(BMMTags.Items.SEEDS_TOMATO).add(BMMItems.TOMATO_SEEDS.asResourceKey());
             tag(BMMTags.Items.SEEDS_LETTUCE).add(BMMItems.LETTUCE_SEEDS.asResourceKey());
 
             // Food Tags
-            tag(Tags.Items.FOODS).addTag(BMMTags.Items.FOODS_CHEESE).addTag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_ICE_CREAM);
+            tag(ConventionalItemTags.FOODS).addTag(BMMTags.Items.FOODS_CHEESE).addTag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_ICE_CREAM);
             tag(BMMTags.Items.FOODS_CHEESE).add(BMMItems.CHEESE.asResourceKey());
-            tag(Tags.Items.FOODS_BREAD).add(BMMItems.TORTILLA.asResourceKey());
+            tag(ConventionalItemTags.BREAD_FOODS).add(BMMItems.TORTILLA.asResourceKey());
             tag(BMMTags.Items.FOODS_SAUCE).addTag(BMMTags.Items.FOODS_SAUCES_MAYONNAISE).addTag(BMMTags.Items.FOODS_SAUCES_SWEET_SOUR_SAUCE).addTag(BMMTags.Items.FOODS_SAUCES_KETCHUP).addTag(BMMTags.Items.FOODS_SAUCES_MUSTARD);
             tag(BMMTags.Items.FOODS_BURGER).addTag(BMMTags.Items.FOODS_BURGERS_HAMBURGER).addTag(BMMTags.Items.FOODS_BURGERS_CHEESEBURGER).addTag(BMMTags.Items.FOODS_BURGERS_CHICKENBURGER).addTag(BMMTags.Items.FOODS_BURGERS_FISHBURGER).add(BMMItems.MCWRAP.asResourceKey());
             tag(BMMTags.Items.FOODS_ICE_CREAM).addAll(List.of(BMMItems.MCFLURRY.asResourceKey(), BMMItems.MCFLURRY_CHOCOLATE.asResourceKey()));
@@ -55,7 +52,7 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.SIDE_DISHES).addAll(List.of(BMMItems.SNACK_SALAD.asResourceKey(), BMMItems.CHICKEN_MCNUGGETS.asResourceKey(), BMMItems.FRIES.asResourceKey()));
 
             // Vegetable Food Tags
-            tag(Tags.Items.FOODS_VEGETABLE).addTag(BMMTags.Items.FOODS_VEGETABLES_TOMATO).addTag(BMMTags.Items.FOODS_VEGETABLES_LETTUCE);
+            tag(ConventionalItemTags.VEGETABLE_FOODS).addTag(BMMTags.Items.FOODS_VEGETABLES_TOMATO).addTag(BMMTags.Items.FOODS_VEGETABLES_LETTUCE);
             tag(BMMTags.Items.FOODS_VEGETABLES_TOMATO).add(BMMItems.TOMATO.asResourceKey());
             tag(BMMTags.Items.FOODS_VEGETABLES_LETTUCE).add(BMMItems.LETTUCE.asResourceKey());
 
@@ -63,12 +60,12 @@ public class BMMTagsProvider {
             tag(ItemTags.MEAT).addAll(List.of(BMMItems.BEEF_PATTY.asResourceKey(), BMMItems.COOKED_BEEF_PATTY.asResourceKey(), BMMItems.RAW_BACON.asResourceKey(), BMMItems.COOKED_BACON.asResourceKey()));
 
             // Raw Meat Food Tags
-            tag(Tags.Items.FOODS_RAW_MEAT).addTag(BMMTags.Items.FOODS_RAW_BEEF).addTag(BMMTags.Items.FOODS_RAW_BACON);
+            tag(ConventionalItemTags.RAW_MEAT_FOODS).addTag(BMMTags.Items.FOODS_RAW_BEEF).addTag(BMMTags.Items.FOODS_RAW_BACON);
             tag(BMMTags.Items.FOODS_RAW_BEEF).add(BMMItems.BEEF_PATTY.asResourceKey());
             tag(BMMTags.Items.FOODS_RAW_BACON).add(BMMItems.RAW_BACON.asResourceKey());
 
             // Cooked Meat Food Tags
-            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(BMMTags.Items.FOODS_COOKED_BEEF).addTag(BMMTags.Items.FOODS_COOKED_BACON);
+            tag(ConventionalItemTags.COOKED_MEAT_FOODS).addTag(BMMTags.Items.FOODS_COOKED_BEEF).addTag(BMMTags.Items.FOODS_COOKED_BACON);
             tag(BMMTags.Items.FOODS_COOKED_BEEF).add(BMMItems.COOKED_BEEF_PATTY.asResourceKey());
             tag(BMMTags.Items.FOODS_COOKED_BACON).add(BMMItems.COOKED_BACON.asResourceKey());
 
@@ -85,7 +82,7 @@ public class BMMTagsProvider {
             tag(BMMTags.Items.FOODS_BURGERS_FISHBURGER).add(BMMItems.FILET_O_FISH.asResourceKey());
 
             // Drink Tags
-            tag(Tags.Items.DRINKS).addTag(BMMTags.Items.DRINKS_SODA).addTag(BMMTags.Items.DRINKS_TEA);
+            tag(ConventionalItemTags.DRINKS).addTag(BMMTags.Items.DRINKS_SODA).addTag(BMMTags.Items.DRINKS_TEA);
             tag(BMMTags.Items.DRINKS).addAll(List.of(BMMItems.COCA_COLA.asResourceKey(), BMMItems.FANTA.asResourceKey(), BMMItems.SPRITE.asResourceKey(), BMMItems.LIPTON_ICE_TEA_PEACH.asResourceKey()));
             tag(BMMTags.Items.DRINKS_SODA).addAll(List.of(BMMItems.COCA_COLA.asResourceKey(), BMMItems.FANTA.asResourceKey(), BMMItems.SPRITE.asResourceKey()));
             tag(BMMTags.Items.DRINKS_TEA).add(BMMItems.LIPTON_ICE_TEA_PEACH.asResourceKey());
@@ -99,9 +96,9 @@ public class BMMTagsProvider {
         }
     }
 
-    public static class Blocks extends BlockTagsProvider {
-        public Blocks(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-            super(output, registries, BetterMcDonaldsMod.MOD_ID);
+    public static class Blocks extends FabricTagsProvider.BlockTagsProvider {
+        public Blocks(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
+            super(output, registryLookupFuture);
         }
 
         @Override
@@ -116,9 +113,9 @@ public class BMMTagsProvider {
         }
     }
 
-    public static class VillagerTrades extends TagsProvider<VillagerTrade> {
-        public VillagerTrades(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-            super(output, Registries.VILLAGER_TRADE, registries, BetterMcDonaldsMod.MOD_ID);
+    public static class VillagerTrades extends FabricTagsProvider<VillagerTrade> {
+        public VillagerTrades(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookupFuture) {
+            super(output, Registries.VILLAGER_TRADE, registryLookupFuture);
         }
 
         @Override
