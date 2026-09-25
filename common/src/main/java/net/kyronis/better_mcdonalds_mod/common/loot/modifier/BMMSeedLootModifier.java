@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import org.jspecify.annotations.Nullable;
 
 import java.util.List;
 import java.util.Set;
@@ -21,7 +22,11 @@ public class BMMSeedLootModifier implements BalmLootModifier {
     private static final Set<DeferredItem> SEEDS = Set.of(BMMItems.TOMATO_SEEDS, BMMItems.LETTUCE_SEEDS);
 
     @Override
-    public void apply(LootContext context, List<ItemStack> loot, ResourceKey<LootTable> lootTableId) {
+    public void apply(LootContext context, List<ItemStack> loot, @Nullable ResourceKey<LootTable> lootTableId) {
+        if (lootTableId == null) {
+            return;
+        }
+
         if (!context.hasParameter(LootContextParams.BLOCK_STATE)) {
             return;
         }
