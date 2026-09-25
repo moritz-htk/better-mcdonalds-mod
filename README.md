@@ -35,7 +35,7 @@ The [Better McDonald's Mod Wiki](https://moddedmc.wiki/project/better-mcdonalds-
 - 🎨 [sovseabird](https://www.fiverr.com/sovseabird) (Textures)
 
 ## 🔗 Dependencies
-- [Balm](https://github.com/twelveiterations/balm) (v26.2.1.x and above)
+- [Balm](https://github.com/twelveiterations/balm) (v26.1.2.x and above)
 
 ## 📦 Maven
 Better McDonald's Mod is available via [Modrinth Maven](https://support.modrinth.com/en/articles/8801191-modrinth-maven) for developers wishing to make use of my mod.
