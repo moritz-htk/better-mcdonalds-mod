@@ -10,12 +10,17 @@ import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import org.jspecify.annotations.Nullable;
 
 import java.util.List;
 
 public class BMMChestLootModifier implements BalmLootModifier {
     @Override
-    public void apply(LootContext context, List<ItemStack> loot, ResourceKey<LootTable> lootTableId) {
+    public void apply(LootContext context, List<ItemStack> loot, @Nullable ResourceKey<LootTable> lootTableId) {
+        if (lootTableId == null) {
+            return;
+        }
+
         addLoot(context, loot, lootTableId, BuiltInLootTables.PILLAGER_OUTPOST, 0.58f, BMMItems.TOMATO.asItem(), UniformGenerator.between(1, 3));
         addLoot(context, loot, lootTableId, BuiltInLootTables.SHIPWRECK_SUPPLY, 0.42f, BMMItems.TOMATO.asItem(), UniformGenerator.between(1, 4));
         addLoot(context, loot, lootTableId, BuiltInLootTables.VILLAGE_SAVANNA_HOUSE, 0.72f, BMMItems.TOMATO.asItem(), UniformGenerator.between(1, 7));
