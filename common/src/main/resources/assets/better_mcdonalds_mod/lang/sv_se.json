@@ -51,5 +51,8 @@
   "item.better_mcdonalds_mod.sweet_sour_sauce": "Sötsur Sås",
   "item.better_mcdonalds_mod.tomato": "Tomat",
   "item.better_mcdonalds_mod.tomato_seeds": "Tomatfrön",
-  "item.better_mcdonalds_mod.tortilla": "Tortilla"
+  "item.better_mcdonalds_mod.tortilla": "Tortilla",
+  "tag.item.better_mcdonalds_mod.burger": "Burgare",
+  "tag.item.better_mcdonalds_mod.drinks": "Drycker",
+  "tag.item.better_mcdonalds_mod.side_dishes": "Tillbehör"
 }

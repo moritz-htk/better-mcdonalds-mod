@@ -1,39 +1,39 @@
 modLoader="javafml"
 loaderVersion="[4,)"
-license="mSLA v2.0"
-issueTrackerURL="https://github.com/moritz-htk/better-mcdonalds-mod/issues"
+license="${mod_license}"
+issueTrackerURL="${mod_github}/issues"
 
 [[mods]]
-    modId="better_mcdonalds_mod"
-    version="${version}"
-    displayName="Better McDonald's Mod"
+    modId="${mod_id}"
+    version="${mod_version}"
+    displayName="${mod_name}"
     updateJSONURL="https://api.modrinth.com/updates/better-mcdonalds-mod/forge_updates.json?neoforge=only"
-    displayURL="https://kyronis.net/better-mcdonalds-mod"
-    logoFile="assets/better_mcdonalds_mod/icon.png"
+    displayURL="${mod_homepage}"
+    logoFile="${mod_icon}"
     credits="Volwert123, rporotos, kohari_nk, sovseabird"
-    authors="Kyronis"
-    description='''This Minecraft mod adds many new items and food from McDonald's.'''
+    authors="{mod_author}"
+    description='''${mod_description}'''
 
-[[dependencies.better_mcdonalds_mod]]
+[[mixins]]
+    config="${mod_id}.mixins.json"
+
+[[dependencies.${mod_id}]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1,)"
+    versionRange="[${neoforge_version},)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.better_mcdonalds_mod]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21.1,)"
+    versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.better_mcdonalds_mod]]
-    modId="architectury"
+[[dependencies.${mod_id}]]
+    modId="balm"
     type="required"
-    versionRange="[13.0.8,)"
+    versionRange="[${balm_version},)"
     ordering="AFTER"
     side="BOTH"
-
-[modproperties.better_mcdonalds_mod]
-    catalogueItemIcon="better_mcdonalds_mod:happy_meal"

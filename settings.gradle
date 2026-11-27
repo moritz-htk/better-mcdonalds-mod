@@ -1,9 +1,19 @@
 pluginManagement {
     repositories {
-        maven { url 'https://maven.fabricmc.net/' }
-        maven { url 'https://maven.architectury.dev/' }
-        maven { url 'https://files.minecraftforge.net/maven/' }
         gradlePluginPortal()
+        mavenCentral()
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        maven {
+            name = 'RelativityMC'
+            url = 'https://repo.codemc.io/repository/relativitymc/'
+        }
+        maven {
+            name = 'First Dark Development'
+            url = 'https://maven.firstdark.dev/releases/'
+        }
     }
 }
 
@@ -11,4 +21,5 @@ rootProject.name = 'better-mcdonalds-mod'
 
 include('common')
 include('fabric')
+include('forge')
 include('neoforge')

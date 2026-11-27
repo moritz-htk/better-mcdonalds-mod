@@ -17,15 +17,15 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.RuleBasedBlockS
 import java.util.List;
 
 public class BMMConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> SALT_BLOCK = registerKey("salt_block");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_SALT = registerKey("disk_salt");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
-        context.register(SALT_BLOCK, saltBlockFeature());
+        context.register(DISK_SALT, saltDiskFeature());
     }
 
-    private static ConfiguredFeature<?, ?> saltBlockFeature() {
+    private static ConfiguredFeature<?, ?> saltDiskFeature() {
         return new ConfiguredFeature<>(Feature.DISK, new DiskConfiguration(
-                RuleBasedBlockStateProvider.simple(BMMBlocks.SALT_BLOCK.get()),
+                RuleBasedBlockStateProvider.simple(BMMBlocks.SALT_BLOCK.asBlock()),
                 BlockPredicate.matchesBlocks(List.of(Blocks.DIRT, Blocks.SAND)),
                 UniformInt.of(2, 3), 1));
     }

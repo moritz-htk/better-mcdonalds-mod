@@ -51,5 +51,8 @@
   "item.better_mcdonalds_mod.sweet_sour_sauce": "甘酸っぱいソース",
   "item.better_mcdonalds_mod.tomato": "トマト",
   "item.better_mcdonalds_mod.tomato_seeds": "トマトの種",
-  "item.better_mcdonalds_mod.tortilla": "トルティーヤ"
+  "item.better_mcdonalds_mod.tortilla": "トルティーヤ",
+  "tag.item.better_mcdonalds_mod.burger": "バーガー",
+  "tag.item.better_mcdonalds_mod.drinks": "ドリンク",
+  "tag.item.better_mcdonalds_mod.side_dishes": "サイドメニュー"
 }

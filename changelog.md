@@ -1,3 +1,4 @@
-**Changes:**
-- Updated to Minecraft 1.21.6
-- Update biome modifier to use `#c:is_aquatic` tag instead of `#minecraft:is_river` tag
+<h2>Changes</h2>
+
+- Backport latest 5.0.0+ features and changes to Minecraft 1.21.1
+- Add Forge support

@@ -1,15 +1,29 @@
-architectury {
-    common(enabled_platforms.split(','))
+plugins {
+    id 'multiloader-common'
 }
 
-sourceSets {
-    main {
-        resources.srcDir project(':common').file('src/main/generated')
+configurations {
+    commonJava {
+        canBeResolved = false
+        canBeConsumed = true
+    }
+    commonResources {
+        canBeResolved = false
+        canBeConsumed = true
     }
 }
 
-dependencies {
-    modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
+sourceSets.main.resources.srcDir file('src/main/generated')
 
-    modApi "dev.architectury:architectury:${project.architectury_api_version}"
+dependencies {
+    compileOnly 'net.fabricmc:sponge-mixin:0.17.5+mixin.0.8.7'
+
+    modImplementation("net.blay09.mods:balm-common:${project.balm_version}+${project.minecraft_version}") {
+        changing = project.balm_version.contains('SNAPSHOT')
+    }
+}
+
+artifacts {
+    commonJava sourceSets.main.java.sourceDirectories.singleFile
+    commonResources sourceSets.main.resources.sourceDirectories.files
 }
