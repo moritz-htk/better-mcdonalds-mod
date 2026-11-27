@@ -1,4 +1,4 @@
 plugins {
-    id 'org.relativitymc.neo-loom-remap' version '1.19-SNAPSHOT' apply false
+    id 'org.relativitymc.neo-loom-remap' version '1.17-SNAPSHOT' apply false
     id 'com.hypherionmc.modutils.modpublisher' version '2.2.+' apply false
 }
