@@ -51,5 +51,8 @@
   "item.better_mcdonalds_mod.sweet_sour_sauce": "Molho Agridoce",
   "item.better_mcdonalds_mod.tomato": "Tomate",
   "item.better_mcdonalds_mod.tomato_seeds": "Sementes de Tomate",
-  "item.better_mcdonalds_mod.tortilla": "Tortilha"
+  "item.better_mcdonalds_mod.tortilla": "Tortilha",
+  "tag.item.better_mcdonalds_mod.burger": "Hambúrgueres",
+  "tag.item.better_mcdonalds_mod.drinks": "Bebidas",
+  "tag.item.better_mcdonalds_mod.side_dishes": "Acompanhamentos"
 }

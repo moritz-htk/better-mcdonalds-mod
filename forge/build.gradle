@@ -1,0 +1,50 @@
+plugins {
+    id 'multiloader-loader'
+    id 'com.hypherionmc.modutils.modpublisher'
+}
+
+loom {
+    forgeExtraMixinConfigs.add("${project.mod_id}.mixins.json")
+}
+
+repositories {
+    maven {
+        name = 'Forge'
+        url = 'https://maven.minecraftforge.net/'
+    }
+}
+
+dependencies {
+    forgeUserdev "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}:userdev"
+
+    modImplementation("net.blay09.mods:balm-forge:${project.balm_version}+${project.minecraft_version}") {
+        changing = project.balm_version.contains('SNAPSHOT')
+    }
+}
+
+publisher {
+    apiKeys {
+        curseforge System.getenv('CURSEFORGE_TOKEN')
+        modrinth System.getenv('MODRINTH_TOKEN')
+    }
+
+    setDisplayName("[Forge ${project.minecraft_version}] Better McDonald's Mod ${project.version}")
+    setVersion(project.version)
+    setVersionType('release')
+    setGameVersions(project.minecraft_version)
+    setLoaders(project.name)
+    setChangelog(rootProject.file('changelog.md').text)
+
+    setArtifact(tasks.jar)
+
+    curseDepends {
+        required 'balm'
+    }
+
+    modrinthDepends {
+        required 'balm'
+    }
+
+    setCurseID('546816')
+    setModrinthID('kdnePgr1')
+}

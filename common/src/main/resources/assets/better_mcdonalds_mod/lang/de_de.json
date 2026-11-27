@@ -51,5 +51,8 @@
   "item.better_mcdonalds_mod.sweet_sour_sauce": "Süßsauer Sauce",
   "item.better_mcdonalds_mod.tomato": "Tomate",
   "item.better_mcdonalds_mod.tomato_seeds": "Tomatensamen",
-  "item.better_mcdonalds_mod.tortilla": "Tortilla"
+  "item.better_mcdonalds_mod.tortilla": "Tortilla",
+  "tag.item.better_mcdonalds_mod.burger": "Burger",
+  "tag.item.better_mcdonalds_mod.drinks": "Getränke",
+  "tag.item.better_mcdonalds_mod.side_dishes": "Beilagen"
 }

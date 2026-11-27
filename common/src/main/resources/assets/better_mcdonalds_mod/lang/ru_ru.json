@@ -51,5 +51,8 @@
   "item.better_mcdonalds_mod.sweet_sour_sauce": "Cладко-кислый соус",
   "item.better_mcdonalds_mod.tomato": "Помидор",
   "item.better_mcdonalds_mod.tomato_seeds": "Семена помидора",
-  "item.better_mcdonalds_mod.tortilla": "Тортилья"
+  "item.better_mcdonalds_mod.tortilla": "Тортилья",
+  "tag.item.better_mcdonalds_mod.burger": "Бургеры",
+  "tag.item.better_mcdonalds_mod.drinks": "Напитки",
+  "tag.item.better_mcdonalds_mod.side_dishes": "Гарниры"
 }

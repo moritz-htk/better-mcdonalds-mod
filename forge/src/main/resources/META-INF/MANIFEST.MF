@@ -1,0 +1,1 @@
+Automatic-Module-Name: better_mcdonalds_mod.forge
